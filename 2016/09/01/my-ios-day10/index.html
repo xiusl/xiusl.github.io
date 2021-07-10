@@ -1,0 +1,1052 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day10">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day10/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day10">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day10/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day10 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day10</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:11:49+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day10/" class="leancloud_visitors" data-flag-title="my-ios-day10">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<h1 id="day-10"><a href="#day-10" class="headerlink" title="day 10"></a>day 10</h1><h2 id="多控制器管理（一）"><a href="#多控制器管理（一）" class="headerlink" title="多控制器管理（一）"></a>多控制器管理（一）</h2><ul>
+<li>项目中常见文件</li>
+<li>UIApplication</li>
+<li>程序启动原理</li>
+<li>UIWindow</li>
+<li>加载控制器</li>
+</ul>
+<hr>
+<h4 id="常见文件"><a href="#常见文件" class="headerlink" title="常见文件"></a>常见文件</h4><ul>
+<li>系统框架及LaunchScreen</li>
+<li>Xcode5，框架是苹果事先导入进去的，在项目栏中就会看见导入的框架，使用image.xcassets中的<code>LaunchScreen</code>文件</li>
+<li>Xcode6，会自动导入一些常用框架，不会看到自动导入的框架，使用<code>LaunchScreen.xib</code>文件</li>
+<li>Xcode7，会自动导入一些常用框架，不会看到自动导入的框架，使用<code>LaunchScreen.storyboard</code>文件</li>
+<li>新版本中，依旧通过更改项目的General的<code>Launch Screen File</code>配置来使用<code>Assets.xcassets</code>中的<code>LaunchScreen</code>文件</li>
+<li>PCH文件</li>
+<li>一般与项目名相同，新版本不会自动添加</li>
+<li>添加过程</li>
+<li>新建一个<code>项目名.pch</code>文件</li>
+<li>在Build Setting中查找<strong>perfix</strong>，找到<code>Precomplie prefix Header</code>设置为 YES</li>
+<li>设置<code>prefix Header</code>为pch文件的完整工程路径，<code>项目名/项目名.pch</code></li>
+<li>只要在pch文件中定义的东西，就会被整个应用程序共享</li>
+<li>是一个预编译文件，系统提前去编译，完成一些配置</li>
+<li>主要用途</li>
+<li>存放一些常用的宏，屏幕、版本…</li>
+<li>存放公用的头文件，系统分类的头文件</li>
+<li>自定义NSLog，实现部署不打印</li>
+<li>注意</li>
+<li>问题：pch会把当中的所有内容导入到工程中的所有文件中，当工程中存在C语言文件时，就会产生错误</li>
+<li>解决：每一个OC文件都会定义一个<code>__OBJC__</code>宏，判断文件是否有这个宏，就可以判断文件类型</li>
+</ul>
+<hr>
+<h4 id="UIApplication"><a href="#UIApplication" class="headerlink" title="UIApplication"></a>UIApplication</h4><ul>
+<li>UIApplication简介</li>
+<li>UIApplication对象是一个应用程序的象征，系统为我们创建，是一个单例对象，一个应用程序启动后就是一个UIApplication对象，可以通过<code>[UIApplication sharedApplication]</code>获得这个对象</li>
+<li>应用UIApplication对象可以完成一些应用级别的操作</li>
+<li>设置应用程序右上角的红色提醒数字</li>
+<li>设置联网指示器的可见性</li>
+<li>设置应用程序的状态栏</li>
+<li>完成应用之间的跳转</li>
+<li>UIApplication功能</li>
+<li><p>提醒数字</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取UIApplication对象</span></span><br><span class="line"><span class="built_in">UIApplication</span> *app = [<span class="built_in">UIApplication</span> sharedApplication];</span><br><span class="line"><span class="comment">// 在设置之前，要注册⼀个通知，从ios8之后，都要先注册一个通知对象，才能够接收到提醒</span></span><br><span class="line"><span class="built_in">UIUserNotificationSettings</span> *notice = [<span class="built_in">UIUserNotificationSettings</span> settingsForTypes:<span class="built_in">UIUserNotificationTypeBadge</span> categories:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 注册通知对象</span></span><br><span class="line">[app registerUserNotificationSettings:notice];</span><br><span class="line"><span class="comment">// 设置提醒数字</span></span><br><span class="line">app.applicationIconBadgeNumber = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置联网状态</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.networkActivityIndicatorVisible = <span class="literal">YES</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置状态栏</p>
+</li>
+<li><p>状态栏默认是交个控制器管理的</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重写控制器的方法，设置显示样式</span></span><br><span class="line">-(<span class="built_in">UIStatusBarStyle</span>)preferredStatusBarStyle &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">UIStatusBarStyleLightContent</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 是否隐藏状态栏，YES--显示，NO--隐藏</span></span><br><span class="line">-(<span class="built_in">BOOL</span>)prefersStatusBarHidden &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">NO</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开发中一般都是应用程序来统一管理，在<code>info.plist</code>文件中添加一个Key值，<code>View controller-based status bar appearance</code>设置为 NO，就交给应用程序管理了</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取UIApplication</span></span><br><span class="line"><span class="built_in">UIApplication</span> *app = [<span class="built_in">UIApplication</span> sharedApplication];</span><br><span class="line"><span class="comment">// 设置状态栏样式.</span></span><br><span class="line">app.statusBarStyle = <span class="built_in">UIStatusBarStyleLightContent</span>;</span><br><span class="line"><span class="comment">// 设置状态的隐藏</span></span><br><span class="line">app.statusBarHidden = <span class="literal">YES</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>跳转网页</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIApplication</span> *app = [<span class="built_in">UIApplication</span> sharedApplication];</span><br><span class="line"><span class="comment">// URL--协议头://域名</span></span><br><span class="line"><span class="comment">// 应用程序通过协议头的类型，去打开相应的软件</span></span><br><span class="line"><span class="built_in">NSURL</span> *url =[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://www.baidu.com"</span>];</span><br><span class="line">[app openURL:url];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打电话发短信</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 打电话</span></span><br><span class="line">[app openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"tel://10086"</span>]];</span><br><span class="line"><span class="comment">// 发短信</span></span><br><span class="line">[app openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"sms://10086"</span>]];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>UIApplication代理</p>
+</li>
+<li>所有的移动应用有一个致命的缺点：<strong>app容易受到打扰</strong>，如来电话，锁屏等会导致app进入后台甚至会被终止</li>
+<li>iOS中当app受到干扰的时候会产生一些系统事件，这时UIApplication会通知它的代理对象，来做一些相应的处理</li>
+<li>AppDelegate类就是在程序启动创建的一个遵守UIApplicationDelegate的类，在这个类中定义很多方法来处理事件</li>
+<li>主要方法<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#parmark 应⽤程序的⽣生命周期</span></span><br><span class="line"><span class="comment">// 应用程序启动完成的时候调⽤</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions: (<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当我们应用程序即将失去焦点的时候调⽤</span></span><br><span class="line">- (<span class="keyword">void</span>)applicationWillResignActive:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当我们应⽤程序完全进⼊后台的时候调⽤</span></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidEnterBackground:(<span class="built_in">UIApplication</span> *)application&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当我们应用程序即将进⼊前台的时候调⽤</span></span><br><span class="line">- (<span class="keyword">void</span>)applicationWillEnterForeground:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当我们应⽤程序完全获取焦点的时候调⽤</span></span><br><span class="line"><span class="comment">// 只有当一个应⽤程序完全获取到焦点,才能与用户交互.</span></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidBecomeActive:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当我们应用程序即将关闭的时候调⽤</span></span><br><span class="line">- (<span class="keyword">void</span>)applicationWillTerminate:(<span class="built_in">UIApplication</span> *)application &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="应用程序启动原理"><a href="#应用程序启动原理" class="headerlink" title="应用程序启动原理"></a>应用程序启动原理</h4><ul>
+<li><p>程序启动时，依旧最先执行main函数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line"><span class="keyword">@autoreleasepool</span> &#123;</span><br><span class="line"><span class="comment">// 第三个参数:UIApplication类名或者⼦类的名称 nil == @"UIApplication"</span></span><br><span class="line"><span class="comment">// 第四个参数:UIApplication的代理的代理名称</span></span><br><span class="line"><span class="comment">// NSStringFromClass:把类名转化字符串， NSStringFromClass好处:1.有提示功能 2.避免输入错误</span></span><br><span class="line"><span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate <span class="keyword">class</span>]));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>程序启动流程</p>
+</li>
+</ul>
+<ol>
+<li>执行<code>main</code>函数</li>
+<li>执行<code>UIApplicationMain</code>函数</li>
+<li>创建<code>UIApplication</code>对象，设置<code>UIApplication</code>对象的代理</li>
+<li>开启一个主循环，保证应用程序不会退出</li>
+<li>加载<code>info.plist</code>配置文件，判断文件中的<code>Main storyboard file base name</code>有没有指定<code>storyboard</code>文件，若果有指定就去加载文件</li>
+</ol>
+<hr>
+<h4 id="UIWindow"><a href="#UIWindow" class="headerlink" title="UIWindow"></a>UIWindow</h4><ul>
+<li>UIWindow简介</li>
+<li>UIWindow是一个特殊的UIView，通常一个app中至少有一个UIWindow，一个iOS程序之所以可以显示到屏幕上，就是靠UIWindow</li>
+<li>iOS启动完毕后，创建的第一个视图控件就是UIWindow，接着创建控制器的View，在将控制器的View添加到UIWindow上</li>
+<li>UIWindow创建</li>
+<li>加载info.plist文件后，如果存在main就会加载storyboard</li>
+<li>创建一个窗口</li>
+<li>加载main.storyboard，初始化一个控制器</li>
+<li>把初始化的控制器设为窗口的根控制器，显示到屏幕上</li>
+<li><p>如果没有指定main这个时候就需要在程序加载完毕后手动创建UIWindow</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 应用程序启动完成的时候调⽤</span></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions: (<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line"><span class="comment">// 创建窗口</span></span><br><span class="line"><span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc] initWithFrame:[<span class="built_in">UIScreen</span> mainScreen].bounds];</span><br><span class="line"><span class="comment">// 创建控制器</span></span><br><span class="line"><span class="built_in">UIViewController</span> *Vc = [[<span class="built_in">UIViewController</span> alloc] init];</span><br><span class="line">Vc.view.backgroundColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line"><span class="comment">// 设置根控制器</span></span><br><span class="line"><span class="keyword">self</span>.window.rooViewController = Vc;</span><br><span class="line"><span class="comment">// 显示窗口</span></span><br><span class="line">[<span class="keyword">self</span>.window makeKeyAndVisiable];</span><br><span class="line"><span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>makeKeyAndVisible</code>的底层实现</p>
+</li>
+</ul>
+<ol>
+<li><p>让窗⼝变为显示状态</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.window.hidden = <span class="literal">NO</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把根控制器的View添加到窗口上</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span>.window addSubView:rootVC.view];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把当前窗口设置成应用程序的主窗⼝<br>application.keyWindow获得应用程序的主窗⼝<br>在程序中，状态栏和键盘都是窗口<br>self.window.windowLevel = UIWindowLevelNormal<br>层级关系<br>UIWindowLevelNormal &lt; UIWindowLevelStatusBar &lt; UIWindowLevelAlert</p>
+</li>
+</ol>
+<hr>
+<h4 id="加载控制器"><a href="#加载控制器" class="headerlink" title="加载控制器"></a>加载控制器</h4><ul>
+<li>storyboard</li>
+<li><p>过程</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建窗口</span></span><br><span class="line"><span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc] inihFrame:[<span class="built_in">UIScreen</span> mainScreen].bounds];</span><br><span class="line"><span class="comment">// 加载控制器</span></span><br><span class="line"><span class="comment">// 指定storyboard</span></span><br><span class="line"><span class="built_in">UIStoryboard</span> *storyboard =[<span class="built_in">UIStoryboard</span> storyboardWithName:<span class="string">@"Main"</span> bundle:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 加载箭头指向的Vc</span></span><br><span class="line"><span class="built_in">UIViewController</span> *Vc = [storyboard instantiateInitialViewController];</span><br><span class="line"><span class="comment">// 设置根控制器</span></span><br><span class="line"><span class="keyword">self</span>.window.rooViewController = Vc;</span><br><span class="line"><span class="comment">// 显示窗口</span></span><br><span class="line">[<span class="keyword">self</span>.window makeKeyAndVisiable];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加载控制器的两种方式</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 指定storyboard</span></span><br><span class="line"><span class="built_in">UIStoryboard</span> *storyboard =[<span class="built_in">UIStoryboard</span> storyboardWithName:<span class="string">@"Main"</span> bundle:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 加载箭头指向的Vc</span></span><br><span class="line"><span class="built_in">UIViewController</span> *Vc = [storyboard instantiateInitialViewController];</span><br><span class="line"><span class="comment">// 加载指定标识的控制器.</span></span><br><span class="line"><span class="built_in">UIViewController</span> *Vc = [storyBoard instantiateViewControllerWithIdentifier:<span class="string">@"VCStoryBoardID"</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xib</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建窗⼝</span></span><br><span class="line"><span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc] initWithFrame:[<span class="built_in">UIScreen</span> nScreen].bounds];</span><br><span class="line"><span class="comment">// 从XIB当中加载控制器.</span></span><br><span class="line">MyViewController *Vc = [[MyViewController alloc] tWithNibName:<span class="string">@"VC"</span> bundle:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 设置根控制器</span></span><br><span class="line"><span class="keyword">self</span>.window.rootViewController = Vc;</span><br><span class="line"><span class="comment">// 显⽰示窗⼝</span></span><br><span class="line">[<span class="keyword">self</span>.window makeKeyAndVisible];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day9/" rel="next" title="my-ios-day9">
+                <i class="fa fa-chevron-left"></i> my-ios-day9
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day11/" rel="prev" title="my-ios-day11">
+                my-ios-day11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day-10"><span class="nav-number">1.</span> <span class="nav-text">day 10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多控制器管理（一）"><span class="nav-number">1.1.</span> <span class="nav-text">多控制器管理（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常见文件"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">常见文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UIApplication"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">UIApplication</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用程序启动原理"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">应用程序启动原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UIWindow"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">UIWindow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载控制器"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">加载控制器</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

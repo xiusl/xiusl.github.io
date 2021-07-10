@@ -1,0 +1,1043 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day16">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day16/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day16">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day16/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day16 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day16/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day16</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:12:07+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day16/" class="leancloud_visitors" data-flag-title="my-ios-day16">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<h1 id="day-16"><a href="#day-16" class="headerlink" title="day 16"></a>day 16</h1><h2 id="彩票项目"><a href="#彩票项目" class="headerlink" title="彩票项目"></a>彩票项目</h2><ul>
+<li>√ 主流框架</li>
+<li>√ 新特性界面</li>
+<li>√ 设置界面</li>
+</ul>
+<hr>
+<h4 id="新特性界面"><a href="#新特性界面" class="headerlink" title="新特性界面"></a>新特性界面</h4><ul>
+<li>UICollectionView</li>
+<li>拥有和UITableView一样的重用机制，但需要自己布局cell</li>
+<li>系统提供UICollectionViewFlowLayout类来布局cell</li>
+<li>使用步骤</li>
+</ul>
+<ol>
+<li><p>设置布局参数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UICollectionViewFlowLayout</span> *flowLayout = [[<span class="built_in">UICollectionViewFlowLayout</span> alloc] init];</span><br><span class="line">flowLayout.itemSize = [<span class="built_in">UIScreen</span> mainScreen].bounds.size;</span><br><span class="line"><span class="comment">// 滚动方向(水平)</span></span><br><span class="line">flowLayout.scrollDirection = <span class="built_in">UICollectionViewScrollDirectionHorizontal</span>;</span><br><span class="line"><span class="comment">// items 和items之间的间距</span></span><br><span class="line">flowLayout.minimumInteritemSpacing = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// 行间距</span></span><br><span class="line">flowLayout.minimumLineSpacing = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册cell</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span>.collectionView registerClass:[XMGNewFeatureCollectionViewCell <span class="keyword">class</span>] forCellWithReuseIdentifier:reuseIdentifier];</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>新特性</li>
+<li>添加NewFeature文件夹</li>
+<li>自定义SLCollectionViewController : UICollectionVieController</li>
+<li><p>布局collectionView</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">instancetype</span>)init &#123;</span><br><span class="line"><span class="comment">// 创建流水布局</span></span><br><span class="line"><span class="built_in">UICollectionViewFlowLayout</span> *flowLayout = [[<span class="built_in">UICollectionViewFlowLayout</span> alloc] init];</span><br><span class="line"><span class="comment">// 行间距</span></span><br><span class="line">flowLayout.minimumLineSpacing = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// 列间距</span></span><br><span class="line">flowLayout.minimumInteritemSpacing = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// 每个cell的尺寸</span></span><br><span class="line">flowLayout.itemSize = [<span class="built_in">UIScreen</span> mainScreen].bounds.size;</span><br><span class="line"><span class="comment">// 滚动方向，水平滚动</span></span><br><span class="line">flowLayout.scrollDirection = <span class="built_in">UICollectionViewScrollDirectionHorizontal</span>;</span><br><span class="line"><span class="keyword">return</span> [<span class="keyword">super</span> initWithCollectionViewLayout:flowLayout];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册cell，设置属性，添加图片</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">[<span class="keyword">super</span> viewDidLoad];</span><br><span class="line"><span class="comment">// Register cell classes</span></span><br><span class="line">[<span class="keyword">self</span>.collectionView registerClass:[SLNewFeatureCollectionViewCell <span class="keyword">class</span>] forCellWithReuseIdentifier:reuseIdentifier];</span><br><span class="line"><span class="comment">// 设置分页</span></span><br><span class="line"><span class="keyword">self</span>.collectionView.pagingEnabled = <span class="literal">YES</span>;</span><br><span class="line"><span class="comment">// 取消弹簧效果</span></span><br><span class="line"><span class="keyword">self</span>.collectionView.bounces = <span class="literal">NO</span>;</span><br><span class="line"><span class="comment">// 取消滚动条</span></span><br><span class="line"><span class="keyword">self</span>.collectionView.showsHorizontalScrollIndicator = <span class="literal">NO</span>;</span><br><span class="line"><span class="comment">// 添加图片</span></span><br><span class="line">[<span class="keyword">self</span> addImageView];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)addImageView &#123;</span><br><span class="line"><span class="comment">// guide1</span></span><br><span class="line"><span class="built_in">UIImageView</span> *guideImageView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"guide1"</span>]];</span><br><span class="line">[<span class="keyword">self</span>.collectionView addSubview:guideImageView];</span><br><span class="line">guideImageView.x += <span class="number">50</span>;</span><br><span class="line"><span class="keyword">self</span>.guideImageView = guideImageView;</span><br><span class="line"><span class="comment">// guideLine</span></span><br><span class="line"><span class="built_in">UIImageView</span> *guideLineImageView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"guideLine"</span>]];</span><br><span class="line">[<span class="keyword">self</span>.collectionView addSubview:guideLineImageView];</span><br><span class="line">guideLineImageView.x -= <span class="number">150</span>;</span><br><span class="line"><span class="comment">// guideLargeText1</span></span><br><span class="line"><span class="built_in">UIImageView</span> *guideLargeTextImageView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"guideLargeText1"</span>]];</span><br><span class="line">[<span class="keyword">self</span>.collectionView addSubview:guideLargeTextImageView];</span><br><span class="line">guideLargeTextImageView.center = <span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.collectionView.width * <span class="number">0.5</span>f, <span class="keyword">self</span>.collectionView.height * <span class="number">0.7</span>);</span><br><span class="line"><span class="keyword">self</span>.guideLargeTextImageView = guideLargeTextImageView;</span><br><span class="line"><span class="comment">// guideSmallText1</span></span><br><span class="line"><span class="built_in">UIImageView</span> *guideSmallTextImageView = [[<span class="built_in">UIImageView</span> alloc] initWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"guideSmallText1"</span>]];</span><br><span class="line">[<span class="keyword">self</span>.collectionView addSubview:guideSmallTextImageView];</span><br><span class="line">guideSmallTextImageView.center = <span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.collectionView.width * <span class="number">0.5</span>f, <span class="keyword">self</span>.collectionView.height * <span class="number">0.8</span>);</span><br><span class="line"><span class="keyword">self</span>.guideSmallTextImageView = guideSmallTextImageView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置图片的动画</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当scrollView 减速的时候调用</span></span><br><span class="line">- (<span class="keyword">void</span>)scrollViewDidEndDecelerating:(<span class="built_in">UIScrollView</span> *)scrollView&#123;</span><br><span class="line"><span class="comment">// 当前偏差</span></span><br><span class="line"><span class="built_in">CGFloat</span> offsetX = scrollView.contentOffset.x;</span><br><span class="line"><span class="comment">// 计算页码</span></span><br><span class="line"><span class="built_in">NSInteger</span> page = offsetX / scrollView.width + <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 换图片</span></span><br><span class="line"><span class="built_in">NSString</span> *name = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"guide%ld"</span>,page];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageNamed:name];</span><br><span class="line"><span class="keyword">self</span>.guideImageView.image = image;</span><br><span class="line"><span class="comment">// 大标题</span></span><br><span class="line"><span class="built_in">NSString</span> *largeTextname = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"guideLargeText%ld"</span>,page];</span><br><span class="line"><span class="built_in">UIImage</span> *largeTextimage = [<span class="built_in">UIImage</span> imageNamed:largeTextname];</span><br><span class="line"><span class="keyword">self</span>.guideLargeTextImageView.image = largeTextimage;</span><br><span class="line"><span class="comment">// 小标题</span></span><br><span class="line"><span class="built_in">NSString</span> *smallTextname = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"guideSmallText%ld"</span>,page];</span><br><span class="line"><span class="built_in">UIImage</span> *smallTextimage = [<span class="built_in">UIImage</span> imageNamed:smallTextname];</span><br><span class="line"><span class="keyword">self</span>.guideSmallTextImageView.image = smallTextimage;</span><br><span class="line"><span class="comment">// 偏差值</span></span><br><span class="line"><span class="built_in">CGFloat</span> del = offsetX - <span class="keyword">self</span>.lastOffsetX;</span><br><span class="line"><span class="keyword">self</span>.guideImageView.x += del * <span class="number">2</span>;</span><br><span class="line"><span class="keyword">self</span>.guideLargeTextImageView.x += del * <span class="number">2</span>;</span><br><span class="line"><span class="keyword">self</span>.guideSmallTextImageView.x += del * <span class="number">2</span>;</span><br><span class="line">[<span class="built_in">UIView</span> animateWithDuration:<span class="number">0.25</span>f animations:^&#123;</span><br><span class="line"><span class="keyword">self</span>.guideImageView.x -= del;</span><br><span class="line"><span class="keyword">self</span>.guideLargeTextImageView.x -= del;</span><br><span class="line"><span class="keyword">self</span>.guideSmallTextImageView.x -= del;</span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// 记录上次偏差</span></span><br><span class="line"><span class="keyword">self</span>.lastOffsetX = offsetX;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置cell样式</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UICollectionViewCell</span> *)collectionView:(<span class="built_in">UICollectionView</span> *)collectionView cellForItemAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">SLNewFeatureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];</span><br><span class="line"><span class="built_in">NSString</span> *imageName = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"guide%ldBackground"</span>,indexPath.item + <span class="number">1</span>];</span><br><span class="line">cell.image = [<span class="built_in">UIImage</span> imageNamed:imageName];</span><br><span class="line"><span class="comment">// 判断是否是最后一个cell</span></span><br><span class="line">[cell setIndexPath:indexPath count:SLPageCount];</span><br><span class="line"><span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义cell，添加bg图片、立即体验</p>
+</li>
+</ul>
+<ol>
+<li><p>提供图片属性</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 背景图片 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">UIImage</span> *image;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加bgImageView</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UIImageView</span> *)bgImageView &#123;</span><br><span class="line"><span class="keyword">if</span> (!_bgImageView) &#123;</span><br><span class="line">_bgImageView = [[<span class="built_in">UIImageView</span> alloc] initWithFrame:<span class="keyword">self</span>.bounds];</span><br><span class="line">[<span class="keyword">self</span>.contentView addSubview:_bgImageView];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _bgImageView;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重写image的set方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setImage:(<span class="built_in">UIImage</span> *)image &#123;</span><br><span class="line">_image = image;</span><br><span class="line"><span class="comment">// 设置image</span></span><br><span class="line"><span class="keyword">self</span>.bgImageView.image = image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提供设置立即体验方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath count:(<span class="built_in">NSInteger</span>)count &#123;</span><br><span class="line"><span class="comment">// 当时最后一个cell的时候，添加立即体验按钮</span></span><br><span class="line"><span class="keyword">if</span> (indexPath.item + <span class="number">1</span> == count) &#123;</span><br><span class="line"><span class="comment">// 添加立即体验按钮</span></span><br><span class="line"><span class="keyword">self</span>.startBtn.hidden = <span class="literal">NO</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123; <span class="comment">// 不是最后一个cell</span></span><br><span class="line"><span class="comment">// 隐藏立即体验按钮</span></span><br><span class="line"><span class="keyword">self</span>.startBtn.hidden = <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>立即体验按钮</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UIButton</span> *)startBtn &#123;</span><br><span class="line"><span class="keyword">if</span> (_startBtn == <span class="literal">nil</span>) &#123;</span><br><span class="line">_startBtn = [[<span class="built_in">UIButton</span> alloc] init];</span><br><span class="line">[_startBtn setBackgroundImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"guideStart"</span>] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">[_startBtn sizeToFit];</span><br><span class="line"><span class="comment">// 一定要在按钮有尺寸的时候，再调整位置</span></span><br><span class="line">_startBtn.center = <span class="built_in">CGPointMake</span>(<span class="keyword">self</span>.contentView.width * <span class="number">0.5</span>f, <span class="keyword">self</span>.contentView.height * <span class="number">0.9</span>f);</span><br><span class="line">[_startBtn addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(startBtnOnclick:) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">[<span class="keyword">self</span>.contentView addSubview:_startBtn];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _startBtn;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 开始按钮点击调用的方法</span></span><br><span class="line">- (<span class="keyword">void</span>)startBtnOnclick:(<span class="built_in">UIButton</span> *)button &#123;</span><br><span class="line">SLTabBarController *tabBarVc = [[SLTabBarController alloc] init];</span><br><span class="line"><span class="comment">// 切换跟控制器</span></span><br><span class="line">SLKeyWindow.rootViewController = tabBarVc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>工具类</li>
+<li>在Other文件夹中添加Tool文件夹</li>
+<li><p>数据存数工具SLSaveTool</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SLSaveTool.h</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLSaveTool</span> : <span class="title">NSObject</span></span></span><br><span class="line">+ (<span class="keyword">id</span>)objectForKey:(<span class="built_in">NSString</span> *)defaultName;</span><br><span class="line">+ (<span class="keyword">void</span>)setObject:(<span class="keyword">id</span>)value forKey:(<span class="built_in">NSString</span> *)defaultName;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="comment">// SLSaveTool.m</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLSaveTool</span></span></span><br><span class="line">+ (<span class="keyword">id</span>)objectForKey:(<span class="built_in">NSString</span> *)defaultName &#123;</span><br><span class="line"><span class="keyword">return</span> [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] objectForKey:defaultName];</span><br><span class="line">&#125;</span><br><span class="line">+ (<span class="keyword">void</span>)setObject:(<span class="keyword">id</span>)value forKey:(<span class="built_in">NSString</span> *)defaultName &#123;</span><br><span class="line"><span class="comment">// 偏好设置不能存储nil</span></span><br><span class="line"><span class="keyword">if</span> (defaultName) &#123;</span><br><span class="line"><span class="comment">// 保存当前版本</span></span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults] setObject:value forKey:defaultName];</span><br><span class="line"><span class="comment">// 立即同步</span></span><br><span class="line">[[<span class="built_in">NSUserDefaults</span> standardUserDefaults] synchronize];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根控制器选择工具SLRootVCTool</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SLRootVCTool.h</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLRootVCTool</span> : <span class="title">NSObject</span></span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 选择窗口的跟控制器</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">+ (<span class="built_in">UIViewController</span> *)chooseWindowRootVc;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="comment">// SLRootVCTool.m</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLRootVCTool</span></span></span><br><span class="line">+ (<span class="built_in">UIViewController</span> *)chooseWindowRootVc &#123;</span><br><span class="line"><span class="built_in">UIViewController</span> *rootVc;</span><br><span class="line"><span class="comment">// 取出当前版本</span></span><br><span class="line"><span class="built_in">NSString</span> *currVerson = [<span class="built_in">NSBundle</span> mainBundle].infoDictionary[<span class="string">@"CFBundleShortVersionString"</span>];</span><br><span class="line"><span class="comment">// 取出上一次保存的版本</span></span><br><span class="line"><span class="built_in">NSString</span> *odlVerson = [SLSaveTool objectForKey:SLVerson];</span><br><span class="line"><span class="comment">// 判断有无新版本</span></span><br><span class="line"><span class="keyword">if</span> ([currVerson isEqualToString:odlVerson]) &#123;</span><br><span class="line"><span class="comment">// 没有新版本，进入主框架</span></span><br><span class="line"><span class="comment">// 设置窗口的根控制器</span></span><br><span class="line">rootVc = [[SLTabBarController alloc] init];</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line"><span class="comment">// 有新版本</span></span><br><span class="line"><span class="comment">// 显示新特性界面</span></span><br><span class="line">rootVc = [[SLNewFeatureViewController alloc] init];</span><br><span class="line">[SLSaveTool setObject:currVerson forKey:SLVerson];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> rootVc;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="设置界面"><a href="#设置界面" class="headerlink" title="设置界面"></a>设置界面</h4><ul>
+<li>分析</li>
+<li>界面较多，但内部结构基本相同，</li>
+<li>使用纯代码，并依据MVC开发</li>
+<li>添加Setting文件夹</li>
+<li><p>设置组模型<code>SLSettingGroup</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SLSettingGroup.h</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLSettingGroup</span> : <span class="title">NSObject</span></span></span><br><span class="line"><span class="comment">/** cell模型数组 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSArray</span> *items;</span><br><span class="line"><span class="comment">/** 头部标题 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *headerTitle;</span><br><span class="line"><span class="comment">/** 尾部标题 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *footTitle;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 通过cell模型数组返回组模型</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">+ (<span class="keyword">instancetype</span>)groupWithItems:(<span class="built_in">NSArray</span> *)items;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="comment">// SLSettingGroup.m</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLSettingGroup</span></span></span><br><span class="line">+ (<span class="keyword">instancetype</span>)groupWithItems:(<span class="built_in">NSArray</span> *)items&#123;</span><br><span class="line">SLSettingGroup *group = [[SLSettingGroup alloc] init];</span><br><span class="line">group.items = items;</span><br><span class="line"><span class="keyword">return</span> group;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置cell模型</p>
+</li>
+<li><p>基本的cell，</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SLSettingItem.h</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLSettingItem</span> : <span class="title">NSObject</span></span></span><br><span class="line"><span class="comment">/** 图标 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">UIImage</span> *image;</span><br><span class="line"><span class="comment">/** 标题 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *title;</span><br><span class="line"><span class="comment">/** 子标题 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *subTitle;</span><br><span class="line"><span class="comment">/** 点击这行cell要做的事情 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="keyword">void</span>(^operation)(<span class="built_in">NSIndexPath</span> *indexPath);</span><br><span class="line">+ (<span class="keyword">instancetype</span>)itemWithImage:(<span class="built_in">UIImage</span> *)image title:(<span class="built_in">NSString</span> *)title;</span><br><span class="line">+ (<span class="keyword">instancetype</span>)itemWithTitle:(<span class="built_in">NSString</span> *)title;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="comment">// SLSettingItem.m</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLSettingItem</span></span></span><br><span class="line">+ (<span class="keyword">instancetype</span>)itemWithImage:(<span class="built_in">UIImage</span> *)image title:(<span class="built_in">NSString</span> *)title&#123;</span><br><span class="line">SLSettingItem *item = [[<span class="keyword">self</span> alloc] init];</span><br><span class="line">item.image = image;</span><br><span class="line">item.title = title;</span><br><span class="line"><span class="keyword">return</span> item;</span><br><span class="line">&#125;</span><br><span class="line">+ (<span class="keyword">instancetype</span>)itemWithTitle:(<span class="built_in">NSString</span> *)title&#123;</span><br><span class="line"><span class="keyword">return</span> [<span class="keyword">self</span> itemWithImage:<span class="literal">nil</span> title:title];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>箭头和开关cell</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 带有箭头的cell是可以跳转狭义控制器的</span></span><br><span class="line"><span class="comment">// 跳转目标控制器 1.绑定类名字符串 2.绑定类名</span></span><br><span class="line"><span class="comment">// SLSettingArrowItem.h</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLSettingArrowItem</span> : <span class="title">SLSettingItem</span></span></span><br><span class="line"><span class="comment">/** 目标控制器类名 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) Class desVc;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="comment">// 带有开关的cell是要有开关状态的</span></span><br><span class="line"><span class="comment">// SLSettingSwitchItem.m</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLSettingSwitchItem</span> : <span class="title">SLSettingItem</span></span></span><br><span class="line"><span class="comment">/** 状态 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">getter</span>=isOpen) <span class="built_in">BOOL</span> open;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置基础控制器<code>SLBaseTableViewController</code></p>
+</li>
+<li>所有控制器都应使用<code>UITableViewController</code>且为组模式，结构基本相同，提取设置基础控制器</li>
+<li><p>代码创建组类型，要重写init方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">instancetype</span>)init&#123;</span><br><span class="line"><span class="keyword">return</span> [<span class="keyword">super</span> initWithStyle:<span class="built_in">UITableViewStyleGrouped</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>基础控制器包含一个组数据（告诉控制器有多少组，且组中包含cell模型数组）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLBaseTableViewController</span> : <span class="title">UITableViewController</span></span></span><br><span class="line"><span class="comment">/** 控制器的所有组 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSMutableArray</span> *groups;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数据源和代理</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSInteger</span>)numberOfSectionsInTableView:(<span class="built_in">UITableView</span> *)tableView &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">self</span>.groups.count;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section &#123;</span><br><span class="line"><span class="comment">// 取出组数组的当前组</span></span><br><span class="line">SLSettingGroup *group = <span class="keyword">self</span>.groups[section];</span><br><span class="line"><span class="keyword">return</span> group.items.count;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">SLSettingTableViewCell *cell = [SLSettingTableViewCell cellWithTableView:tableView];</span><br><span class="line"><span class="comment">// 从总数组中取出组模型</span></span><br><span class="line">SLSettingGroup *group = <span class="keyword">self</span>.groups[indexPath.section];</span><br><span class="line"><span class="comment">// 从cell模型数组中取出当前cell模型</span></span><br><span class="line">SLSettingItem *item = group.items[indexPath.row];</span><br><span class="line"><span class="comment">// 传递模型</span></span><br><span class="line">cell.item = item;</span><br><span class="line"><span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">NSString</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView titleForHeaderInSection:(<span class="built_in">NSInteger</span>)section&#123;</span><br><span class="line"><span class="comment">// 取出组模型</span></span><br><span class="line">SLSettingGroup *group = <span class="keyword">self</span>.groups[section];</span><br><span class="line"><span class="keyword">return</span> group.headerTitle;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">NSString</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView titleForFooterInSection: (<span class="built_in">NSInteger</span>)section &#123;</span><br><span class="line"><span class="comment">// 取出组模型</span></span><br><span class="line">SLSettingGroup *group = <span class="keyword">self</span>.groups[section];</span><br><span class="line"><span class="keyword">return</span> group.footTitle;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView didSelectRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">[tableView deselectRowAtIndexPath:indexPath animated:<span class="literal">YES</span>];</span><br><span class="line"><span class="comment">// 从总数组中取出组模型数组</span></span><br><span class="line">SLSettingGroup *group = <span class="keyword">self</span>.groups[indexPath.section];</span><br><span class="line"><span class="comment">// 从行模型数组中取出cell模型</span></span><br><span class="line">SLSettingItem *item = group.items[indexPath.row];</span><br><span class="line"><span class="keyword">if</span> (item.operation) &#123;</span><br><span class="line">item.operation(indexPath);</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span> ([item isKindOfClass:[SLSettingArrowItem <span class="keyword">class</span>]]) &#123;</span><br><span class="line"><span class="comment">// 只有剪头模型才具备跳转功能</span></span><br><span class="line">SLSettingArrowItem *arrowItem = (SLSettingArrowItem *)item;</span><br><span class="line"><span class="keyword">if</span> (arrowItem.desVc) &#123;</span><br><span class="line"><span class="comment">// 如果有目标控制器</span></span><br><span class="line"><span class="comment">// 拿到目标控制器类名 创建目标控制器</span></span><br><span class="line"><span class="built_in">UIViewController</span> *vc = [[arrowItem.desVc alloc] init];</span><br><span class="line">vc.title = arrowItem.title;</span><br><span class="line">[<span class="keyword">self</span>.navigationController pushViewController:vc animated:<span class="literal">YES</span>];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置控制器<code>SLSettingTableViewController</code></p>
+</li>
+<li><p>添加模型</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">[<span class="keyword">super</span> viewDidLoad];</span><br><span class="line"><span class="keyword">self</span>.title = <span class="string">@"设置"</span>;</span><br><span class="line"><span class="comment">// 添加第0组</span></span><br><span class="line">[<span class="keyword">self</span> setupGroup0];</span><br><span class="line"><span class="comment">// 添加第1组</span></span><br><span class="line">[<span class="keyword">self</span> setupGroup1];</span><br><span class="line"><span class="comment">// 添加第2组</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 第0组</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)setupGroup0 &#123;</span><br><span class="line">SLSettingArrowItem *item = [SLSettingArrowItem itemWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"RedeemCode"</span>] title:<span class="string">@"使用兑换码"</span>];</span><br><span class="line">__<span class="keyword">weak</span> <span class="keyword">typeof</span>(<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</span><br><span class="line"><span class="comment">// 使用item的operation跳转控制器</span></span><br><span class="line">item.operation = ^(<span class="built_in">NSIndexPath</span> *indexPath) &#123;</span><br><span class="line"><span class="built_in">UIViewController</span> *vc = [[<span class="built_in">UIViewController</span> alloc] init];</span><br><span class="line">vc.title = <span class="string">@"asdf"</span>;</span><br><span class="line">vc.view.backgroundColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">[weakSelf.navigationController pushViewController:vc animated:<span class="literal">YES</span>];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 创建组模型</span></span><br><span class="line">SLSettingGroup *group = [SLSettingGroup groupWithItems:@[item]];</span><br><span class="line">group.headerTitle = <span class="string">@"123"</span>;</span><br><span class="line">group.footTitle = <span class="string">@"qeqrere"</span>;</span><br><span class="line"><span class="comment">// 添加到总数组中</span></span><br><span class="line">[<span class="keyword">self</span>.groups addObject:group];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 第1组</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)setupGroup1 &#123;</span><br><span class="line">SLSettingArrowItem *item1 = [SLSettingArrowItem itemWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"MorePush"</span>] title:<span class="string">@"推送和提醒"</span>];</span><br><span class="line"><span class="comment">// 箭头特有属性desVc实现跳转</span></span><br><span class="line">item1.desVc = [SLPushTableViewController <span class="keyword">class</span>];</span><br><span class="line"></span><br><span class="line">SLSettingSwitchItem *item2 = [SLSettingSwitchItem itemWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"handShake"</span>] title:<span class="string">@"使用摇一摇机选"</span>];</span><br><span class="line">item2.open = <span class="literal">YES</span>;</span><br><span class="line">SLSettingSwitchItem *item3 = [SLSettingSwitchItem itemWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"sound_Effect"</span>] title:<span class="string">@"声音效果"</span>];</span><br><span class="line">SLSettingSwitchItem *item4 = [SLSettingSwitchItem itemWithImage:[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"More_LotteryRecommend"</span>] title:<span class="string">@"购彩小助手"</span>];</span><br><span class="line"><span class="comment">// 创建组模型</span></span><br><span class="line">SLSettingGroup *group = [SLSettingGroup groupWithItems:@[item1, item2, item3, item4]];</span><br><span class="line">group.headerTitle = <span class="string">@"qwe"</span>;</span><br><span class="line">group.footTitle = <span class="string">@"slll"</span>;</span><br><span class="line"><span class="comment">// 添加到总数组中</span></span><br><span class="line">[<span class="keyword">self</span>.groups addObject:group];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// 添加...</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他的控制器与设置控制器相同，只需创建并添加相应的组模型</p>
+</li>
+<li>block简单介绍</li>
+<li>封装一段代码，在合适的时候调用</li>
+<li><p>两种定义方法（没有参数和返回值）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 第一种方法 这里的block是变量名</span></span><br><span class="line"><span class="keyword">void</span>(^block)() = ^() &#123;</span><br><span class="line"><span class="comment">// 要保存的代码块...</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 2. 起别名的方式</span></span><br><span class="line"><span class="comment">// 这里的MyBlock是类型名，这个可以跨方法执行</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">void</span>(^MyBlock)();</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) MyBlock block;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>block可以当做参数来传递</p>
+</li>
+<li><code>inline</code>快速创建block</li>
+<li>设置界面回顾</li>
+<li>MVC设计模式的强大，更改需求只需修改模型，不需要再修改view的显示代码</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day15/" rel="next" title="my-ios-day15">
+                <i class="fa fa-chevron-left"></i> my-ios-day15
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day17/" rel="prev" title="my-ios-day17">
+                my-ios-day17 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day-16"><span class="nav-number">1.</span> <span class="nav-text">day 16</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#彩票项目"><span class="nav-number">1.1.</span> <span class="nav-text">彩票项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新特性界面"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">新特性界面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置界面"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">设置界面</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

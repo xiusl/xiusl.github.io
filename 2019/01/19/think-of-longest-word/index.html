@@ -1,0 +1,985 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="think,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="Longest Word in Dictionary through Deleting  “最长子序列问题” 思考">
+<meta name="keywords" content="think">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“最长子序列问题” 思考">
+<meta property="og:url" content="http://xiusl.me/2019/01/19/think-of-longest-word/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="Longest Word in Dictionary through Deleting  “最长子序列问题” 思考">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="“最长子序列问题” 思考">
+<meta name="twitter:description" content="Longest Word in Dictionary through Deleting  “最长子序列问题” 思考">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2019/01/19/think-of-longest-word/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>“最长子序列问题” 思考 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2019/01/19/think-of-longest-word/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">“最长子序列问题” 思考</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T14:42:03+00:00">
+                2019-01-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/19/think-of-longest-word/" class="leancloud_visitors" data-flag-title="“最长子序列问题” 思考">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Longest Word in Dictionary through Deleting</p>
+</blockquote>
+<p>“最长子序列问题” 思考<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; Longest Word in Dictionary through Deleting</span><br><span class="line"></span><br><span class="line">&gt; Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input:</span><br><span class="line">s = &quot;abpcplea&quot;, d = [&quot;ale&quot;,&quot;apple&quot;,&quot;monkey&quot;,&quot;plea&quot;]</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">&quot;apple&quot;</span><br><span class="line"></span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input:</span><br><span class="line">s = &quot;abpcplea&quot;, d = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</span><br><span class="line">Output:</span><br><span class="line">&quot;a&quot;</span><br><span class="line"></span><br><span class="line">&gt; Note:</span><br><span class="line"></span><br><span class="line">&gt; All the strings in the input will only contain lower-case letters.</span><br><span class="line">&gt; The size of the dictionary won&apos;t exceed 1,000.</span><br><span class="line">&gt; The length of all the strings in the input won&apos;t exceed 1,000.</span><br></pre></td></tr></table></figure></p>
+<h4 id="双指针的方式解决"><a href="#双指针的方式解决" class="headerlink" title="双指针的方式解决"></a>双指针的方式解决</h4>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :type d: List[str]</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">is_valid</span><span class="params">(s, word)</span>:</span></span><br><span class="line">            i, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> i &lt; len(s) <span class="keyword">and</span> j &lt; len(word):</span><br><span class="line">                <span class="keyword">if</span> s[i] == word[j]:</span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> j == len(word)</span><br><span class="line"></span><br><span class="line">        longest = <span class="string">''</span></span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> d:</span><br><span class="line">            l1, l2 = len(longest), len(word)</span><br><span class="line">            <span class="keyword">if</span> l1 &gt; l2 <span class="keyword">or</span> (l1 == l2 <span class="keyword">and</span> longest &lt; word):</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">if</span> is_valid(s, word):</span><br><span class="line">                longest = word</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> longest</span><br></pre></td></tr></table></figure>
+<h4 id="问题描述里有很多-python-的高级写法"><a href="#问题描述里有很多-python-的高级写法" class="headerlink" title="问题描述里有很多 python 的高级写法"></a>问题描述里有很多 python 的高级写法</h4><ul>
+<li><a href="https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/discuss/99590/Short-Python-solutions" target="_blank" rel="noopener">LINK</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">isSubsequence</span><span class="params">(x)</span>:</span></span><br><span class="line">      it = iter(s)</span><br><span class="line">      <span class="keyword">return</span> all(c <span class="keyword">in</span> it <span class="keyword">for</span> c <span class="keyword">in</span> x)</span><br><span class="line">  <span class="keyword">return</span> max(sorted(filter(isSubsequence, d)) + [<span class="string">''</span>], key=len)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>fliter</code> 函数</p>
+<ul>
+<li>过滤序列，过滤掉不符合条件的元素，返回符合条件的元素组成的新序列，新序列是一个迭代器</li>
+<li>接受两个参数，第一个是过滤函数，第二的是可迭代对象</li>
+<li>语法 <code>filter(function, iterable)</code></li>
+<li><p>例子</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x%<span class="number">2</span> == <span class="number">1</span></span><br><span class="line">list2 = filter(is_odd, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>])</span><br><span class="line">print(list(list2))  <span class="comment"># out [1, 3, 5, 7]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>过滤函数对每个元素进行条件判断，返回 bool 值，</p>
+</li>
+<li>换一种写法<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br><span class="line">list2 = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> list1:</span><br><span class="line">  <span class="keyword">if</span> x%<span class="number">2</span> == <span class="number">1</span>:</span><br><span class="line">    list2.append(x)</span><br><span class="line">print(list2)  <span class="comment"># out [1, 3, 5, 7]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>all</code> 函数</p>
+<ul>
+<li>判断可迭代对象中所有元素是否为 <code>TRUE</code>，如果是放回 <code>True</code>，不是返回 <code>False</code></li>
+<li>这里 <code>TRUE</code> 的定义是除 0、空（None）、False、’’ 都算 <code>TRUE</code></li>
+<li>元素为 0 个的可迭代对象返回 <code>True</code></li>
+<li>语法 <code>all(iterable)</code></li>
+<li><p>使用</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">all([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment"># True</span></span><br><span class="line">all([<span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>]) <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>等同于</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">all</span><span class="params">(iterable)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> element:</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类似的 <code>any</code> 函数，任意元素为 <code>TRUE</code> 就返回 <code>True</code></p>
+</li>
+</ul>
+</li>
+<li><code>sorted</code> 函数<ul>
+<li>对可迭代序列排序生成新序列</li>
+</ul>
+</li>
+<li><code>max</code> 函数<ul>
+<li>取出序列中最大的元素</li>
+</ul>
+</li>
+<li>流程分析<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">it = iter(s)  # 将字符串转换为可迭代序列 it = (&apos;a&apos;,&apos;b&apos;,&apos;p&apos;,&apos;c&apos;,&apos;p&apos;,&apos;l&apos;,&apos;e&apos;,&apos;a&apos;)</span><br><span class="line">#  x = &apos;ale&apos;</span><br><span class="line">(c in it for c in x) # c 元素同时按在 x 中的顺序同时出现在 it 和 x 中，(&apos;a&apos;, &apos;l&apos;, &apos;e&apos;)</span><br><span class="line">all((&apos;a&apos;, &apos;l&apos;, &apos;e&apos;))  # 上一步每个元素都不为空时返回 True</span><br><span class="line">d = [&quot;ale&quot;,&quot;apple&quot;,&quot;monkey&quot;,&quot;plea&quot;]</span><br><span class="line">filter(isSubsequence, d) # 对 d 进行过滤，(&apos;ale&apos;, &apos;apple&apos;, &apos;plea&apos;)</span><br><span class="line">sorted((&apos;ale&apos;, &apos;apple&apos;, &apos;plea&apos;)) # 上一步的结果进行排序，字典顺序</span><br><span class="line"># + [&apos;&apos;]  处理为找的情况</span><br><span class="line">max((&apos;ale&apos;, &apos;apple&apos;, &apos;plea&apos;, &apos;&apos;), key=len) # 根据元素长度取出最长的元素</span><br><span class="line"># &apos;apple&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>不使用 <code>sorted</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSubsequence</span><span class="params">(x)</span>:</span></span><br><span class="line">        it = iter(s)</span><br><span class="line">        <span class="keyword">return</span> all(c <span class="keyword">in</span> it <span class="keyword">for</span> c <span class="keyword">in</span> x)</span><br><span class="line">    <span class="keyword">return</span> min(filter(isSubsequence, d) + [<span class="string">''</span>], key=<span class="keyword">lambda</span> x: (-len(x), x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># min(((-3, 'ale'), (-5, 'apple'),(-4, 'plea')))</span></span><br><span class="line"><span class="comment"># 'apple'</span></span><br><span class="line"><span class="comment"># 巧妙地运用 min 函数对元组的效果</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>循环替代 <code>filter</code> <code>max</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">    best = <span class="string">''</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> d:</span><br><span class="line">        <span class="keyword">if</span> (-len(x), x) &lt; (-len(best), best):</span><br><span class="line">            it = iter(s)</span><br><span class="line">            <span class="keyword">if</span> all(c <span class="keyword">in</span> it <span class="keyword">for</span> c <span class="keyword">in</span> x):</span><br><span class="line">                best = x</span><br><span class="line">    <span class="keyword">return</span> best</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先进行排序</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSubsequence</span><span class="params">(x)</span>:</span></span><br><span class="line">        it = iter(s)</span><br><span class="line">        <span class="keyword">return</span> all(c <span class="keyword">in</span> it <span class="keyword">for</span> c <span class="keyword">in</span> x)</span><br><span class="line">    d.sort(key=<span class="keyword">lambda</span> x: (-len(x), x))</span><br><span class="line">    <span class="keyword">return</span> next(itertools.ifilter(isSubsequence, d), <span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>先排序，在循环</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> sorted(d, key=<span class="keyword">lambda</span> x: (-len(x), x)):</span><br><span class="line">        it = iter(s)</span><br><span class="line">        <span class="keyword">if</span> all(c <span class="keyword">in</span> it <span class="keyword">for</span> c <span class="keyword">in</span> x):</span><br><span class="line">            <span class="keyword">return</span> x</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>heapq.heapify</code> 替换 <code>sorted</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findLongestWord</span><span class="params">(self, s, d)</span>:</span></span><br><span class="line">    heap = [(-len(word), word) <span class="keyword">for</span> word <span class="keyword">in</span> d]</span><br><span class="line">    heapq.heapify(heap)</span><br><span class="line">    <span class="keyword">while</span> heap:</span><br><span class="line">        word = heapq.heappop(heap)[<span class="number">1</span>]</span><br><span class="line">        it = iter(s)</span><br><span class="line">        <span class="keyword">if</span> all(c <span class="keyword">in</span> it <span class="keyword">for</span> c <span class="keyword">in</span> word):</span><br><span class="line">            <span class="keyword">return</span> word</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/think/" rel="tag"><i class="fa fa-tag"></i> think</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/16/think-of-two-sum/" rel="next" title="由“俩数之和问题”所想">
+                <i class="fa fa-chevron-left"></i> 由“俩数之和问题”所想
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/21/centos-flask-nginx/" rel="prev" title="centos-flask-nginx">
+                centos-flask-nginx <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#双指针的方式解决"><span class="nav-number">1.</span> <span class="nav-text">双指针的方式解决</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述里有很多-python-的高级写法"><span class="nav-number">2.</span> <span class="nav-text">问题描述里有很多 python 的高级写法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

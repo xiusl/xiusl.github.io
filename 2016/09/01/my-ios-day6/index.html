@@ -1,0 +1,1031 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day6">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day6/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day6">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day6/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day6 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day6</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:00:42+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day6/" class="leancloud_visitors" data-flag-title="my-ios-day6">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<h1 id="day-06"><a href="#day-06" class="headerlink" title="day 06"></a>day 06</h1><h2 id="UITableView"><a href="#UITableView" class="headerlink" title="UITableView"></a>UITableView</h2><h4 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h4><ul>
+<li>数据源简介</li>
+<li>tableView需要一个数据源来显示数据</li>
+<li>tableView会向数据源查询有多少行数据，每行数据是什么</li>
+<li>凡是遵守UITableViewDataSource协议的OC对象，都可以成为数据源</li>
+<li>数据源协议<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一共有多少组数据</span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)numberOfSectionsInTableView:(<span class="built_in">UITableView</span> *)tableView;</span><br><span class="line"><span class="comment">// 每一组有多少行数据</span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section;</span><br><span class="line"><span class="comment">// 每一行显示什么内容</span></span><br><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<p>####常见设置<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置tableView每一行cell的高度，默认是44</span></span><br><span class="line"><span class="keyword">self</span>.tableView.rowHeight = <span class="number">80</span>;</span><br><span class="line"><span class="comment">// 设置tableView每⼀一组头部的⾼高度</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.sectionHeaderHeight = <span class="number">50</span>;</span><br><span class="line">￼<span class="comment">// 设置tableView每⼀一组尾部的⾼高度</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.sectionFooterHeight = <span class="number">50</span>;</span><br><span class="line">￼<span class="comment">// 设置分割线的颜色，如果设置[UIColor clearColor]隐藏分割线</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.separatorColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">￼<span class="comment">// 设置分割线的样式</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.separatorStyle = <span class="built_in">UITableViewCellSeparatorStyleNone</span>;</span><br><span class="line">￼<span class="comment">// 设置表头</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.tableHeaderView = [[<span class="built_in">UISwitch</span> alloc] init] ;</span><br><span class="line">￼<span class="comment">// 设置表尾</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.tableFooterView = [<span class="built_in">UIButton</span></span><br><span class="line">￼buttonWithType:<span class="built_in">UIButtonTypeContactAdd</span>];</span><br><span class="line">￼<span class="comment">// 设置索引条上⽂文字颜⾊色</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.sectionIndexColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">￼<span class="comment">// 设置索引条的背景颜⾊色</span></span><br><span class="line">￼<span class="keyword">self</span>.tableView.sectionIndexBackgroundColor = [<span class="built_in">UIColor</span> blackColor];</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>####代理<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 当选中某一行cell就会调用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">￼- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView didSelectRowAtIndexPath:￼(<span class="built_in">NSIndexPath</span> *)indexPath&#123;&#125;</span><br><span class="line">￼<span class="comment">/**</span></span><br><span class="line"><span class="comment">￼* 当取消选中某⼀一⾏行cell就会调⽤用</span></span><br><span class="line"><span class="comment">￼*/</span></span><br><span class="line">￼- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView didDeselectRowAtIndexPath:￼(<span class="built_in">NSIndexPath</span> *)indexPath&#123;&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 返回每一组显示的头部控件</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="built_in">UIView</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView viewForHeaderInSection:(<span class="built_in">NSInteger</span>)section&#123;&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 返回每一组显示的尾部控件</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="built_in">UIView</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView viewForFooterInSection:(<span class="built_in">NSInteger</span>)section&#123;&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 返回每一组头部的高度</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">￼- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForHeaderInSection:(<span class="built_in">NSInteger</span>)section&#123;&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 返回每一组尾部的高度</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">￼- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForFooterInSection:(<span class="built_in">NSInteger</span>)section&#123;&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 返回tableView的每一行高度</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">￼- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:￼(<span class="built_in">NSIndexPath</span> *)indexPath</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="UITableViewCell"><a href="#UITableViewCell" class="headerlink" title="UITableViewCell"></a>UITableViewCell</h4><ul>
+<li>简介</li>
+<li>tableView的每一行都是一个UITableViewCell，通过dataSource的tableView: cellForRowAtIndexPath:方法初始化每一行</li>
+<li>UITableViewCell内部有一个默认的子视图contentView，contentView是cell内部所有控件的父控件</li>
+<li>常见设置<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置cell右边的指⽰示控件</span></span><br><span class="line">￼cell.accessoryView = [[<span class="built_in">UISwitch</span> alloc] init];</span><br><span class="line">￼<span class="comment">// 设置cell右边的指⽰示样式(accessoryView优先级 &gt; accessoryType)</span></span><br><span class="line">￼cell.accessoryType = <span class="built_in">UITableViewCellAccessoryDisclosureIndicator</span>;</span><br><span class="line">￼<span class="comment">// 设置cell的背景view</span></span><br><span class="line">￼<span class="comment">// backgroundView优先级 &gt; backgroundColor</span></span><br><span class="line">￼<span class="built_in">UIView</span> *bg = [[<span class="built_in">UIView</span> alloc] init];</span><br><span class="line">￼bg.backgroundColor = [<span class="built_in">UIColor</span> blueColor];</span><br><span class="line">￼cell.backgroundView = bg;</span><br><span class="line">￼<span class="comment">// 设置cell的背景颜⾊色</span></span><br><span class="line">￼cell.backgroundColor = [<span class="built_in">UIColor</span> redColor];</span><br><span class="line">￼<span class="comment">// 设置cell选中的背景view</span></span><br><span class="line">￼<span class="built_in">UIView</span> *selectbg = [[<span class="built_in">UIView</span> alloc] init];</span><br><span class="line">￼selectbg.backgroundColor = [<span class="built_in">UIColor</span> purpleColor];</span><br><span class="line">￼cell.selectedBackgroundView = selectbg;</span><br><span class="line">￼<span class="comment">// 设置cell选中的样式</span></span><br><span class="line">cell.selectionStyle = <span class="built_in">UITableViewCellSelectionStyleNone</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="cell重用"><a href="#cell重用" class="headerlink" title="cell重用"></a>cell重用</h4><ul>
+<li><p>第一种</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">[<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">￼<span class="comment">// 根据ID 这个标识 注册对应的 cell类型</span></span><br><span class="line">￼[<span class="keyword">self</span>.tableView registerClass:[<span class="built_in">UITableViewCell</span> <span class="keyword">class</span>] ￼forCellReuseIdentifier:ID];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableViewew:(<span class="built_in">UITableView</span> *)tableView￼cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line"><span class="comment">// 1.首先去缓存池中查找可循环利用的cell</span></span><br><span class="line"><span class="built_in">UITableViewCell</span> *cell = [tableview dequeueReusableCellWithIdentifier:ID];</span><br><span class="line"><span class="comment">// 2.设置数据</span></span><br><span class="line">cell.textLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"第%ld行数据"</span>, indexPath.row];</span><br><span class="line"><span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二种</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableViewew:(<span class="built_in">UITableView</span> *)tableView￼cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line"><span class="comment">// 1.首先去缓存池中找可以循环利用的cell</span></span><br><span class="line"><span class="built_in">UITableViewCell</span> *cell = [tableview dequeueReusableCellWithIdentifier:ID];</span><br><span class="line"><span class="comment">// 2.如果缓存池中的cell为空，就创建一个cell</span></span><br><span class="line"><span class="keyword">if</span> (cell == <span class="literal">nil</span>) &#123;</span><br><span class="line">cell = [[<span class="built_in">UITableViewCell</span> alloc] initWithStyle:<span class="built_in">UITableViewCellStyleSubtitle</span> reuseIdentifier:ID];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 3.设置数据</span></span><br><span class="line">cell.textLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"第%ld行数据"</span>, indexPath.row];</span><br><span class="line"><span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="自定义cell"><a href="#自定义cell" class="headerlink" title="自定义cell"></a>自定义cell</h4><ul>
+<li>自定义等高cell</li>
+<li><strong>代码方式</strong></li>
+</ul>
+<ol>
+<li><p>新建一个继承自<code>UITableViewCell</code>的子类，如SLOwnCell</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLOwnCell</span> : <span class="title">UITableViewCell</span></span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在SLOwnCell.m文件中重写<code>-initWithStyle:reuseIdentifier:</code>方法，添加子控件，给控件做一些一次性的初始化（如使用自动布局可在此方法中为控件添加完整约束）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加所有子控件</span></span><br><span class="line">- (<span class="keyword">instancetype</span>)initWithStyle:(<span class="built_in">UITableViewCellStyle</span>)style reuseIdentifier:(<span class="built_in">NSString</span> *)reuseIdentifier</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">self</span> = [<span class="keyword">super</span> initWithStyle:style reuseIdentifier:reuseIdentifier]) &#123;</span><br><span class="line"><span class="comment">// code...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重写<code>-layoutSubviews</code>方法，一定要调用<code>[super layoutSubviews]</code>，在这个方法中计算和设置所有子控件的frame</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 布局内部子控件</span></span><br><span class="line">- (<span class="keyword">void</span>)layoutSubviews</span><br><span class="line">&#123;</span><br><span class="line">[<span class="keyword">super</span> layoutSubviews];</span><br><span class="line"><span class="comment">// code...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>SLOwnCell.h</code>中提供一个模型属性，如SLOwn模型</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@class</span> <span class="title">SLOwn</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLOwnCell</span> : <span class="title">UITableViewCell</span></span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) SLOwn *own;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>SLOwnCell.m</code>中重写模型属性的set方法，同时为cell中的子控件添加数据</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setOwn:(SLOwn *)own</span><br><span class="line">&#123;</span><br><span class="line">_own = own; <span class="comment">// 先要进行set方法的赋值</span></span><br><span class="line"><span class="comment">// 为子控件添加数据...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在viewController中注册cell，并给cell传递模型</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注册cell</span></span><br><span class="line">[<span class="keyword">self</span>.tableView registerClass:[SLOwnCell <span class="keyword">class</span>] forCellReuseIdentifier:ID];</span><br><span class="line"><span class="comment">// 传递模型</span></span><br><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">SLOwnCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];</span><br><span class="line">cell.own = <span class="keyword">self</span>.owns[indexPath.row];</span><br><span class="line"><span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><strong>xib方式</strong></li>
+</ul>
+<ol>
+<li><p>新建一个继承自<code>UITableViewCell</code>的子类，如SLOwnCell</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLOwnCell</span> : <span class="title">UITableViewCell</span></span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建一个xib文件，文件名最好和类名相同，如<code>SLOwnCell.xib</code></p>
+</li>
+</ol>
+<ul>
+<li>修改cell的class为SLOwnCell</li>
+<li>为cell绑定循环利用标识</li>
+<li>添加子控件，设置完整约束</li>
+<li>将子控件拖线到类扩展中<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLOwnCell</span> ()</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIImageView</span> *iconView;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *titleLabel;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *priceLabel;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>添加模型和重写set方法（与代码方式相同）</li>
+<li>在viewController中，需要注册xib文件<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注册xib文件</span></span><br><span class="line">[<span class="keyword">self</span>.tableView registerNib:[<span class="built_in">UINib</span> nibWithNibName:<span class="built_in">NSStringFromClass</span>([XMGTgCell <span class="keyword">class</span>]) bundle:<span class="literal">nil</span>] forCellReuseIdentifier:ID];</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><strong>storyboard方式</strong></li>
+<li>基本方法与xib相同，只是不需要注册</li>
+<li>在添加控件的时候，要加入到cell的contentView中</li>
+<li>自定义不等高cell</li>
+<li>主要通过代码的方式实现</li>
+<li>基本思路等高cell相同，主要介绍一些区别支出</li>
+</ul>
+<ol>
+<li><p>需要添加一个frame模型，如SLOwnFrame，</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@class</span> <span class="title">SLOwn</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLOwnFrame</span> : <span class="title">NSObject</span></span></span><br><span class="line"><span class="comment">// 头像的frame</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) <span class="built_in">CGRect</span> iconFrame;</span><br><span class="line"><span class="comment">// 标题的frame</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) <span class="built_in">CGRect</span> titleFrame;</span><br><span class="line"><span class="comment">// 价格的frame</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) <span class="built_in">CGRect</span> priceFrame;</span><br><span class="line"><span class="comment">// cell的高度</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) <span class="built_in">CGFloat</span> cellHeight;</span><br><span class="line"><span class="comment">// 数据模型</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) SLOwn *own;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在frame模型的<code>setOwn:</code>方法中，根据own模型中的数据计算各个控件的frame</p>
+</li>
+<li><p>在自定义的SLOwnCell文件中包含SLOwnFrame模型</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@class</span> <span class="title">SLOwnFrame</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLOwnCell</span> : <span class="title">UITableViewCell</span></span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) SLOwnFrame *ownFrame;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在重写<code>setOwnFrame:</code>方法的时候需要进行数据和frame的设置</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)setOwnFrame:(SLOwnFrame *)ownFrame</span><br><span class="line">&#123;</span><br><span class="line">_ownFrame = ownFrame;</span><br><span class="line">[<span class="keyword">self</span> setData];</span><br><span class="line">[<span class="keyword">self</span> setFrame];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)setData</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">// 设置子控件的数据</span></span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)setFrame &#123;</span><br><span class="line"><span class="comment">// 设置子控件的frame</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在viewController中字典转模型后，将own赋值给ownFrame，数组中存储的是<code>SLOwnFrame</code>模型</p>
+</li>
+<li>通过数据源的<code>tableView: heightForRowAtIndexPath:</code>方法得到每一行cell的高度<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">SLOwnFrame *oframe = <span class="keyword">self</span>.ownFrames[indexPath.row];</span><br><span class="line"><span class="keyword">return</span> oframe.cellHeight;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day5/" rel="next" title="my-ios-day5">
+                <i class="fa fa-chevron-left"></i> my-ios-day5
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day7/" rel="prev" title="my-ios-day7">
+                my-ios-day7 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day-06"><span class="nav-number">1.</span> <span class="nav-text">day 06</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#UITableView"><span class="nav-number">1.1.</span> <span class="nav-text">UITableView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据源"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">数据源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UITableViewCell"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">UITableViewCell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cell重用"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">cell重用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义cell"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">自定义cell</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

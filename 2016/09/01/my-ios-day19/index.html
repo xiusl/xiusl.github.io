@@ -1,0 +1,1113 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day19">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day19/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day19">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day19/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day19 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day19/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day19</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:12:15+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day19/" class="leancloud_visitors" data-flag-title="my-ios-day19">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<h1 id="Day-19"><a href="#Day-19" class="headerlink" title="Day 19"></a>Day 19</h1><h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
+<li>相关概念</li>
+<li>NSURLConnection</li>
+<li>数据解析</li>
+<li>NSURLConnection文件传输</li>
+<li>NSURLSession</li>
+<li>AFNetworking</li>
+</ul>
+<hr>
+<h4 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h4><ul>
+<li>基础</li>
+<li>客户端，手机所使用的app</li>
+<li>服务器，远程服务器(Linux系列，windows)</li>
+<li>请求，客户端向服务器索取数据的方式</li>
+<li>响应，服务器返回、客户端需要解析的数据</li>
+<li>统一资源定位符URL</li>
+<li>定位主机和资源</li>
+<li>格式（协议/主机地址/资源路径）</li>
+<li>协议：资源的查找方式和传输方式（HTTP、FTP…）</li>
+<li>主机地址：存放资源的服务器主机的IP地址、域名</li>
+<li>路径：资源在服务器主机中的位置</li>
+<li>常见协议</li>
+<li>file：本地计算机的资源，file://</li>
+<li>ftp：共享主机的资源，ftp://</li>
+<li>mailto：电子邮件地址，mailto:</li>
+<li>http：超文本传输协议，访问远程的网络资源，http://</li>
+<li>http协议</li>
+<li>简介</li>
+<li>超文本传输协议</li>
+<li>规定客户端和服务器之间数据传输格式</li>
+<li>让客户端和服务器有效的进行数据沟通</li>
+<li>请求通信过程</li>
+<li>请求<br>请求头 + 请求体(非必须)</li>
+<li>响应<br>响应头 + 响应体</li>
+<li>通信过程<br>客户端发送请求时，先把请求头和请求体（非必须）封装成一个请求对象<br>服务器端对请求进行响应，在响应信息中包含响应头和响应体，响应信息是对服务器端的描述，具体的信息放在响应体中传递给客户端</li>
+<li>常见状态码<br>200：请求成功<br>400：请求语法错误，服务器无法解析<br>404：资源路径不存在<br>500：服务器内部错误</li>
+<li>请求</li>
+<li>GET请求<br><a href="http://www.test.com/login?username=123&amp;pwd=234" target="_blank" rel="noopener">http://www.test.com/login?username=123&amp;pwd=234</a><br>请求的参数跟在URL的后面，以?隔开，使用&amp;连接<br>服务器对URL的长度有限制，所以对参数长度有限制，通常不超过1KB</li>
+<li>POST请求<br><a href="http://www.test.com/login" target="_blank" rel="noopener">http://www.test.com/login</a><br>请求的参数放在请求体里面，POST的数据量一般无限制，主要看服务器</li>
+<li>如何选择<br>如果有大量数据传输，上传、下载等，只能使用POST<br>GET中的参数过于暴露，设计敏感、机密需要用POST<br>增加、修改、删除数据，建议使用POST<br>只有在简单的查询数据，使用GET</li>
+<li>iOS中的请求</li>
+<li>系统原生</li>
+<li>NSURLConnection 03年的古老技术</li>
+<li>NSURLSession 13年iOS7之后推出，替代NSURLConnection</li>
+<li>CFNetwork 底层所依赖的技术，纯C</li>
+<li>第三方框架</li>
+<li>ASIHttpRequest 已不再维护</li>
+<li>AFNetworking 主流</li>
+</ul>
+<hr>
+<h4 id="NSURLConnection"><a href="#NSURLConnection" class="headerlink" title="NSURLConnection"></a>NSURLConnection</h4><ul>
+<li><p>同步请求GET-sync</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)syncG &#123;</span><br><span class="line"><span class="comment">// 确定URL</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/login?username=520it&amp;pwd=520it&amp;type=JSON"</span>];</span><br><span class="line"><span class="comment">// 封装请求</span></span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [[<span class="built_in">NSURLRequest</span> alloc] initWithURL:url];</span><br><span class="line"><span class="comment">// 声明响应</span></span><br><span class="line"><span class="built_in">NSURLResponse</span> *reponse = <span class="literal">nil</span>;</span><br><span class="line"><span class="comment">// 发送请求，接收数据</span></span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSURLConnection</span> sendSynchronousRequest:request returningResponse:&amp;reponse error:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 简单打印</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [[<span class="built_in">NSString</span> alloc] initWithData:data encoding:<span class="built_in">NSUTF8StringEncoding</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>异步请求GET-async</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)asyncG &#123;</span><br><span class="line"><span class="comment">// 确定URL</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/login?username=520it&amp;pwd=520it&amp;type=JSON"</span>];</span><br><span class="line"><span class="comment">// 封装请求</span></span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [[<span class="built_in">NSURLRequest</span> alloc] initWithURL:url];</span><br><span class="line"><span class="comment">// 发送请求</span></span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendAsynchronousRequest:request queue:[<span class="built_in">NSOperationQueue</span> mainQueue] completionHandler:^(<span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSError</span> * _Nullable connectionError) &#123;</span><br><span class="line"><span class="comment">// 简单打印数据</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [[<span class="built_in">NSString</span> alloc] initWithData:data encoding:<span class="built_in">NSUTF8StringEncoding</span>]);</span><br><span class="line"><span class="comment">// 响应头信息</span></span><br><span class="line"><span class="built_in">NSHTTPURLResponse</span> *re = (<span class="built_in">NSHTTPURLResponse</span> *)response;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, re.statusCode);</span><br><span class="line">&#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>异步请求GET-delegate</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)delegateG &#123;</span><br><span class="line"><span class="comment">// 确定URL</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/video?type=JSON"</span>];</span><br><span class="line"><span class="comment">// 封装请求</span></span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [[<span class="built_in">NSURLRequest</span> alloc] initWithURL:url];</span><br><span class="line"><span class="comment">// 设置代理</span></span><br><span class="line"><span class="comment">// [NSURLConnection connectionWithRequest:request delegate:self];</span></span><br><span class="line"><span class="comment">// [[NSURLConnection alloc] initWithRequest:request delegate:self];</span></span><br><span class="line"><span class="built_in">NSURLConnection</span> *con = [[<span class="built_in">NSURLConnection</span> alloc] initWithRequest:request delegate:<span class="keyword">self</span> startImmediately:<span class="literal">NO</span>];</span><br><span class="line"><span class="comment">// 可以特定时间开始发送请求</span></span><br><span class="line">[con start];</span><br><span class="line">[con cancel];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#pragma mark - NSURLConnectionDataDelegate</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 接收服务器响应时调用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didReceiveResponse:(<span class="built_in">NSURLResponse</span> *)response &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 接收到服务器返回数据时调用</span></span><br><span class="line"><span class="comment">* 可能会带哦与功能多次</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didReceiveData:(<span class="built_in">NSData</span> *)data &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line">[<span class="keyword">self</span>.allData appendData:data];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 请求失败会调用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didFailWithError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 请求结束时会调用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)connectionDidFinishLoading:(<span class="built_in">NSURLConnection</span> *)connection &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [[<span class="built_in">NSString</span> alloc] initWithData:<span class="keyword">self</span>.allData encoding:<span class="built_in">NSUTF8StringEncoding</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POST请求</p>
+</li>
+<li>步骤</li>
+</ul>
+<ol>
+<li>确定URL</li>
+<li>创建可变的请求对象</li>
+<li>修改请求对象的方法为POST</li>
+<li>设置请求体</li>
+<li>发送异步请求</li>
+<li>设置超时，处理错误信息，设置请求头（可选）</li>
+</ol>
+<ul>
+<li>代码<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)asyncP &#123;</span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/login"</span>];</span><br><span class="line"><span class="built_in">NSMutableURLRequest</span> *request = [[<span class="built_in">NSMutableURLRequest</span> alloc] initWithURL:url];</span><br><span class="line"><span class="comment">// 修改请求类型，POST必须大写</span></span><br><span class="line">request.HTTPMethod = <span class="string">@"POST"</span>;</span><br><span class="line"><span class="comment">// 设置请求体信息</span></span><br><span class="line"><span class="built_in">NSData</span> *bodyData = [<span class="string">@"username=52it&amp;pwd=520it&amp;type=JSON"</span> dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</span><br><span class="line">request.HTTPBody = bodyData;</span><br><span class="line"><span class="comment">// 发送请求</span></span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendAsynchronousRequest:request queue:[<span class="built_in">NSOperationQueue</span> mainQueue] completionHandler:^(<span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSError</span> * _Nullable connectionError) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [[<span class="built_in">NSString</span> alloc] initWithData:data encoding:<span class="built_in">NSUTF8StringEncoding</span>]);</span><br><span class="line">&#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="数据解析"><a href="#数据解析" class="headerlink" title="数据解析"></a>数据解析</h4><ul>
+<li>常用数据格式</li>
+<li>JSON：轻量级，比较流行</li>
+<li>XML：可拓展标记语言，包含声明、元素和属性</li>
+<li>JSON解析</li>
+<li>NSJSONSerialization</li>
+<li><p>JSON–&gt;OC （反序列化）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)JOSNToOC &#123;</span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/login?username=123&amp;pwd=123&amp;type=JSON"</span>];</span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];</span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendAsynchronousRequest:request queue:[<span class="built_in">NSOperationQueue</span> mainQueue] completionHandler:^(<span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSError</span> * _Nullable connectionError) &#123;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：要解析的JSON数据，NSData，二进制数据</span></span><br><span class="line"><span class="comment">第二个参数：解析JSON的配置参数（可选）</span></span><br><span class="line"><span class="comment">NSJSONReadingMutableContainers 解析出来的字典和数组是可变的</span></span><br><span class="line"><span class="comment">NSJSONReadingMutableLeaves 解析出来的对象中的字符串是可变的 iOS7以后有问题，不用</span></span><br><span class="line"><span class="comment">NSJSONReadingAllowFragments 被解析的JSON数据如果既不是字典也不是数组， 那么就必须使用这个</span></span><br><span class="line"><span class="comment">kNilOptions == 0 哪个也不选，高效</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">NSDictionary</span> *dict = [<span class="built_in">NSJSONSerialization</span> JSONObjectWithData:data options:kNilOptions error:<span class="literal">nil</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,dict);</span><br><span class="line">&#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OC–&gt;JSON （序列化）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">OC--&gt;JSON有一定限制</span></span><br><span class="line"><span class="comment">使用+ (BOOL)isValidJSONObject:(id)obj;方法判断当前OC对象能否转换为JSON数据</span></span><br><span class="line"><span class="comment">1. obj是NSArray或NSDictionary以及他们的子类</span></span><br><span class="line"><span class="comment">2. obj包含的所有对象是NSString、NSNumber、NSArray、NSDictionary、NSNull</span></span><br><span class="line"><span class="comment">3. 字典中的所有key必须是NSString</span></span><br><span class="line"><span class="comment">4. NSNumber的对象不能是Nan或无穷大</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">// 需要序列化的数据</span></span><br><span class="line"><span class="built_in">NSDictionary</span> *dictM = @&#123;</span><br><span class="line"><span class="string">@"name"</span>:<span class="string">@"sleen"</span>,</span><br><span class="line"><span class="string">@"age"</span>:@<span class="number">18</span>,</span><br><span class="line"><span class="string">@"height"</span>:@<span class="number">1.80</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：需要序列化的数据</span></span><br><span class="line"><span class="comment">第二个参数：NSJSONWritingPrettyPrinted对转换之后的JSON对象进行排版，无意义</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSJSONSerialization</span> dataWithJSONObject:dictM options:<span class="built_in">NSJSONWritingPrettyPrinted</span> error:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 查看是否序列化</span></span><br><span class="line"><span class="built_in">NSString</span> *str = [[<span class="built_in">NSString</span> alloc] initWithData:data encoding:<span class="built_in">NSUTF8StringEncoding</span>];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,str);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JSON数据与OC对象对应<br>{} –&gt; NADictionary<br>[] –&gt; NSArray<br>“” –&gt; NSString<br>10/10.1 –&gt; NSNumber<br>true/false –&gt; NSNumber<br>null –&gt; NSNull</p>
+</li>
+<li>XML解析</li>
+<li>两种方式</li>
+</ul>
+<ol>
+<li>SAX：从根节点开始，按顺序一个元素一个元素的向下解析</li>
+<li>DOM：一次性将整个xml文档加载到内存中，使用与较小文件</li>
+</ol>
+<ul>
+<li>工具</li>
+</ul>
+<ol>
+<li>NSXMLParser：苹果原生，采用SAX，使用简单</li>
+<li>libxml2：纯C，默认在iOS SDK中，同时支持SAX和DOM</li>
+<li>GDataXML：Google的基于libxml2，采用DOM方式</li>
+</ol>
+<ul>
+<li>NSXMLParser<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个解析器</span></span><br><span class="line"><span class="built_in">NSXMLParser</span> *parser = [[<span class="built_in">NSXMLParser</span> alloc]initWithData:data];</span><br><span class="line"><span class="comment">// 设置代理</span></span><br><span class="line">parser.delegate = <span class="keyword">self</span>;</span><br><span class="line"><span class="comment">// 开始解析</span></span><br><span class="line">[parser parse];</span><br><span class="line"><span class="comment">// 开始解析XML文档</span></span><br><span class="line">- (<span class="keyword">void</span>)parserDidStartDocument:(<span class="keyword">nonnull</span> <span class="built_in">NSXMLParser</span> *)parser &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 开始解析XML中某个元素的时候调用，比如&lt;video&gt;</span></span><br><span class="line">- (<span class="keyword">void</span>)parser:(<span class="keyword">nonnull</span> <span class="built_in">NSXMLParser</span> *)parser didStartElement:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)elementName namespaceURI:(<span class="keyword">nullable</span> <span class="built_in">NSString</span> *)namespaceURI qualifiedName:(<span class="keyword">nullable</span> <span class="built_in">NSString</span> *)qName attributes:(<span class="keyword">nonnull</span> <span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSString</span> *,<span class="built_in">NSString</span> *&gt; *)attributeDict</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span> ([elementName isEqualToString:<span class="string">@"videos"</span>]) &#123;</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 字典转模型</span></span><br><span class="line">SLVideo *video = [SLVideo objectWithKeyValues:attributeDict];</span><br><span class="line">[<span class="keyword">self</span>.videos addObject:video];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当某个元素解析完成之后调用，比如&lt;/video&gt;</span></span><br><span class="line">- (<span class="keyword">void</span>)parser:(<span class="keyword">nonnull</span> <span class="built_in">NSXMLParser</span> *)parser didEndElement:(<span class="keyword">nonnull</span> <span class="built_in">NSString</span> *)elementName namespaceURI:(<span class="keyword">nullable</span> <span class="built_in">NSString</span> *)namespaceURI qualifiedName:(<span class="keyword">nullable</span> <span class="built_in">NSString</span> *)qName &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// XML文档解析结束</span></span><br><span class="line">- (<span class="keyword">void</span>)parserDidEndDocument:(<span class="keyword">nonnull</span> <span class="built_in">NSXMLParser</span> *)parser &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="文件传输"><a href="#文件传输" class="headerlink" title="文件传输"></a>文件传输</h4><ul>
+<li>小文件下载</li>
+<li><p>直接下载，无多线程</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 确定资源路径</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/resources/images/minion_01.png"</span>];</span><br><span class="line"><span class="comment">// 根据URL加载对应的资源</span></span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:url];</span><br><span class="line"><span class="comment">// 转换并显示数据</span></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line"><span class="keyword">self</span>.imageView.image = image;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NSURLConnection - sendAsync</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 确定请求路径</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/resources/images/minion_01.png"</span>];</span><br><span class="line"><span class="comment">// 创建请求对象</span></span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];</span><br><span class="line"><span class="comment">// 使用NSURLConnection发送一个异步请求</span></span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendAsynchronousRequest:request queue:[<span class="built_in">NSOperationQueue</span> mainQueue] completionHandler:^(<span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSError</span> * _Nullable connectionError) &#123;</span><br><span class="line"><span class="comment">// 设置数据</span></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line"><span class="keyword">self</span>.imageView.image = image;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NSURLConnection - delegate</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)delegateDownload &#123;</span><br><span class="line"><span class="comment">// 确定请求路径</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"</span>];</span><br><span class="line"><span class="comment">//2.创建请求对象</span></span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];</span><br><span class="line"><span class="comment">//3.使用NSURLConnection设置代理并发送异步请求</span></span><br><span class="line">[<span class="built_in">NSURLConnection</span> connectionWithRequest:request delegate:<span class="keyword">self</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#pragma mark - NSURLConnectionDataDelegate</span></span><br><span class="line"><span class="comment">// 当接收到服务器响应的时候调用，该方法只会调用一次</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didReceiveResponse:(<span class="built_in">NSURLResponse</span> *)response &#123;</span><br><span class="line"><span class="comment">// 创建一个容器，用来接收服务器返回的数据</span></span><br><span class="line"><span class="keyword">self</span>.fileData = [<span class="built_in">NSMutableData</span> data];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获得当前要下载文件的总大小（通过响应头得到）</span></span><br><span class="line"><span class="built_in">NSHTTPURLResponse</span> *res = (<span class="built_in">NSHTTPURLResponse</span> *)response;</span><br><span class="line"><span class="keyword">self</span>.totalLength = res.expectedContentLength;</span><br><span class="line"><span class="comment">// 拿到服务器端推荐的文件名称</span></span><br><span class="line"><span class="keyword">self</span>.fileName = res.suggestedFilename;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当接收到服务器返回的数据时会调用</span></span><br><span class="line"><span class="comment">// 该方法可能会被调用多次</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didReceiveData:(<span class="built_in">NSData</span> *)data &#123;</span><br><span class="line"><span class="comment">// 拼接每次下载的数据</span></span><br><span class="line">[<span class="keyword">self</span>.fileData appendData:data];</span><br><span class="line"><span class="comment">// 计算当前下载进度并刷新UI显示</span></span><br><span class="line"><span class="keyword">self</span>.currentLength = <span class="keyword">self</span>.fileData.length;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%f"</span>,<span class="number">1.0</span>* <span class="keyword">self</span>.currentLength/<span class="keyword">self</span>.totalLength);</span><br><span class="line"><span class="keyword">self</span>.progressView.progress = <span class="number">1.0</span>* <span class="keyword">self</span>.currentLength/<span class="keyword">self</span>.totalLength;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//当网络请求结束之后调用</span></span><br><span class="line">- (<span class="keyword">void</span>)connectionDidFinishLoading:(<span class="built_in">NSURLConnection</span> *)connection &#123;</span><br><span class="line"><span class="comment">// 文件下载完毕把接受到的文件数据写入到沙盒中保存</span></span><br><span class="line"><span class="comment">// 确定要保存文件的全路径</span></span><br><span class="line"><span class="comment">// caches文件夹路径</span></span><br><span class="line"><span class="built_in">NSString</span> *caches = [<span class="built_in">NSSearchPathForDirectoriesInDomains</span>(<span class="built_in">NSCachesDirectory</span>, <span class="built_in">NSUserDomainMask</span>, <span class="literal">YES</span>) lastObject];</span><br><span class="line"><span class="built_in">NSString</span> *fullPath = [caches stringByAppendingPathComponent:<span class="keyword">self</span>.fileName];</span><br><span class="line"><span class="comment">// 写数据到文件中</span></span><br><span class="line">[<span class="keyword">self</span>.fileData writeToFile:fullPath atomically:<span class="literal">YES</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 当请求失败的时候调用该方法</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didFailWithError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>,__func__);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>大文件下载</p>
+</li>
+<li><p>文件句柄下载</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark - NSURLConnectionDataDelegate</span></span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didReceiveResponse:(<span class="built_in">NSURLResponse</span> *)response &#123;</span><br><span class="line"><span class="comment">// 当已经下载过，就不在创建文件</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.currentSize &gt; <span class="number">0</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 获取文件总大小</span></span><br><span class="line"><span class="built_in">NSHTTPURLResponse</span> *res = (<span class="built_in">NSHTTPURLResponse</span> *)response;</span><br><span class="line"><span class="keyword">self</span>.totalSize = res.expectedContentLength;</span><br><span class="line"><span class="comment">// 创建一个新的文件</span></span><br><span class="line"><span class="comment">// 得到文件管理者</span></span><br><span class="line"><span class="built_in">NSFileManager</span> *man = [<span class="built_in">NSFileManager</span> defaultManager];</span><br><span class="line"><span class="comment">// 搜索cache路径</span></span><br><span class="line"><span class="built_in">NSString</span> *caches = [<span class="built_in">NSSearchPathForDirectoriesInDomains</span>(<span class="built_in">NSCachesDirectory</span>, <span class="built_in">NSUserDomainMask</span>, <span class="literal">YES</span>) lastObject];</span><br><span class="line"><span class="comment">// 拼接全路径</span></span><br><span class="line"><span class="built_in">NSString</span> *path = [caches stringByAppendingPathComponent:res.suggestedFilename];</span><br><span class="line"><span class="keyword">self</span>.fullPath = path;</span><br><span class="line"><span class="comment">// 创建文件</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 第一个参数：文件路径</span></span><br><span class="line"><span class="comment">* 第二个参数：文件内容</span></span><br><span class="line"><span class="comment">* 第三个参数：文件属性</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">[man createFileAtPath:path contents:<span class="literal">nil</span> attributes:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didReceiveData:(<span class="built_in">NSData</span> *)data &#123;</span><br><span class="line"><span class="comment">// 文件句柄</span></span><br><span class="line"><span class="keyword">self</span>.handle = [<span class="built_in">NSFileHandle</span> fileHandleForWritingAtPath:<span class="keyword">self</span>.fullPath];</span><br><span class="line"><span class="comment">// 移动句柄</span></span><br><span class="line">[<span class="keyword">self</span>.handle seekToEndOfFile];</span><br><span class="line"><span class="comment">// 追加数据</span></span><br><span class="line">[<span class="keyword">self</span>.handle writeData:data];</span><br><span class="line"><span class="comment">// 得到已下载大小</span></span><br><span class="line"><span class="keyword">self</span>.currentSize += data.length;</span><br><span class="line"><span class="keyword">self</span>.progressV.progress = <span class="number">1.0</span> * <span class="keyword">self</span>.currentSize / <span class="keyword">self</span>.totalSize;</span><br><span class="line"><span class="keyword">self</span>.progressL.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%.2f"</span>, <span class="keyword">self</span>.progressV.progress];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%f"</span>, <span class="keyword">self</span>.progressV.progress);</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)connection:(<span class="built_in">NSURLConnection</span> *)connection didFailWithError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)connectionDidFinishLoading:(<span class="built_in">NSURLConnection</span> *)connection &#123;</span><br><span class="line">[<span class="keyword">self</span>.handle closeFile];</span><br><span class="line"><span class="keyword">self</span>.handle = <span class="literal">nil</span>;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s"</span>, __func__);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="keyword">self</span>.fullPath);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输出流下载</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个数据输出流</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 第一个参数：二进制的流数据要写入到哪里</span></span><br><span class="line"><span class="comment">* 第二个参数：采用什么样的方式写入流数据，如果YES则表示追加，如果是NO则表示覆盖</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">NSOutputStream</span> *stream = [<span class="built_in">NSOutputStream</span> outputStreamToFileAtPath:fullPath append:<span class="literal">YES</span>];</span><br><span class="line"><span class="comment">// 只要调用了该方法就会往文件中写数据</span></span><br><span class="line"><span class="comment">// 如果文件不存在，那么会自动的创建一个</span></span><br><span class="line">[stream open];</span><br><span class="line"><span class="keyword">self</span>.stream = stream;</span><br><span class="line"><span class="comment">// 当接收到数据的时候写数据</span></span><br><span class="line"><span class="comment">// 使用输出流写数据</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：要写入的二进制数据</span></span><br><span class="line"><span class="comment">第二个参数：要写入的数据的大小</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">[<span class="keyword">self</span>.stream write:data.bytes maxLength:data.length];</span><br><span class="line"><span class="comment">// 当文件下载完毕的时候关闭输出流</span></span><br><span class="line"><span class="comment">// 关闭输出流</span></span><br><span class="line">[<span class="keyword">self</span>.stream close];</span><br><span class="line"><span class="keyword">self</span>.stream = <span class="literal">nil</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件上传</p>
+</li>
+<li>步骤</li>
+</ul>
+<ol>
+<li>确定请求的URL</li>
+<li>创建可变的请求对象</li>
+<li>修改请求方式为POST</li>
+<li>设置请求头，通知服务器将要上传文件Content-Type</li>
+<li>设置请求体（严格按确定格式拼接数据）</li>
+<li>发送异步请求上传文件</li>
+<li>解析服务器返回数据</li>
+</ol>
+<ul>
+<li><p>请求体数据格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">分隔符：----WebKitFormBoundaryhBDKBUvFdCAgsr5b</span><br><span class="line">格式：</span><br><span class="line">--分隔符</span><br><span class="line">Content-Dispostion:参数</span><br><span class="line">Content-Type:参数</span><br><span class="line">空行</span><br><span class="line">文件参数</span><br><span class="line">--分隔符</span><br><span class="line">Content-Disposition:参数</span><br><span class="line">空行</span><br><span class="line">非文件的二进制数据</span><br><span class="line">--分隔符--</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define Kboundary @“----WebKitFormBoundaryhBDKBUvFdCAgsr5b”</span></span><br><span class="line">- (<span class="keyword">void</span>)upload</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">// 1.确定请求路径</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/upload"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.创建一个可变的请求对象</span></span><br><span class="line"><span class="built_in">NSMutableURLRequest</span> *request = [<span class="built_in">NSMutableURLRequest</span> requestWithURL:url];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.设置请求方式为POST</span></span><br><span class="line">request.HTTPMethod = <span class="string">@"POST"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.设置请求头</span></span><br><span class="line"><span class="built_in">NSString</span> *filed = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"multipart/form-data; boundary=%@"</span>,Kboundary];</span><br><span class="line">[request setValue:filed forHTTPHeaderField:<span class="string">@"Content-Type"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5.设置请求体</span></span><br><span class="line"><span class="built_in">NSMutableData</span> *data = [<span class="built_in">NSMutableData</span> data];</span><br><span class="line"><span class="comment">// 5.1 文件参数</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">--分隔符</span></span><br><span class="line"><span class="comment">Content-Disposition:参数</span></span><br><span class="line"><span class="comment">Content-Type:参数</span></span><br><span class="line"><span class="comment">空行</span></span><br><span class="line"><span class="comment">文件参数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">[data appendData:[[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"--%@"</span>,Kboundary] dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:[<span class="string">@"Content-Disposition: form-data; name=\"file\"; filename=\"test.png\""</span> dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:[<span class="string">@"Content-Type: image/png"</span> dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line"></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"test"</span>];</span><br><span class="line"><span class="built_in">NSData</span> *imageData = <span class="built_in">UIImagePNGRepresentation</span>(image);</span><br><span class="line">[data appendData:imageData];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line"><span class="comment">// 5.2 非文件参数</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">--分隔符</span></span><br><span class="line"><span class="comment">Content-Disposition:参数</span></span><br><span class="line"><span class="comment">空行</span></span><br><span class="line"><span class="comment">非文件参数的二进制数据</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">[data appendData:[[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"--%@"</span>,Kboundary] dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:[<span class="string">@"Content-Disposition: form-data; name=\"username\""</span> dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSData</span> *nameData = [<span class="string">@"wendingding"</span> dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</span><br><span class="line">[data appendData:nameData];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5.3 结尾标识</span></span><br><span class="line"><span class="comment">// --分隔符--</span></span><br><span class="line">[data appendData:[[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"--%@--"</span>,Kboundary] dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>]];</span><br><span class="line">[data appendData:KnewLine];</span><br><span class="line"></span><br><span class="line">request.HTTPBody = data;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 6.发送请求</span></span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendAsynchronousRequest:request queue:[<span class="built_in">NSOperationQueue</span> mainQueue] completionHandler:^(<span class="built_in">NSURLResponse</span> * __<span class="keyword">nullable</span> response, <span class="built_in">NSData</span> * __<span class="keyword">nullable</span> data, <span class="built_in">NSError</span> * __<span class="keyword">nullable</span> connectionError) &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 7.解析服务器返回的数据</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[<span class="built_in">NSJSONSerialization</span> JSONObjectWithData:data options:kNilOptions error:<span class="literal">nil</span>]);</span><br><span class="line">&#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取文件的MIMEType类型</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSString</span> *)getMIMEType</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">NSString</span> *filePath = <span class="string">@"/Users/xiuxiu/Desktop/sleen.txt"</span>;</span><br><span class="line"><span class="comment">// 同步请求获取</span></span><br><span class="line"><span class="built_in">NSURLResponse</span> *response = <span class="literal">nil</span>;</span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendSynchronousRequest:[<span class="built_in">NSURLRequest</span> requestWithURL:[<span class="built_in">NSURL</span> fileURLWithPath:filePath]] returningResponse:&amp;response error:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 异步请求获取</span></span><br><span class="line">[<span class="built_in">NSURLConnection</span> sendAsynchronousRequest:[<span class="built_in">NSURLRequest</span> requestWithURL:[<span class="built_in">NSURL</span> fileURLWithPath:<span class="string">@"/Users/xiuxiu/Desktop/sleen.png"</span>]] queue:[<span class="built_in">NSOperationQueue</span> mainQueue] completionHandler:^(<span class="built_in">NSURLResponse</span> * __<span class="keyword">nullable</span> response, <span class="built_in">NSData</span> * __<span class="keyword">nullable</span> data, <span class="built_in">NSError</span> * __<span class="keyword">nullable</span> connectionError) &#123;</span><br><span class="line"><span class="comment">// response.MIMEType</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,response.MIMEType);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="keyword">return</span> response.MIMEType;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="NSURLSession"><a href="#NSURLSession" class="headerlink" title="NSURLSession"></a>NSURLSession</h4><ul>
+<li>使用</li>
+<li>通过NSURLSession创建task，执行task</li>
+<li>NSURLSessionTask</li>
+<li>本身是一个抽象类，使用三个子类</li>
+<li>NSURLSessionDataTask</li>
+<li>NSURLSessionUploadTask</li>
+<li>NSURLSessionDownloadTask</li>
+<li>发送请求</li>
+<li><p>GET请求</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// block方式</span></span><br><span class="line">- (<span class="keyword">void</span>)get &#123;</span><br><span class="line"><span class="comment">// 创建session，获得单例/自定义</span></span><br><span class="line"><span class="built_in">NSURLSession</span> *session = [<span class="built_in">NSURLSession</span> sharedSession];</span><br><span class="line"><span class="comment">// 创建请求对象</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@""</span>];</span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];</span><br><span class="line"><span class="comment">// 根据session创建task</span></span><br><span class="line"><span class="built_in">NSURLSessionDataTask</span> *task = [session dataTaskWithRequest:request completionHandler:^(<span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line"><span class="comment">// 解析数据</span></span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// GET请求可以直接使用url创建</span></span><br><span class="line"><span class="comment">// NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) &#123;</span></span><br><span class="line"><span class="comment">// // 解析数据</span></span><br><span class="line"><span class="comment">// &#125;];</span></span><br><span class="line"><span class="comment">// 执行task</span></span><br><span class="line">[task resume];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>POST请求</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)post &#123;</span><br><span class="line"><span class="comment">// 创建session，获得单例/自定义</span></span><br><span class="line"><span class="built_in">NSURLSession</span> *session = [<span class="built_in">NSURLSession</span> sharedSession];</span><br><span class="line"><span class="comment">// 创建请求对象</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/login"</span>];</span><br><span class="line"><span class="built_in">NSMutableURLRequest</span> *request = [<span class="built_in">NSMutableURLRequest</span> requestWithURL:url];</span><br><span class="line"><span class="comment">// 设置请求</span></span><br><span class="line">request.HTTPMethod = <span class="string">@"POST"</span>;</span><br><span class="line">request.HTTPBody = [<span class="string">@"username=123&amp;pwd=123&amp;type=JSON"</span> dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</span><br><span class="line"><span class="comment">// 根据session创建task</span></span><br><span class="line"><span class="built_in">NSURLSessionDataTask</span> *task = [session dataTaskWithRequest:request completionHandler:^(<span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line"><span class="comment">// 解析数据</span></span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// 执行task</span></span><br><span class="line">[task resume];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件传输</p>
+</li>
+<li><p>文件下载</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)download &#123;</span><br><span class="line"><span class="comment">// 代理方式需要使用自定义的session</span></span><br><span class="line"><span class="built_in">NSURLSession</span> *session = [<span class="built_in">NSURLSession</span> sessionWithConfiguration:[<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration] delegate:<span class="keyword">self</span> delegateQueue:[<span class="built_in">NSOperationQueue</span> mainQueue]];</span><br><span class="line"><span class="comment">// 创建请求对象</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@""</span>];</span><br><span class="line"><span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];</span><br><span class="line"><span class="comment">// 根据session创建task</span></span><br><span class="line"><span class="built_in">NSURLSessionDataTask</span> *task = [session dataTaskWithRequest:request];</span><br><span class="line"><span class="comment">// 执行task</span></span><br><span class="line">[task resume];</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#pragma mark - NSURLSessionDataDelegate</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收到服务器响应时调用</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* @param session 发送请求的session对象</span></span><br><span class="line"><span class="comment">* @param dataTask 创建的task任务</span></span><br><span class="line"><span class="comment">* @param response 响应信息（响应头）</span></span><br><span class="line"><span class="comment">* @param completionHandler 回调，是否要接收数据</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session dataTask:(<span class="built_in">NSURLSessionDataTask</span> *)dataTask didReceiveResponse:(<span class="built_in">NSURLResponse</span> *)response completionHandler:(<span class="keyword">void</span> (^)(<span class="built_in">NSURLSessionResponseDisposition</span>))completionHandler &#123;</span><br><span class="line"><span class="comment">// 默认情况下，当接收到服务器响应之后，服务器认为客户端不需要接收数据，所以后面的代理方法不会调用</span></span><br><span class="line"><span class="comment">// 如果需要继续接收服务器返回的数据，那么需要调用block，并传入对应的策略</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">NSURLSessionResponseCancel = 0, 取消任务</span></span><br><span class="line"><span class="comment">NSURLSessionResponseAllow = 1, 接收任务</span></span><br><span class="line"><span class="comment">NSURLSessionResponseBecomeDownload = 2, 转变成下载</span></span><br><span class="line"><span class="comment">NSURLSessionResponseBecomeStream NS_ENUM_AVAILABLE(10_11, 9_0) = 3, 转变成流</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">completionHandler(<span class="built_in">NSURLSessionResponseAllow</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 收到服务器返回数据是调用</span></span><br><span class="line"><span class="comment">* 方法会被调用多次</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session dataTask:(<span class="built_in">NSURLSessionDataTask</span> *)dataTask didReceiveData:(<span class="built_in">NSData</span> *)data &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 请求完成后会调用</span></span><br><span class="line"><span class="comment">* 成功和失败都会调用，失败后error会保存失败信息</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session task:(<span class="built_in">NSURLSessionTask</span> *)task didCompleteWithError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>大文件下载（离线缓存）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark - lazy</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)fullPath &#123;</span><br><span class="line"><span class="keyword">if</span> (_fullPath == <span class="literal">nil</span>) &#123;</span><br><span class="line"><span class="built_in">NSString</span> *path = [<span class="built_in">NSSearchPathForDirectoriesInDomains</span>(<span class="built_in">NSCachesDirectory</span>, <span class="built_in">NSUserDomainMask</span>, <span class="literal">YES</span>) lastObject];</span><br><span class="line">_fullPath = [path stringByAppendingPathComponent:Filename];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _fullPath;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">NSURLSession</span> *)session &#123;</span><br><span class="line"><span class="keyword">if</span> (!_session) &#123;</span><br><span class="line"><span class="comment">// 代理方式需要使用自定义的session</span></span><br><span class="line">_session = [<span class="built_in">NSURLSession</span> sessionWithConfiguration:[<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration] delegate:<span class="keyword">self</span> delegateQueue:[<span class="built_in">NSOperationQueue</span> mainQueue]];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _session;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">NSURLSessionDataTask</span> *)task &#123;</span><br><span class="line"><span class="keyword">if</span> (!_task) &#123;</span><br><span class="line"><span class="comment">// 创建请求对象</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/resources/videos/minion_01.mp4"</span>];</span><br><span class="line"><span class="built_in">NSMutableURLRequest</span> *request = [<span class="built_in">NSMutableURLRequest</span> requestWithURL:url];</span><br><span class="line"><span class="comment">// 设置请求头</span></span><br><span class="line"><span class="keyword">self</span>.currentSize = [<span class="keyword">self</span> oldFileSize];</span><br><span class="line"><span class="built_in">NSString</span> *range = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"bytes=%zd-"</span>, <span class="keyword">self</span>.currentSize];</span><br><span class="line">[request setValue:range forHTTPHeaderField:<span class="string">@"range"</span>];</span><br><span class="line"><span class="comment">// 创建人物</span></span><br><span class="line">_task = [<span class="keyword">self</span>.session dataTaskWithRequest:request];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _task;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#pragma mark - other</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 获取本地文件大小</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)oldFileSize &#123;</span><br><span class="line"><span class="built_in">NSDictionary</span> *fileInfo = [[<span class="built_in">NSFileManager</span> defaultManager] attributesOfItemAtPath:<span class="keyword">self</span>.fullPath error:<span class="literal">nil</span>];</span><br><span class="line"><span class="keyword">return</span> [fileInfo[<span class="string">@"NSFileSize"</span>] integerValue];</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#pragma mark - NSURLSessionDataDelegate</span></span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session dataTask:(<span class="built_in">NSURLSessionDataTask</span> *)dataTask didReceiveResponse:(<span class="built_in">NSURLResponse</span> *)response completionHandler:(<span class="keyword">void</span> (^)(<span class="built_in">NSURLSessionResponseDisposition</span>))completionHandler &#123;</span><br><span class="line"><span class="keyword">self</span>.totalSize = response.expectedContentLength + <span class="keyword">self</span>.currentSize;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.currentSize == <span class="number">0</span>) &#123;</span><br><span class="line">[[<span class="built_in">NSFileManager</span> defaultManager] createFileAtPath:<span class="keyword">self</span>.fullPath contents:<span class="literal">nil</span> attributes:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">self</span>.handle = [<span class="built_in">NSFileHandle</span> fileHandleForWritingAtPath:<span class="keyword">self</span>.fullPath];</span><br><span class="line">completionHandler(<span class="built_in">NSURLSessionResponseAllow</span>);</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session dataTask:(<span class="built_in">NSURLSessionDataTask</span> *)dataTask didReceiveData:(<span class="built_in">NSData</span> *)data &#123;</span><br><span class="line">[<span class="keyword">self</span>.handle seekToEndOfFile];</span><br><span class="line">[<span class="keyword">self</span>.handle writeData:data];</span><br><span class="line"><span class="keyword">self</span>.currentSize += data.length;</span><br><span class="line"><span class="keyword">self</span>.progressV.progress = <span class="number">1.0</span> * <span class="keyword">self</span>.currentSize / <span class="keyword">self</span>.totalSize;</span><br><span class="line"><span class="keyword">self</span>.progressL.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%.2f"</span>, <span class="keyword">self</span>.progressV.progress];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session task:(<span class="built_in">NSURLSessionTask</span> *)task didCompleteWithError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line">[<span class="keyword">self</span>.handle closeFile];</span><br><span class="line"><span class="keyword">self</span>.handle = <span class="literal">nil</span>;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"didCompleteWithError%@"</span>, error);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, <span class="keyword">self</span>.fullPath);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件上传</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)upload &#123;</span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/upload"</span>];</span><br><span class="line"><span class="built_in">NSMutableURLRequest</span> *request = [<span class="built_in">NSMutableURLRequest</span> requestWithURL:url];</span><br><span class="line">request.HTTPMethod = <span class="string">@"POST"</span>;</span><br><span class="line">[request setValue:[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"multipart/form-data;boundary=%@"</span>, Kboundary] forHTTPHeaderField:<span class="string">@"Content-Type"</span>];</span><br><span class="line"><span class="built_in">NSURLSession</span> *session = [<span class="built_in">NSURLSession</span> sessionWithConfiguration:[<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration] delegate:<span class="keyword">self</span> delegateQueue:[<span class="built_in">NSOperationQueue</span> mainQueue]];</span><br><span class="line"><span class="built_in">NSURLSessionUploadTask</span> *task = [session uploadTaskWithRequest:request fromData:[<span class="keyword">self</span> getBodyData] completionHandler:^(<span class="built_in">NSData</span> * _Nullable data, <span class="built_in">NSURLResponse</span> * _Nullable response, <span class="built_in">NSError</span> * _Nullable error) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[[<span class="built_in">NSString</span> alloc]initWithData:data encoding:<span class="built_in">NSUTF8StringEncoding</span>]);</span><br><span class="line">&#125;];</span><br><span class="line">[task resume];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">NSData</span> *)getBodyData &#123;</span><br><span class="line"><span class="comment">// 拼接数据</span></span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)URLSession:(<span class="built_in">NSURLSession</span> *)session task:(<span class="built_in">NSURLSessionTask</span> *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%f"</span>,<span class="number">1.0</span> *totalBytesSent / totalBytesExpectedToSend);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="AFNetworking"><a href="#AFNetworking" class="headerlink" title="AFNetworking"></a>AFNetworking</h4>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day18/" rel="next" title="my-ios-day18">
+                <i class="fa fa-chevron-left"></i> my-ios-day18
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/28/be-hacker/" rel="prev" title="be-hacker">
+                be-hacker <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Day-19"><span class="nav-number">1.</span> <span class="nav-text">Day 19</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">1.1.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#相关概念"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">相关概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSURLConnection"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">NSURLConnection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据解析"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">数据解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件传输"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">文件传输</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSURLSession"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">NSURLSession</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AFNetworking"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">AFNetworking</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

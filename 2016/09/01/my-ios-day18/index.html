@@ -1,0 +1,1216 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day18">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day18/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day18">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day18/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day18 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day18/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day18</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:12:12+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day18/" class="leancloud_visitors" data-flag-title="my-ios-day18">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<h1 id="Day-18"><a href="#Day-18" class="headerlink" title="Day 18"></a>Day 18</h1><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><ul>
+<li>单例模式</li>
+<li>NSOperation</li>
+<li>多图下载</li>
+<li>SDWebImage框架</li>
+<li>NSCache</li>
+<li>位移枚举</li>
+<li>RunLoop</li>
+</ul>
+<hr>
+<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ul>
+<li>简介</li>
+<li>整个程序运行中，一个类只有一个实例，且易于外界访问</li>
+<li>方便控制实例个数，节约资源</li>
+<li>使用场景</li>
+<li>整个应用共享一份资源，只需要初始化一次</li>
+<li>实现</li>
+<li>新建一个类<code>SLPerson</code><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLPerson</span> : <span class="title">NSObject</span></span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 返回person单例</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">+ (<span class="keyword">instancetype</span>)sharePerson;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLPerson</span></span></span><br><span class="line"><span class="keyword">static</span> SLPerson *_person;</span><br><span class="line">+ (<span class="keyword">instancetype</span>)allocWithZone:(<span class="keyword">struct</span> _NSZone *)zone &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 懒加载</span></span><br><span class="line"><span class="comment">// @synchronized(self) &#123;</span></span><br><span class="line"><span class="comment">// if (_person == nil) &#123;</span></span><br><span class="line"><span class="comment">// _person = [super allocWithZone:zone];</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// 一次性代码</span></span><br><span class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line">_person = [<span class="keyword">super</span> allocWithZone:zone];</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">return</span> _person;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (<span class="keyword">instancetype</span>)sharePerson &#123;</span><br><span class="line"><span class="keyword">return</span> [[SLPerson alloc] init];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">id</span>)copyWithZone:(<span class="built_in">NSZone</span> *)zone &#123;</span><br><span class="line"><span class="keyword">return</span> _person;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">id</span>)mutableCopyWithZone:(<span class="built_in">NSZone</span> *)zone &#123;</span><br><span class="line"><span class="keyword">return</span> _person;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="NSOperation"><a href="#NSOperation" class="headerlink" title="NSOperation"></a>NSOperation</h4><ul>
+<li>简介</li>
+<li>基于GCD</li>
+<li>两个概念：队列和操作</li>
+<li>使用</li>
+<li>NSOperation是一个抽象类，要使用其子类</li>
+<li>可以使用的三个子类：NSBlockOperation、NSInvocationOperation和自定义继承自NSOperation的类</li>
+<li>NSOperation和NSOperationQueue需要结合使用</li>
+<li>代码</li>
+<li><p><code>NSInvocationOperation</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：目标对象</span></span><br><span class="line"><span class="comment">第二个参数：该操作要调用的方法</span></span><br><span class="line"><span class="comment">第三个参数：调用方法传递的参数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">NSInvocationOperation</span> *operation = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(run) object:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 启动操作</span></span><br><span class="line">[operation start];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>NSBlockOperation</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSBlockOperation</span> *ope1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *ope2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// 启动操作</span></span><br><span class="line">[ope1 start];</span><br><span class="line">[ope2 start];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>NSOperationQueue</code>的使用</p>
+</li>
+<li>两种队列</li>
+</ul>
+<ol>
+<li>主队列，通过mainQueue获得，放在主队列的操作都在主线程中执行</li>
+<li>非主队列，使用alloc init得到的队列，具有并发和串行的功能，通过设置最大并发数属性来控制操作是并发还是串行</li>
+</ol>
+<ul>
+<li><p>代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">invocation和非主队列</span></span><br><span class="line"><span class="comment">会开子线程，实现并发操作</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)invocationWithQueue &#123;</span><br><span class="line"><span class="comment">// 创建操作</span></span><br><span class="line"><span class="built_in">NSInvocationOperation</span> *op1 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(run1) object:<span class="literal">nil</span>];</span><br><span class="line"><span class="built_in">NSInvocationOperation</span> *op2 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(run2) object:<span class="literal">nil</span>];</span><br><span class="line"><span class="built_in">NSInvocationOperation</span> *op3 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(run3) object:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</span><br><span class="line"><span class="comment">// 添加操作到队列</span></span><br><span class="line"><span class="comment">// 内部会调用[op start];</span></span><br><span class="line">[queue addOperation:op1];</span><br><span class="line">[queue addOperation:op2];</span><br><span class="line">[queue addOperation:op3];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">block和非主队列</span></span><br><span class="line"><span class="comment">会开子线程，操作并发</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)blockWithQueue &#123;</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op3 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</span><br><span class="line"><span class="comment">// 添加操作到队列</span></span><br><span class="line"><span class="comment">// 内部会调用[op start];</span></span><br><span class="line">[queue addOperation:op1];</span><br><span class="line">[queue addOperation:op2];</span><br><span class="line">[queue addOperation:op3];</span><br><span class="line"><span class="comment">// 有快速的创建方法</span></span><br><span class="line"><span class="comment">// [queue addOperationWithBlock^&#123;&#125;];</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义<code>SLOperation</code> : <code>NSOperation</code></p>
+</li>
+<li><p>代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)customWithQueue &#123;</span><br><span class="line"><span class="comment">// 创建操作</span></span><br><span class="line">SLOperation *op1 = [[SLOperation alloc] init];</span><br><span class="line">SLOperation *op2 = [[SLOperation alloc] init];</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</span><br><span class="line"><span class="comment">// 添加操作到队列</span></span><br><span class="line">[queue addOperation:op1];</span><br><span class="line">[queue addOperation:op2];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// SLOperation.m</span></span><br><span class="line">@implemetation SLOperation</span><br><span class="line"><span class="comment">// 重写mian方法，设置操作</span></span><br><span class="line">- (<span class="keyword">void</span>)main &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad---"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+</li>
+<li>有利于代码的隐蔽性</li>
+<li>提高代码的复用性</li>
+<li><code>NSOperation</code>的一些功能</li>
+<li><p>最大并发数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</span><br><span class="line"><span class="comment">// 设置最大并发数：同一时间最多有多少个操作执行，默认不受限制的</span></span><br><span class="line">queue.maxConcurrentOperationCount = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// 可以将默认的并发设置为串行</span></span><br><span class="line"><span class="comment">// 串行并不是只开一条线程，而是线程同步</span></span><br><span class="line"><span class="comment">// queue.maxConcurrentOperationCount = 1;</span></span><br><span class="line"><span class="comment">// 创建操作</span></span><br><span class="line">SLOperation *op1 = [[SLOperation alloc] init];</span><br><span class="line">SLOperation *op2 = [[SLOperation alloc] init];</span><br><span class="line"><span class="comment">// 添加操作到队列</span></span><br><span class="line">[queue addOperation:op1];</span><br><span class="line">[queue addOperation:op2];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>暂停恢复和取消</p>
+</li>
+<li><p>暂停恢复</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置队列的暂停 YES、恢复 NO</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">getter</span>=isSuspended) <span class="built_in">BOOL</span> suspended;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取消</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 取消执行队列中的所有任务</span></span><br><span class="line">- (<span class="keyword">void</span>)cancelAllOperations;</span><br><span class="line"><span class="comment">// 在自定义的Operation中</span></span><br><span class="line"><span class="comment">// 苹果官方建议，每当执行完一次耗时操作之后，就查看一下当前操作是否为取消状态，如果是，那么就直接退出，可以用户体验</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.isCancelled) &#123;</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>操作依赖和监听</p>
+</li>
+<li><p>依赖</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op3 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</span><br><span class="line"><span class="comment">// 添加依赖</span></span><br><span class="line"><span class="comment">// op1依赖于op2，只有op2完成才能执行op1</span></span><br><span class="line">[op1 addDependency:op2];</span><br><span class="line"><span class="comment">// 添加操作到队列</span></span><br><span class="line">[queue addOperation:op1];</span><br><span class="line">[queue addOperation:op2];</span><br><span class="line">[queue addOperation:op3];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>监听</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="built_in">NSBlockOperation</span> *op3 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line"><span class="comment">// 监听操作</span></span><br><span class="line">op3.completionBlock = ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"op3 完成"</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</span><br><span class="line"><span class="comment">// 添加操作到队列</span></span><br><span class="line">[queue addOperation:op1];</span><br><span class="line">[queue addOperation:op2];</span><br><span class="line">[queue addOperation:op3];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>NSOperation</code>线程间通信</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc]init];</span><br><span class="line"><span class="comment">// 使用简便方法封装操作并添加到队列中</span></span><br><span class="line">[queue addOperationWithBlock:^&#123;</span><br><span class="line"><span class="comment">// 在该block中下载图片</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://news.51sheyuan.com/uploads/allimg/111001/133442IB-2.jpg"</span>];</span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:url];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"下载图片操作--%@"</span>,[<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line"><span class="comment">// 回到主线程刷新UI</span></span><br><span class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line"><span class="keyword">self</span>.imageView.image = image;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"刷新UI操作---%@"</span>,[<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="多图下载"><a href="#多图下载" class="headerlink" title="多图下载"></a>多图下载</h4><ul>
+<li><p>简要代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SLApp *app = <span class="keyword">self</span>.apps[indexPath.row];</span><br><span class="line">cell.textLabel.text = app.name;</span><br><span class="line">cell.detailTextLabel.text = app.download;</span><br><span class="line"></span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:[<span class="built_in">NSURL</span> URLWithString:app.icon]];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line"><span class="keyword">return</span> cell;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>涉及问题</p>
+</li>
+<li>UI卡顿</li>
+<li>图片多次下载</li>
+<li>解决</li>
+<li><p>图片多次下载</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用内存缓存</span></span><br><span class="line"><span class="comment">// 去内存缓存找图片</span></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="keyword">self</span>.images objectForKey:app.name];</span><br><span class="line"><span class="keyword">if</span> (image == <span class="literal">nil</span>) &#123;</span><br><span class="line"><span class="comment">// 如果没有就去下载</span></span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:[<span class="built_in">NSURL</span> URLWithString:app.icon]];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line"><span class="comment">// 添加图片到内存缓存</span></span><br><span class="line">[<span class="keyword">self</span>.images setObject:image forKey:app.name];</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 使用磁盘缓存</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Documents：会备份，</span></span><br><span class="line"><span class="comment">Libray：</span></span><br><span class="line"><span class="comment">Preferences：偏好设置，账号属性</span></span><br><span class="line"><span class="comment">Caches：缓存文件</span></span><br><span class="line"><span class="comment">tmp：临时文件，随时会被删除</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">// 去内存缓存找图片</span></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="keyword">self</span>.images objectForKey:app.name];</span><br><span class="line"><span class="keyword">if</span> (image == <span class="literal">nil</span>) &#123;</span><br><span class="line"><span class="comment">// 获取缓存路径</span></span><br><span class="line"><span class="built_in">NSString</span> *path = [<span class="built_in">NSSearchPathForDirectoriesInDomains</span>(<span class="built_in">NSCachesDirectory</span>, <span class="built_in">NSUserDomainMask</span>, <span class="literal">YES</span>) lastObject];</span><br><span class="line"><span class="comment">// 拼接图片全路径</span></span><br><span class="line"><span class="built_in">NSString</span> *fileName = [app.icon lastPathComponent];</span><br><span class="line"><span class="built_in">NSString</span> *imagePath = [path stringByAppendingPathComponent:fileName];</span><br><span class="line"><span class="comment">// 内存中没有</span></span><br><span class="line"><span class="comment">// 1. 先检查磁盘缓存</span></span><br><span class="line"><span class="built_in">NSData</span> *imageData = [<span class="built_in">NSData</span> dataWithContentsOfFile:imagePath];</span><br><span class="line"><span class="keyword">if</span> (imageData == <span class="literal">nil</span>) &#123;</span><br><span class="line"><span class="comment">// 2. 如果没有就去下载，保存到内存和沙盒</span></span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:[<span class="built_in">NSURL</span> URLWithString:app.icon]];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line"><span class="comment">// 添加图片到内存缓存</span></span><br><span class="line">[<span class="keyword">self</span>.images setObject:image forKey:app.name];</span><br><span class="line"><span class="comment">// 添加图片到磁盘缓存</span></span><br><span class="line"><span class="comment">// 写数据打沙盒</span></span><br><span class="line">[data writeToFile:imagePath atomically:<span class="literal">YES</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:imageData];</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> cell;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>UI的流畅性</p>
+</li>
+<li><p>开线程下载图片</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (imageData == <span class="literal">nil</span>) &#123;</span><br><span class="line"><span class="comment">// 2. 如果没有就去下载，保存到内存和沙盒</span></span><br><span class="line">[<span class="keyword">self</span>.queue addOperationWithBlock:^&#123;</span><br><span class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:[<span class="built_in">NSURL</span> URLWithString:app.icon]];</span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</span><br><span class="line"><span class="comment">// 添加图片到内存缓存</span></span><br><span class="line">[<span class="keyword">self</span>.images setObject:image forKey:app.name];</span><br><span class="line"><span class="comment">// 添加图片到磁盘缓存</span></span><br><span class="line">[data writeToFile:imagePath atomically:<span class="literal">YES</span>];</span><br><span class="line"><span class="comment">// 回到主线程刷新UI</span></span><br><span class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">cell.imageView.image = image;</span><br><span class="line">&#125;];</span><br><span class="line">&#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片不会刷新</p>
+</li>
+<li><p>图片已经下载，但是应为frame问题不会显示，主动刷新</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 刷新tableView的一行</span></span><br><span class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</span><br><span class="line">[<span class="keyword">self</span>.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:<span class="built_in">UITableViewRowAnimationAutomatic</span>];</span><br><span class="line"><span class="comment">// cell.imageView.image = image;</span></span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>滑动过快，图片下载需要时间，图片下载操作反复添加</p>
+</li>
+<li><p>操作缓存</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span>.operation setObject:[[<span class="keyword">self</span>.queue operations] lastObject] forKey:app.icon];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>总结</p>
+</li>
+<li>主要关注点</li>
+</ul>
+<ol>
+<li>缓存的处理，NSDictionary使用</li>
+<li>存储数据到沙盒</li>
+<li>占位图片的处理</li>
+<li>程序并发时，差错控制</li>
+<li>cell重用的数据错乱处理</li>
+<li>NSOperation的使用</li>
+</ol>
+<ul>
+<li>主要逻辑</li>
+</ul>
+<ol>
+<li>在本地磁盘查找缓存，如果存在直接显示</li>
+<li>磁盘中没有查看内存缓存，如有直接显示，并保存到磁盘</li>
+<li>如果内存没有，创建NSOperation下载操作，添加到NSOperationQueue中</li>
+<li>下载操作中，图片下载完毕，需要保存到内存和磁盘缓存</li>
+<li>对url进行容错处理，下载不成功要重新下载</li>
+<li>添加操作到操作缓存，避免操作多次添加，图片多次下载</li>
+<li>图片下载完成回到主线程，要立即刷新当前行</li>
+<li>在最开始为imageView设置占位图片</li>
+</ol>
+<hr>
+<h4 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h4><ul>
+<li>简介</li>
+<li>使用</li>
+<li><p>方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：下载图片的url</span></span><br><span class="line"><span class="comment">第二个参数：占位图片</span></span><br><span class="line"><span class="comment">第三个参数：枚举值，下载图片的策略</span></span><br><span class="line"><span class="comment">回调参数</span></span><br><span class="line"><span class="comment">receivedSize：已经下载完成的数据大小</span></span><br><span class="line"><span class="comment">expectedSize：该文件的总大小</span></span><br><span class="line"><span class="comment">image：下载得到的图片数据</span></span><br><span class="line"><span class="comment">error：下载的错误信息</span></span><br><span class="line"><span class="comment">SDImageCacheType：图片的缓存策略</span></span><br><span class="line"><span class="comment">imageURL：下载图片的url</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">[cell.imageView sd_setImageWithURL:(<span class="built_in">NSURL</span> *) placeholderImage:(<span class="built_in">UIImage</span> *) options:(SDWebImageOptions) progress:^(<span class="built_in">NSInteger</span> receivedSize, <span class="built_in">NSInteger</span> expectedSize) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%f"</span>, <span class="number">1.0</span> * receivedSize / expectedSize);</span><br><span class="line">&#125; completed:^(<span class="built_in">UIImage</span> *image, <span class="built_in">NSError</span> *error, SDImageCacheType cacheType, <span class="built_in">NSURL</span> *imageURL) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, image);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内存</p>
+</li>
+<li>一些细节</li>
+<li><p>开子线程的最大并发数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认是6</span></span><br><span class="line">_downloadQueue.maxConcurrentOperationCount = <span class="number">6</span>;</span><br><span class="line">- (<span class="built_in">NSInteger</span>)maxConcurrentDownloads &#123;</span><br><span class="line"><span class="keyword">return</span> _downloadQueue.maxConcurrentOperationCount;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>缓存文件的路径和名称</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">名称是URL的MD5加密</span><br><span class="line">Cache--&gt;<span class="keyword">default</span>--&gt;*ache--&gt;图片</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部内存管理</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过监听通知的方式，来清理的</span></span><br><span class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span></span><br><span class="line">selector:<span class="keyword">@selector</span>(clearMemory)</span><br><span class="line">name:<span class="built_in">UIApplicationDidReceiveMemoryWarningNotification</span></span><br><span class="line">object:<span class="literal">nil</span>];</span><br><span class="line"></span><br><span class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span></span><br><span class="line">selector:<span class="keyword">@selector</span>(cleanDisk)</span><br><span class="line">name:<span class="built_in">UIApplicationWillTerminateNotification</span></span><br><span class="line">object:<span class="literal">nil</span>];</span><br><span class="line"></span><br><span class="line">[[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span></span><br><span class="line">selector:<span class="keyword">@selector</span>(backgroundCleanDisk)</span><br><span class="line">name:<span class="built_in">UIApplicationDidEnterBackgroundNotification</span></span><br><span class="line">object:<span class="literal">nil</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部缓存方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类似于<span class="built_in">NSMutableDictionary</span>的 ---&gt; <span class="built_in">NSCache</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片类别的判断</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 内部主要根据图片十六进制的第一个字节</span></span><br><span class="line">+ (<span class="built_in">NSString</span> *)sd_contentTypeForImageData:(<span class="built_in">NSData</span> *)data;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片下载方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSURLConnection</span> ----&gt; 建立网络请求连接</span><br><span class="line">建立连接后通过代理来下载图片</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部逻辑结构</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// UIButton+WebCache</span></span><br><span class="line">- (<span class="keyword">void</span>)sd_setBackgroundImageWithURL:(<span class="built_in">NSURL</span> *)url forState:(<span class="built_in">UIControlState</span>)state placeholderImage:(<span class="built_in">UIImage</span> *)placeholder options:(SDWebImageOptions)options completed:(SDWebImageCompletionBlock)completedBlock;</span><br><span class="line"><span class="comment">// SDWebImageManager</span></span><br><span class="line">- (<span class="keyword">id</span> &lt;SDWebImageOperation&gt;)downloadImageWithURL:(<span class="built_in">NSURL</span> *)url options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionWithFinishedBlock)completedBlock;</span><br><span class="line"><span class="comment">// SDWebImageDownloader</span></span><br><span class="line">- (<span class="keyword">id</span> &lt;SDWebImageOperation&gt;)downloadImageWithURL:(<span class="built_in">NSURL</span> *)url options:(SDWebImageDownloaderOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageDownloaderCompletedBlock)completedBlock</span><br><span class="line"><span class="comment">// SDWebImageDownloaderOperation</span></span><br><span class="line">- (<span class="keyword">id</span>)initWithRequest:(<span class="built_in">NSURLRequest</span> *)request options:(SDWebImageDownloaderOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageDownloaderCompletedBlock)completedBlock cancelled:(SDWebImageNoParamsBlock)cancelBlock;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="NSCache"><a href="#NSCache" class="headerlink" title="NSCache"></a>NSCache</h4><ul>
+<li>简介</li>
+<li>苹果官方的缓存处理类，与字典类似</li>
+<li>内存很低会自动释放对象</li>
+<li>线程安全的，不需要加锁</li>
+<li>对象的强引用，不是拷贝</li>
+<li>属性</li>
+<li>name：名称</li>
+<li>delegate：设置代理</li>
+<li>totalCostLimit：缓存空间的总成本，超出会回收，默认0没限制</li>
+<li>evictsObjectsWithDiscardedContent：标识缓存是否回收废弃内容</li>
+<li>使用<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加缓存</span></span><br><span class="line">- (<span class="keyword">void</span>)setObject:(ObjectType)obj forKey:(KeyType)key; <span class="comment">// 0 cost：成本</span></span><br><span class="line">- (<span class="keyword">void</span>)setObject:(ObjectType)obj forKey:(KeyType)key cost:(<span class="built_in">NSUInteger</span>)g;</span><br><span class="line"><span class="comment">// 拿到缓存</span></span><br><span class="line">- (<span class="keyword">nullable</span> ObjectType)objectForKey:(KeyType)key;</span><br><span class="line"><span class="comment">// 删除缓存</span></span><br><span class="line">- (<span class="keyword">void</span>)removeObjectForKey:(KeyType)key;</span><br><span class="line">- (<span class="keyword">void</span>)removeAllObjects;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="位移枚举"><a href="#位移枚举" class="headerlink" title="位移枚举"></a>位移枚举</h4><ul>
+<li>枚举</li>
+<li><p>第一种</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span></span><br><span class="line">&#123;</span><br><span class="line">SLTypeOne,</span><br><span class="line">SLTypeTwo</span><br><span class="line">&#125;SLType;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二种，可以定义类型</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, SLType)</span><br><span class="line">&#123;</span><br><span class="line">SLTypeOne,</span><br><span class="line">SLTypeTwo</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三种，位移枚举</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_OPTIONS</span>(<span class="built_in">NSInteger</span>, SLNewType)</span><br><span class="line">&#123;</span><br><span class="line">SLTypeOne = <span class="number">1</span> &lt;&lt; <span class="number">0</span>, <span class="comment">// 1</span></span><br><span class="line">SLTypeTwo = <span class="number">1</span> &lt;&lt; <span class="number">1</span>, <span class="comment">// 2</span></span><br><span class="line">SLTypeThree = <span class="number">1</span> &lt;&lt; <span class="number">2</span>, <span class="comment">// 4</span></span><br><span class="line">SLTypeFour = <span class="number">1</span> &lt;&lt; <span class="number">3</span> <span class="comment">// 8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用途：多个量传递</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 按位或 |</span></span><br><span class="line"><span class="comment">// objc.type = 0011</span></span><br><span class="line">obj.type = SLTypeOne | SLTypeTwo;</span><br><span class="line"><span class="comment">// 按位与 &amp;</span></span><br><span class="line"><span class="comment">// 0011 &amp; 0001 = 1</span></span><br><span class="line"><span class="keyword">if</span>(obj.type &amp; SLTypeOne) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"SLTypeOne"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0011 &amp; 0010 = 1</span></span><br><span class="line"><span class="keyword">if</span>(obj.type &amp; SLTypeTwo) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"SLTypeTwo"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0011 &amp; 0100 = 0</span></span><br><span class="line"><span class="keyword">if</span>(obj.type &amp; SLTypeThree) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"SLTypeThree"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 0011 &amp; 1000 = 0</span></span><br><span class="line"><span class="keyword">if</span>(obj.type &amp; SLTypeFour) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"SLTypeFour"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="RunLoop"><a href="#RunLoop" class="headerlink" title="RunLoop"></a>RunLoop</h4><ul>
+<li>简介</li>
+<li>运行循环，保持程序的持续运行</li>
+<li>处理App中的各种事件（触摸、定时器、Selector）</li>
+<li>节省CPU资源，提高性能，有事就做，没事休息</li>
+<li>两套API访问RunLoop</li>
+<li>Foundation–&gt;NSRunLoop</li>
+<li>Core Foundation–&gt;CFRunLoopRef</li>
+<li>RunLoop与线程</li>
+<li>每条线程都有唯一的一个RunLoop对象</li>
+<li>主线程的RunLoop已经自动创建好了，子线程的RunLoop需要主动创建</li>
+<li>RunLoop在第一次获取是创建，在线程结束时销毁</li>
+<li>获得RunLoop对象</li>
+<li><p>Foundation</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">NSRunLoop</span> currentRunLoop]; <span class="comment">// 获得当前线程的RunLoop对象</span></span><br><span class="line">[<span class="built_in">NSRunLoop</span> mainRunLoop]; <span class="comment">// 获得主线程的RunLoop对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Core Foundation</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">CFRunLoopGetCurrent</span>(); <span class="comment">// 获得当前线程的RunLoop对象</span></span><br><span class="line"><span class="built_in">CFRunLoopGetMain</span>(); <span class="comment">// 获得主线程的RunLoop对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Core Foundation 中的五个类</p>
+</li>
+<li>CFRunLoopRef</li>
+<li>CFrunLoopModeRef 运行模式</li>
+<li>CFRunLoopSourceRef 事件源输入源</li>
+<li>CFRunLoopTimerRef 定时器事件</li>
+<li>CFRunLoopObserveRef 监听运行</li>
+<li>RunLoop运行</li>
+<li>RunLoop有多个运行模式，但它只能在一种模式运行</li>
+<li>Mode中至少要一个Source或Timer，Observe可选</li>
+<li>每次RunLoop启动，只能指定一个Mode（currentMode）</li>
+<li>如果需要切换Mode，只能退出Loop，在指定新的Mode</li>
+<li>系统默认五种运行模式</li>
+<li>kCFRunLoopDefaultMode：app的默认模式，通常主线程在这个模式下运行</li>
+<li>UITrackingRunLoopMode：界面跟踪Mode，用于ScrollView追踪滑动触摸，保证界面滑动不受其他Mode影响</li>
+<li>UIInitializationRunLoopMode：在刚启动App时进入的第一个Mode，启动完就不在使用</li>
+<li>GSEventReceiveRunLoopMode：接收系统事件的内部Mode，通常不用</li>
+<li>kCFRunLoopCommonModes：这是一个占位用的Mode，不是真的Mode</li>
+<li>事件源（输入源）分类</li>
+<li>官方文档</li>
+</ul>
+<ol>
+<li>Port-Based Sources</li>
+<li>Custom Input Sources</li>
+<li>Cocoa Perform Selector Sources</li>
+</ol>
+<ul>
+<li>函数调用栈</li>
+</ul>
+<ol>
+<li>Source0：非基于Port的</li>
+<li>Source1：基于Port的</li>
+</ol>
+<ul>
+<li>监听者Observer</li>
+<li>监听RunLoop的状态改变</li>
+<li><p>步骤</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个监听者对象</span></span><br><span class="line"><span class="built_in">CFRunLoopObserverRef</span> observer = <span class="built_in">CFRunLoopObserverCreateWithHandler</span>(<span class="built_in">CFAllocatorGetDefault</span>(),kCFRunLoopAllActivities, <span class="literal">YES</span>, <span class="number">0</span>, ^(<span class="built_in">CFRunLoopObserverRef</span> observer, <span class="built_in">CFRunLoopActivity</span> activity) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"监听runloop状态改变---%zd"</span>,activity);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 添加监听者</span></span><br><span class="line"><span class="built_in">CFRunLoopAddObserver</span>(<span class="built_in">CFRunLoopGetCurrent</span>(), observer, kCFRunLoopDefaultMode);</span><br><span class="line"><span class="comment">// 移除监听者</span></span><br><span class="line"><span class="built_in">CFRelease</span>(observer);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>几个RunLoop状态</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">CF_OPTIONS</span>(<span class="built_in">CFOptionFlags</span>, <span class="built_in">CFRunLoopActivity</span>) &#123;</span><br><span class="line">kCFRunLoopEntry = (<span class="number">1</span>UL &lt;&lt; <span class="number">0</span>), <span class="comment">//即将进入Runloop</span></span><br><span class="line">kCFRunLoopBeforeTimers = (<span class="number">1</span>UL &lt;&lt; <span class="number">1</span>), <span class="comment">//即将处理NSTimer</span></span><br><span class="line">kCFRunLoopBeforeSources = (<span class="number">1</span>UL &lt;&lt; <span class="number">2</span>), <span class="comment">//即将处理Sources</span></span><br><span class="line">kCFRunLoopBeforeWaiting = (<span class="number">1</span>UL &lt;&lt; <span class="number">5</span>), <span class="comment">//即将进入休眠</span></span><br><span class="line">kCFRunLoopAfterWaiting = (<span class="number">1</span>UL &lt;&lt; <span class="number">6</span>), <span class="comment">//刚从休眠中唤醒</span></span><br><span class="line">kCFRunLoopExit = (<span class="number">1</span>UL &lt;&lt; <span class="number">7</span>), <span class="comment">//即将退出runloop</span></span><br><span class="line">kCFRunLoopAllActivities = <span class="number">0x0FFFFFFF</span>U <span class="comment">//所有状态改变</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RunLoop的运行逻辑</p>
+</li>
+<li>事件队列</li>
+<li>每次运行RunLoop，会自动处理之前未处理的消息，并通知相关的监听者</li>
+<li>具体过程</li>
+</ul>
+<ol>
+<li>通知监听者RunLoop已经启动</li>
+<li>通知监听者任何即将开始的定时器</li>
+<li>通知监听者任何即将启动的非基于端口的源（Source）</li>
+<li>启动任何准备好的非基于端口的源</li>
+<li>如果基于端口的源准备好并处于等待状态，立即启动，处理未处理的事件</li>
+<li>通知监听者线程进入休眠</li>
+<li>直到以下事件发生，线程将被唤醒<br>某一事件到达基于端口的源<br>定时器启动<br>RunLoop设置的时间已经超时<br>RunLoop被显式唤醒</li>
+<li>通知监听者线程将被唤醒</li>
+<li>处理未处理事件</li>
+<li>通知观察者RunLoop结束</li>
+<li>未处理事件<br>定时器启动，处理定时器事件并重启RunLoop<br>输入源启动，传递相应消息<br>被显式唤醒且没有超时，重启RunLoop</li>
+</ol>
+<ul>
+<li>应用</li>
+<li>NSTimer</li>
+<li>ImageView显示</li>
+<li>performSelector</li>
+<li>常驻线程：子线程中开启一个runloop</li>
+<li>自动释放池</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day17/" rel="next" title="my-ios-day17">
+                <i class="fa fa-chevron-left"></i> my-ios-day17
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day19/" rel="prev" title="my-ios-day19">
+                my-ios-day19 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Day-18"><span class="nav-number">1.</span> <span class="nav-text">Day 18</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">1.1.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单例模式"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">单例模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSOperation"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">NSOperation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多图下载"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">多图下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SDWebImage"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">SDWebImage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSCache"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">NSCache</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位移枚举"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">位移枚举</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RunLoop"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">RunLoop</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

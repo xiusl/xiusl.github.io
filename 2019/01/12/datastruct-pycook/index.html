@@ -1,0 +1,1043 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="cookbook,datastruct,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="python cookbook datastruct">
+<meta name="keywords" content="cookbook,datastruct">
+<meta property="og:type" content="article">
+<meta property="og:title" content="datastruct-pycook">
+<meta property="og:url" content="http://xiusl.me/2019/01/12/datastruct-pycook/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="python cookbook datastruct">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="datastruct-pycook">
+<meta name="twitter:description" content="python cookbook datastruct">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2019/01/12/datastruct-pycook/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>datastruct-pycook | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2019/01/12/datastruct-pycook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">datastruct-pycook</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-12T16:34:30+00:00">
+                2019-01-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/12/datastruct-pycook/" class="leancloud_visitors" data-flag-title="datastruct-pycook">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>python cookbook datastruct<br><a id="more"></a></p>
+<ul>
+<li><p>解压序列赋值给多个变量</p>
+<ul>
+<li>变量的个数和序列元素的个数不匹配</li>
+<li>只解压一部分<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="string">"abc"</span>, <span class="number">10</span>, <span class="number">22.1</span>, (<span class="number">2018</span>, <span class="number">12</span>, <span class="number">12</span>)]</span><br><span class="line">_, shares, prices, _= data</span><br><span class="line">print(shares)  <span class="comment"># 10</span></span><br><span class="line">print(prices)  <span class="comment"># 22.1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>解压可迭代对象赋值给多个变量</p>
+<ul>
+<li><p>星号(*)表达式</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">record = (<span class="string">'Dave'</span>, <span class="string">'dave@example.com'</span>, <span class="string">'213-123-1421'</span>, <span class="string">'312-423-1511'</span>)</span><br><span class="line">name, email, *phone_numbers = record</span><br><span class="line">print(name)  <span class="comment"># Dave</span></span><br><span class="line">print(email)  <span class="comment"># deve@example.com</span></span><br><span class="line">print(phone_numbers)  <span class="comment"># ['213-123-1421', '312-423-1511']</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>星号表达式解压出来的永远是<strong>列表</strong>类型</p>
+</li>
+<li><p>迭代元素为可变长元组的序列</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">records = [</span><br><span class="line">    (<span class="string">'foo'</span>, <span class="number">1</span>, <span class="number">2</span>),</span><br><span class="line">    (<span class="string">'bar'</span>, <span class="string">'hello'</span>),</span><br><span class="line">    (<span class="string">'foo'</span>, <span class="number">3</span>, <span class="number">5</span>)</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_foo</span><span class="params">(x, y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_bar</span><span class="params">(str)</span>:</span></span><br><span class="line">    print(str)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> tag, *args <span class="keyword">in</span> records:</span><br><span class="line">    <span class="keyword">if</span> tag == <span class="string">'foo'</span>:</span><br><span class="line">        do_foo(*args)</span><br><span class="line">    <span class="keyword">elif</span> tag == <span class="string">'bar'</span>:</span><br><span class="line">        do_bar(*args)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>星号表达式操作字符chuan</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">line = <span class="string">'nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false'</span></span><br><span class="line">uname, *fields, homedir, sh = line.split(<span class="string">':'</span>)</span><br><span class="line">print(uname)  <span class="comment"># 'nobody'</span></span><br><span class="line">print(homedir)  <span class="comment"># '/var/empty'</span></span><br><span class="line">print(sh)  <span class="comment"># '/usr/bin/false'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压并丢弃一些元素， <code>_</code> or <code>ign(ignore)</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">record = (<span class="string">'abc'</span>, <span class="number">12</span>, <span class="number">23.1</span>, (<span class="number">12</span>, <span class="number">12</span>, <span class="number">2018</span>))</span><br><span class="line">name, *_, (*_, year) = record</span><br><span class="line">print(name)  <span class="comment"># 'abc'</span></span><br><span class="line">print(year)  <span class="comment"># 2012</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>保留最后 N 个元素</p>
+<ul>
+<li><p>保留有限历史记录 <code>collections.deque</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">search</span><span class="params">(lines, pattern, history=<span class="number">5</span>)</span>:</span></span><br><span class="line">    previous_lines = deque(maxlen=history)</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">        <span class="keyword">if</span> pattern <span class="keyword">in</span> line:</span><br><span class="line">            <span class="keyword">yield</span> line, previous_lines</span><br><span class="line">        previous_lines.append(line)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">r'../../cookbook/somefile.txt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> line, prevlines <span class="keyword">in</span> search(f, <span class="string">'python'</span>, <span class="number">5</span>):</span><br><span class="line">            <span class="keyword">for</span> pline <span class="keyword">in</span> prevlines:</span><br><span class="line">                print(pline, end=<span class="string">''</span>)</span><br><span class="line">            print(line, end=<span class="string">''</span>)</span><br><span class="line">            print(<span class="string">'-'</span> * <span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>deque(maxlen=N)</code> 会创建一个固定大小的队列，当新的元素加入并且队列已满的时候，最老的元素会自动被移除</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">q = deque(maxlen=<span class="number">3</span>)</span><br><span class="line">q.append(<span class="number">1</span>)</span><br><span class="line">q.append(<span class="number">2</span>)</span><br><span class="line">q.append(<span class="number">3</span>)</span><br><span class="line">print(q)  <span class="comment"># deque([1, 2, 3], maxlen=3)</span></span><br><span class="line">q.append(<span class="number">4</span>)</span><br><span class="line">print(q)  <span class="comment"># deque([2, 3, 4], maxlen=4)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>deque()</code> 不设置最大长度，将会创建一个无限大小队列，可以在两端增删元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">q = deque()</span><br><span class="line">q.append(1)</span><br><span class="line">q.append(2)</span><br><span class="line">q.append(3)</span><br><span class="line">print(q)  # deque([1, 2, 3])</span><br><span class="line">q.appendleft(4)</span><br><span class="line">print(q)  # deque([4, 1, 2, 3])</span><br><span class="line">q.pop()</span><br><span class="line">print(q)  # deque([4, 1, 2])</span><br><span class="line">q.popleft()</span><br><span class="line">print(q)  # deque([1, 2])</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>查找最大或最小的 N 个元素</p>
+<ul>
+<li><code>heapq</code> 模块的 <code>nlargest()</code> 和 <code>nsmallest()</code> 两个函数</li>
+<li><p>函数可以接受一个关键字参数，用于复杂的数据结构</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line">nums = [<span class="number">1</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">23</span>, <span class="number">4</span>, <span class="number">-1</span>, <span class="number">12</span>, <span class="number">34</span>, <span class="number">54</span>, <span class="number">3</span>]</span><br><span class="line">print(heapq.nlargest(<span class="number">3</span>, nums))  <span class="comment"># [54, 34, 23]</span></span><br><span class="line">print(heapq.nsmallest(<span class="number">3</span>, nums))  <span class="comment"># [-1, 1, 3]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">portfolio = [</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'IBM'</span>, <span class="string">'shares'</span>: <span class="number">100</span>, <span class="string">'price'</span>: <span class="number">91.1</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'AAPL'</span>, <span class="string">'shares'</span>: <span class="number">50</span>, <span class="string">'price'</span>: <span class="number">543.22</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'FB'</span>, <span class="string">'shares'</span>: <span class="number">200</span>, <span class="string">'price'</span>: <span class="number">21.09</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'HPQ'</span>, <span class="string">'shares'</span>: <span class="number">35</span>, <span class="string">'price'</span>: <span class="number">31.75</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'YHOO'</span>, <span class="string">'shares'</span>: <span class="number">45</span>, <span class="string">'price'</span>: <span class="number">16.35</span>&#125;,</span><br><span class="line">    &#123;<span class="string">'name'</span>: <span class="string">'ACME'</span>, <span class="string">'shares'</span>: <span class="number">75</span>, <span class="string">'price'</span>: <span class="number">115.69</span>&#125;</span><br><span class="line">]</span><br><span class="line">cheap = heapq.nsmallest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br><span class="line">expensive = heapq.nlargest(<span class="number">3</span>, portfolio, key=<span class="keyword">lambda</span> s: s[<span class="string">'price'</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数的底层实现是将集合进行堆排序再放入列表中</p>
+</li>
+<li>堆排序的特征是 heap[0] 始终是最小的元素</li>
+<li>…</li>
+<li>查找元素个数相对比较少的时候，函数 nlargest() 和 nsmallest() 是很合适的</li>
+<li>如果你仅仅查找唯一的最小或最大的元素的话，使用 min() 和 max() 会更快一些</li>
+<li>如果查找元素的个数和集合的大小接近的话，通常先排序这个集合然后在使用切片操作会更快</li>
+</ul>
+</li>
+<li><p>实现优先级队列</p>
+<ul>
+<li>使用 heapq 实现简单的优先级队列<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PriorityQueue</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self._queue = []</span><br><span class="line">        self._index = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self, item, priority)</span>:</span></span><br><span class="line">        heapq.heappush(self._queue, (-priority, self._index, item))</span><br><span class="line">        self._index += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> heapq.heappop(self._queue)[<span class="number">-1</span>]</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Item</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'Item(&#123;!r&#125;)'</span>.format(self.name)</span><br><span class="line"></span><br><span class="line">q = PriorityQueue()</span><br><span class="line">q.push(Item(<span class="string">'foo'</span>), <span class="number">1</span>)</span><br><span class="line">q.push(Item(<span class="string">'bar'</span>), <span class="number">5</span>)</span><br><span class="line">q.push(Item(<span class="string">'spam'</span>), <span class="number">4</span>)</span><br><span class="line">q.push(Item(<span class="string">'grok'</span>), <span class="number">1</span>)</span><br><span class="line">print(q.pop())</span><br><span class="line">print(q.pop())</span><br><span class="line">print(q.pop())</span><br><span class="line">print(q.pop())</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>字典排序</p>
+<ul>
+<li><p>使用 <code>collections</code> 模块中的 <code>OrderedDict</code> 类，控制一个字典中元素的顺序</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line">d = OrderedDict()</span><br><span class="line">d[<span class="string">'foo'</span>] = <span class="number">1</span></span><br><span class="line">d[<span class="string">'bar'</span>] = <span class="number">2</span></span><br><span class="line">d[<span class="string">'spam'</span>] = <span class="number">3</span></span><br><span class="line">d[<span class="string">'grok'</span>] = <span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> d:</span><br><span class="line">    print(key, d[key])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当需要序列化或编码成其他格式的映射的时候，<code>OrderedDict</code> 是非常有用的。例如精确控制 <code>JSON</code> 编码后字段的顺序</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line">json.dumps(d)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>OrderedDict</code> 的内部维护着一个很具键插入顺序排序的双向链表。每次一个新元素插入的时候，它会放到链表的尾部。对一个已经存在的键的重复赋值不会改变键的顺序</p>
+</li>
+<li>一个 <code>OrderedDict</code> 的大小是一个普通字典的两倍，因为它内部维护这另一个链表，当在处理大量数据的时候需要考虑内存消耗</li>
+</ul>
+</li>
+<li><p>字典的运算</p>
+<ul>
+<li>字典中执行运算操作，最值、排序等</li>
+<li><p>使用 <code>zip()</code> 函数将键和值翻转</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">prices = &#123;</span><br><span class="line">    <span class="string">'ACME'</span>: <span class="number">45.23</span>,</span><br><span class="line">    <span class="string">'AAPL'</span>: <span class="number">612.78</span>,</span><br><span class="line">    <span class="string">'IBM'</span>: <span class="number">205.55</span>,</span><br><span class="line">    <span class="string">'HPQ'</span>: <span class="number">37.20</span>,</span><br><span class="line">    <span class="string">'FB'</span>: <span class="number">10.75</span></span><br><span class="line">&#125;</span><br><span class="line">min_price = min(zip(prices.values(), prices.keys()))</span><br><span class="line">max_price = max(zip(prices.values(), prices.keys()))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类似的可以使用 <code>sorted()</code> 函数来排序字典数据</p>
+</li>
+<li><p>需要注意 <code>zip()</code> 函数创建的是一个只能访问一次的迭代器</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">prices_and_names = zip(prices.values(), prices.keys())</span><br><span class="line">print(min(prices_and_name))</span><br><span class="line">print(max(Prices_and_name)) <span class="comment"># ValueError max arg is an empty sequence</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在一个字典上执行普通的数学运算，只会作用在键上</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min(prices) <span class="comment"># 'AAPL'</span></span><br><span class="line">max(prices) <span class="comment"># 'IBM'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当考虑使用 <code>values()</code> 方法解决的时候，无法获取对应键的信息</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min(prices.values()) <span class="comment"># 10.75</span></span><br><span class="line">max(prices.values()) <span class="comment"># 612.78</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <code>min()</code> 和 <code>max()</code> 函数中的参数 <code>key</code> 可以获取对应的键的信息，但又无法一次性获取对应值得信息</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">min(prices, key=<span class="keyword">lambda</span> k: prices[k]) <span class="comment"># 'FB'</span></span><br><span class="line">max(prices, key=<span class="keyword">lambda</span> k: prices[k]) <span class="comment"># 'AAPL'</span></span><br><span class="line"></span><br><span class="line">min_value = prices[min(prices, key=<span class="keyword">lambda</span> k: pirces[k])]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在使用(值,键)对的时，多个实体拥有相同值得时候，键会决定返回结果</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">prices = &#123;<span class="string">'AAA'</span>: <span class="number">45.23</span>, <span class="string">'ZZZ'</span>, <span class="number">45.23</span>&#125;</span><br><span class="line">min(zip(prices.values(), prices.keys())) <span class="comment"># (45.23, 'AAA')</span></span><br><span class="line">max(zip(prices.values(), prices.keys())) <span class="comment"># (45.23, 'ZZZ')</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>查找两个字典的相同点</p>
+<ul>
+<li><p>通过集合操作来获取字典相同的键、相同的值</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">2</span>, <span class="string">'z'</span>: <span class="number">3</span>&#125;</span><br><span class="line">b = &#123;<span class="string">'w'</span>: <span class="number">10</span>, <span class="string">'x'</span>: <span class="number">11</span>, <span class="string">'y'</span>: <span class="number">2</span>&#125;</span><br><span class="line">print(a.keys() &amp; b.keys()) <span class="comment"># &#123;'x', 'y'&#125;</span></span><br><span class="line">print(a.keys() - b.keys()) <span class="comment"># &#123;'z'&#125;</span></span><br><span class="line">print(a.items() &amp; b.items()) <span class="comment"># &#123;('y', 2)&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改或过滤字典元素</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c = &#123; key:a[key] <span class="keyword">for</span> key <span class="keyword">in</span> a.keys() - &#123;<span class="string">'z'</span>, <span class="string">'w'</span>&#125;&#125;</span><br><span class="line">print(c) <span class="comment"># &#123;'x': 1, 'y': 2&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典的键可以直接执行集合的运算操作，不需要转换为 <code>set</code></p>
+</li>
+<li>字典的值是不支持直接进行集合操作的，需要转换为 <code>set</code> 才可以</li>
+</ul>
+</li>
+<li><p>删除序列相同元素并保持顺序</p>
+<ul>
+<li><p>序列上的值都是 <code>hashable</code> 类型，可以使用集合或者生成器来解决</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dedupe</span><span class="params">(items)</span>:</span></span><br><span class="line">    seen = set()</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">        <span class="keyword">if</span> item <span class="keyword">not</span> <span class="keyword">in</span> seen:</span><br><span class="line">            <span class="keyword">yield</span> item</span><br><span class="line">            seen.add(item)</span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>]</span><br><span class="line">print(list(dedupe(a))  <span class="comment"># [1, 5, 2, 9, 10]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元素不可以哈希时</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dedupe</span><span class="params">(items, key=None)</span>:</span></span><br><span class="line">    seen = set()</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">        val = item <span class="keyword">if</span> key <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">else</span> key(item)</span><br><span class="line">        <span class="keyword">if</span> val <span class="keyword">not</span> <span class="keyword">in</span> seen:</span><br><span class="line">            <span class="keyword">yield</span> item</span><br><span class="line">            seen.add(val)</span><br><span class="line"></span><br><span class="line">a = [&#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">2</span>&#125;, &#123;<span class="string">'x'</span>: <span class="number">1</span>, <span class="string">'y'</span>: <span class="number">3</span>&#125;, &#123;<span class="string">'x'</span>: <span class="number">1</span>,<span class="string">'y'</span>: <span class="number">2</span>&#125;, &#123;<span class="string">'x'</span>: <span class="number">2</span>, <span class="string">'y'</span>: <span class="number">4</span>&#125;]</span><br><span class="line">print(list(dedupe(a, key=<span class="keyword">lambda</span> d: (d[<span class="string">'x'</span>], d[<span class="string">'y'</span>]))))</span><br><span class="line"><span class="comment"># [&#123;'x': 1, 'y': 2&#125;, &#123;'x': 1, 'y': 3&#125;, &#123;'x': 2, 'y': 4&#125;]</span></span><br><span class="line">print(list(dedupe(a, key=<span class="keyword">lambda</span> d: d[<span class="string">'x'</span>])))</span><br><span class="line"><span class="comment"># [&#123;'x': 1, 'y': 2&#125;, &#123;'x': 2, 'y': 4&#125;]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>命名切片</p>
+<ul>
+<li><p>硬编码切片下标（固定字符串提取指定位置的字段）</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">record = <span class="string">'...............100.........513.25.........'</span></span><br><span class="line">cost = int(record[<span class="number">15</span>:<span class="number">18</span>]) * float(record[<span class="number">27</span>:<span class="number">33</span>])</span><br><span class="line"></span><br><span class="line">SHARES = slice(<span class="number">15</span>, <span class="number">18</span>)</span><br><span class="line">PRICE = slice(<span class="number">27</span>, <span class="number">33</span>)</span><br><span class="line">cost = int(record[SHARES]) * float(record[PRICE])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内置的 <code>slice()</code> 函数创建一个切片对象，可以被用在任何允许使用切片的地方</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">a = slice(<span class="number">2</span>, <span class="number">4</span>)</span><br><span class="line">print(items[<span class="number">2</span>:<span class="number">4</span>])  <span class="comment"># [2, 3]</span></span><br><span class="line">print(items[a])  <span class="comment"># [2, 3]</span></span><br><span class="line">items[a] = [<span class="number">10</span>, <span class="number">11</span>]</span><br><span class="line">print(items[a])  <span class="comment"># [10, 11]</span></span><br><span class="line"><span class="keyword">del</span> items[a]</span><br><span class="line">print(items)  <span class="comment"># [0, 1, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切片对象的属性可以获取相应的信息</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = slice(<span class="number">5</span>, <span class="number">50</span>, <span class="number">2</span>)</span><br><span class="line">print(a.start)  <span class="comment"># 5</span></span><br><span class="line">print(a.stop)  <span class="comment"># 50</span></span><br><span class="line">print(a.step)  <span class="comment"># 2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切片对象的 <code>indices(size)</code> 方法可以将它映射到一个确定大小的序列上</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'HelloWorld'</span></span><br><span class="line">print(a.indices(len(s)))  <span class="comment"># (5, 10, 2)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(*a.indices(len(s))):</span><br><span class="line">    print(s[i])</span><br><span class="line"><span class="comment"># W</span></span><br><span class="line"><span class="comment"># r</span></span><br><span class="line"><span class="comment"># d</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cookbook/" rel="tag"><i class="fa fa-tag"></i> cookbook</a>
+          
+            <a href="/tags/datastruct/" rel="tag"><i class="fa fa-tag"></i> datastruct</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/25/模拟器路径和相册文件夹/" rel="next" title="模拟器路径和相册文件夹（iOS）">
+                <i class="fa fa-chevron-left"></i> 模拟器路径和相册文件夹（iOS）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/16/think-of-two-sum/" rel="prev" title="由“俩数之和问题”所想">
+                由“俩数之和问题”所想 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

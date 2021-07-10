@@ -1,0 +1,1013 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day8">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day8/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://xiusl.me/2016/09/01/my-ios-day8/images/wine.png">
+<meta property="og:image" content="http://xiusl.me/2016/09/01/my-ios-day8/images/story.png">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day8">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="twitter:image" content="http://xiusl.me/2016/09/01/my-ios-day8/images/wine.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day8/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day8 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day8</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:00:48+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day8/" class="leancloud_visitors" data-flag-title="my-ios-day8">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<p>#day 08</p>
+<h2 id="简单购物车"><a href="#简单购物车" class="headerlink" title="简单购物车"></a>简单购物车</h2><p><img src="images/wine.png" alt></p>
+<h4 id="关注点"><a href="#关注点" class="headerlink" title="关注点"></a>关注点</h4><ul>
+<li>storyboard自定义等高cell</li>
+<li>简单MVC</li>
+<li>代理设计模式</li>
+<li>圆角按钮</li>
+</ul>
+<h4 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h4><ul>
+<li>storyboard界面<br><img src="images/story.png" alt></li>
+<li><p>添加数据源</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#pragma mark - 懒加载，模型解析</span></span><br><span class="line">- (<span class="built_in">NSArray</span> *)wines &#123;</span><br><span class="line"><span class="keyword">if</span> (_wines == <span class="literal">nil</span>) &#123;</span><br><span class="line">_wines = [SLWine mj_objectArrayWithFilename:<span class="string">@"wine.plist"</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> _wines;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#pragma mark - UITableView数据源方法</span></span><br><span class="line">- (<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">self</span>.wines.count;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</span><br><span class="line">&#123;</span><br><span class="line">SLWineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<span class="string">@"wine"</span>];</span><br><span class="line"><span class="keyword">if</span> (!cell) &#123;</span><br><span class="line">cell = [[SLWineTableViewCell alloc] init];</span><br><span class="line">&#125;</span><br><span class="line">cell.wine = <span class="keyword">self</span>.wines[indexPath.row];</span><br><span class="line">cell.delegate = <span class="keyword">self</span>;</span><br><span class="line"><span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自定义cell</p>
+</li>
+<li><p>新建<code>SLWineTableViewCell</code>类，设置storyboard的cell为但钱类，拖线拿到相应控件属性和事件</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLWineTableViewCell</span> ()</span></span><br><span class="line"><span class="comment">/** 图片标签 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UIImageView</span> *iconView;</span><br><span class="line"><span class="comment">/** 名字标签 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *nameLabel;</span><br><span class="line"><span class="comment">/** 价钱标签 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *priceLabel;</span><br><span class="line"><span class="comment">/** 加一个按钮 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> SLCircleButton *ad dButton;</span><br><span class="line"><span class="comment">/** 减一个按钮 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> SLCircleButton *removeButton;</span><br><span class="line"><span class="comment">/** 数量标签 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UILabel</span> *numLabel;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLWineTableViewCell</span></span></span><br><span class="line">- (<span class="keyword">IBAction</span>)addButton:(<span class="built_in">UIButton</span> *)button &#123;</span><br><span class="line"><span class="keyword">self</span>.wine.count += <span class="number">1</span>;</span><br><span class="line"><span class="keyword">self</span>.removeButton.enabled = <span class="literal">YES</span>;</span><br><span class="line"><span class="keyword">self</span>.numLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%d"</span>, <span class="keyword">self</span>.wine.count];</span><br><span class="line"><span class="keyword">if</span> ([<span class="keyword">self</span>.delegate respondsToSelector:<span class="keyword">@selector</span>(wineTableViewCell: addbuttonClick:)]) &#123;</span><br><span class="line">[<span class="keyword">self</span>.delegate wineTableViewCell:<span class="keyword">self</span> addbuttonClick:button];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">IBAction</span>)removeButton:(<span class="built_in">UIButton</span> *)button &#123;</span><br><span class="line"><span class="keyword">self</span>.wine.count -= <span class="number">1</span>;</span><br><span class="line"><span class="keyword">self</span>.numLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%d"</span>, <span class="keyword">self</span>.wine.count];</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.wine.count == <span class="number">0</span>) &#123;</span><br><span class="line">button.enabled = <span class="literal">NO</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ([<span class="keyword">self</span>.delegate respondsToSelector:<span class="keyword">@selector</span>(wineTableViewCell: removebuttonClick:)]) &#123;</span><br><span class="line">[<span class="keyword">self</span>.delegate wineTableViewCell:<span class="keyword">self</span> removebuttonClick:button];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)setWine:(SLWine *)wine &#123;</span><br><span class="line">_wine = wine;</span><br><span class="line"><span class="keyword">self</span>.iconView.image = [<span class="built_in">UIImage</span> imageNamed:wine.image];</span><br><span class="line"><span class="keyword">self</span>.nameLabel.text = wine.name;</span><br><span class="line"><span class="keyword">self</span>.priceLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"¥%@"</span>, wine.money];</span><br><span class="line"><span class="keyword">self</span>.numLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%d"</span>, <span class="keyword">self</span>.wine.count];</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.wine.count == <span class="number">0</span>) &#123;</span><br><span class="line"><span class="keyword">self</span>.removeButton.enabled = <span class="literal">NO</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cell的代理</p>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@class</span> <span class="title">SLWine</span>, <span class="title">SLWineTableViewCell</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">SLWineTableViewCelldelegate</span> &lt;<span class="title">NSObject</span>&gt;</span></span><br><span class="line"><span class="keyword">@optional</span></span><br><span class="line">- (<span class="keyword">void</span>)wineTableViewCell:(SLWineTableViewCell *)cell addbuttonClick:(<span class="built_in">UIButton</span> *)button;</span><br><span class="line">- (<span class="keyword">void</span>)wineTableViewCell:(SLWineTableViewCell *)cell removebuttonClick:(<span class="built_in">UIButton</span> *)button;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLWineTableViewCell</span> : <span class="title">UITableViewCell</span></span></span><br><span class="line"><span class="comment">/** 酒模型 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) SLWine *wine;</span><br><span class="line"><span class="comment">/** Cell的代理 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">id</span>&lt;SLWineTableViewCelldelegate&gt; delegate;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>圆角按钮</li>
+<li>自定义按钮<code>SLCircleButton</code></li>
+<li><p>头文件<code>SLCircleButton.h</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">SLCircleButton</span> : <span class="title">UIButton</span></span></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现<code>SLCircleButton.m</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">"SLCircleButton.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">SLCircleButton</span></span></span><br><span class="line">- (<span class="keyword">void</span>)awakeFromNib</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">// 设置边框宽度</span></span><br><span class="line"><span class="keyword">self</span>.layer.borderWidth = <span class="number">1.0</span>;</span><br><span class="line"><span class="comment">// 设置边框颜色</span></span><br><span class="line"><span class="keyword">self</span>.layer.borderColor = [<span class="built_in">UIColor</span> redColor].CGColor;</span><br><span class="line"><span class="comment">// 设置圆角半径</span></span><br><span class="line"><span class="keyword">self</span>.layer.cornerRadius = <span class="keyword">self</span>.frame.size.width * <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="iOS通知机制"><a href="#iOS通知机制" class="headerlink" title="iOS通知机制"></a>iOS通知机制</h4><ul>
+<li>要点</li>
+<li>通知的发布</li>
+<li>通知的监听</li>
+<li>通知的移除</li>
+<li>通知中心</li>
+<li>每一个应用程序都有一个通知中心<code>NSNotificationCenter</code>实例，专门负责协助不同对象之间的消息通信</li>
+<li>任何一个对象都可以向通知中心发布通知<code>NSNotification</code>，描述自己在做什么</li>
+<li>其他感兴趣的对象<code>Observer</code>可以申请在某个特定通知发布时(或在某个特定的对象发布通知时)收到这个通知</li>
+<li>通知简介</li>
+<li><p>三个属性</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSString</span> *)name; <span class="comment">// 通知的名称</span></span><br><span class="line">- (<span class="keyword">id</span>)object; <span class="comment">// 通知发布者(是谁要发布通知)</span></span><br><span class="line">- (<span class="built_in">NSDictionary</span> *)userInfo; <span class="comment">// 一些额外的信息(通知发布者传递给通知接收者的信息内容)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="keyword">instancetype</span>)notificationWithName:(<span class="built_in">NSString</span> *)aName object:(<span class="keyword">id</span>)anObject;</span><br><span class="line">+ (<span class="keyword">instancetype</span>)notificationWithName:(<span class="built_in">NSString</span> *)aName object:(<span class="keyword">id</span>)anObject userInfo:(<span class="built_in">NSDictionary</span> *)aUserInfo;</span><br><span class="line">- (<span class="keyword">instancetype</span>)initWithName:(<span class="built_in">NSString</span> *)name object:(<span class="keyword">id</span>)object userInfo:(<span class="built_in">NSDictionary</span> *)userInfo;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通知发布</p>
+</li>
+<li><p>通知中心<code>NSNotificationCenter</code>提供了相应的方法来帮助发布通知</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发布一个notification通知，可在notification对象中设置通知的名称、通知发布者、额外信息等</span></span><br><span class="line">- (<span class="keyword">void</span>)postNotification:(<span class="built_in">NSNotification</span> *)notification;</span><br><span class="line"><span class="comment">// 发布一个名称为aName的通知，anObject为这个通知的发布者</span></span><br><span class="line">- (<span class="keyword">void</span>)postNotificationName:(<span class="built_in">NSString</span> *)aName object:(<span class="keyword">id</span>)anObject;</span><br><span class="line"><span class="comment">// 发布一个名称为aName的通知，anObject为这个通知的发布者，aUserInfo为额外信息</span></span><br><span class="line">- (<span class="keyword">void</span>)postNotificationName:(<span class="built_in">NSString</span> *)aName object:(<span class="keyword">id</span>)anObject userInfo:(<span class="built_in">NSDictionary</span> *)aUserInfo;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通知监听</p>
+</li>
+<li><p>注册监听器，通知中心<code>NSNotificationCenter</code>提供了方法来注册一个监听通知的监听器<code>Observer</code></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* observer：监听器，即谁要接收这个通知</span></span><br><span class="line"><span class="comment">* aSelector：收到通知后，回调监听器的这个方法，并且把通知对象当做参数传入</span></span><br><span class="line"><span class="comment">* aName：通知的名称。如果为nil，那么无论通知的名称是什么，监听器都能收到这个通知</span></span><br><span class="line"><span class="comment">* anObject：通知发布者。如果为anObject和aName都为nil，监听器都收到所有的通知</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)addObserver:(<span class="keyword">id</span>)observer selector:(SEL)aSelector name:(<span class="built_in">NSString</span> *)aName object:(<span class="keyword">id</span>)anObject;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* name：通知的名称</span></span><br><span class="line"><span class="comment">* obj：通知发布者</span></span><br><span class="line"><span class="comment">* block：收到对应的通知时，会回调这个block</span></span><br><span class="line"><span class="comment">* queue：决定了block在哪个操作队列中执行，如果传nil，默认在当前操作队列中同步执行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">id</span>)addObserverForName:(<span class="built_in">NSString</span> *)name object:(<span class="keyword">id</span>)obj queue:(<span class="built_in">NSOperationQueue</span> *)queue usingBlock:(<span class="keyword">void</span> (^)(<span class="built_in">NSNotification</span> *note))block;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>移除监听</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)removeObserver:(<span class="keyword">id</span>)observer;</span><br><span class="line">- (<span class="keyword">void</span>)removeObserver:(<span class="keyword">id</span>)observer name:(<span class="built_in">NSString</span> *)aName object:(<span class="keyword">id</span>)anObject;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>UIDecive的通知</p>
+</li>
+<li>UIDevice类提供了一个单粒对象，它代表着设备，通过它可以获得一些设备相关的信息</li>
+<li>电池电量值(batteryLevel)</li>
+<li>电池状态(batteryState)</li>
+<li>设备的类型(model，比如iPod、iPhone等)</li>
+<li>设备的系统(systemVersion)</li>
+<li>通过<code>[UIDevice currentDevice]</code>可以获取这个单粒对象</li>
+<li>UIDevice对象会不间断地发布一些通知<br>UIDeviceOrientationDidChangeNotification // 设备旋转<br>UIDeviceBatteryStateDidChangeNotification // 电池状态改变<br>UIDeviceBatteryLevelDidChangeNotification // 电池电量改变<br>UIDeviceProximityStateDidChangeNotification // 近距离传感器(比如设备贴近了使用者的脸部)</li>
+<li>键盘的通知</li>
+<li>我们经常需要在键盘弹出或者隐藏的时候做一些特定的操作,因此需要监听键盘的状态</li>
+<li>键盘状态改变的时候,系统会发出一些特定的通知<br>UIKeyboardWillShowNotification // 键盘即将显示<br>UIKeyboardDidShowNotification // 键盘显示完毕<br>UIKeyboardWillHideNotification // 键盘即将隐藏<br>UIKeyboardDidHideNotification // 键盘隐藏完毕<br>UIKeyboardWillChangeFrameNotification // 键盘的位置尺寸即将发生改变<br>UIKeyboardDidChangeFrameNotification // 键盘的位置尺寸改变完毕</li>
+<li>系统发出键盘通知时,会附带一下跟键盘有关的额外信息(字典),字典常见的key如下:<br>UIKeyboardFrameBeginUserInfoKey // 键盘刚开始的frame<br>UIKeyboardFrameEndUserInfoKey // 键盘最终的frame(动画执行完毕后)<br>UIKeyboardAnimationDurationUserInfoKey // 键盘动画的时间<br>UIKeyboardAnimationCurveUserInfoKey // 键盘动画的执行节奏(快慢)</li>
+<li>通知和代理</li>
+<li>共同点<br><br>利用通知和代理都能完成对象之间的通信<br><br>(比如A对象告诉D对象发生了什么事情, A对象传递数据给D对象)</li>
+<li>区别</li>
+<li>代理 : 1个对象只能告诉另1个对象发生了什么事情</li>
+<li>通知 : 1个对象能告诉N个对象发生了什么事情, 1个对象能得知N个对象发生了什么事情</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day7/" rel="next" title="my-ios-day7">
+                <i class="fa fa-chevron-left"></i> my-ios-day7
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day9/" rel="prev" title="my-ios-day9">
+                my-ios-day9 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单购物车"><span class="nav-number">1.</span> <span class="nav-text">简单购物车</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关注点"><span class="nav-number">1.0.1.</span> <span class="nav-text">关注点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本步骤"><span class="nav-number">1.0.2.</span> <span class="nav-text">基本步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iOS通知机制"><span class="nav-number">1.0.3.</span> <span class="nav-text">iOS通知机制</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

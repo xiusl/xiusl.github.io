@@ -1,0 +1,1141 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="ios,gitbook,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1">
+
+
+
+
+
+
+<meta name="description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta name="keywords" content="ios,gitbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-ios-day17">
+<meta property="og:url" content="http://xiusl.me/2016/09/01/my-ios-day17/index.html">
+<meta property="og:site_name" content="Instant">
+<meta property="og:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-07-10T11:42:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my-ios-day17">
+<meta name="twitter:description" content="这个是16年重新复习的iOS笔记，当时是放在了gitbook，现在转移过来！">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://xiusl.me/2016/09/01/my-ios-day17/">
+
+
+
+
+<script>
+  (function(){
+    if(''){
+      if (prompt('请输入文章密码','') !== ''){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  })();
+</script>
+
+  <title>my-ios-day17 | Instant</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Instant</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">instant bb forever</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiusl.me/2016/09/01/my-ios-day17/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiusl">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Instant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">my-ios-day17</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-01T16:12:09+00:00">
+                2016-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/09/01/my-ios-day17/" class="leancloud_visitors" data-flag-title="my-ios-day17">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个是16年重新复习的iOS笔记，当时是放在了<a href="https://sleenxiu.gitbooks.io/my-learning-ios/content/" target="_blank" rel="noopener">gitbook</a>，现在转移过来！<br><a id="more"></a></p>
+<h1 id="day-17"><a href="#day-17" class="headerlink" title="day 17"></a>day 17</h1><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><ul>
+<li>进程与线程</li>
+<li>pthread</li>
+<li>NSThread</li>
+<li>GCD</li>
+</ul>
+<hr>
+<h4 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h4><ul>
+<li>进程</li>
+<li>在系统中正在运行的一个应用程序。每个进程间是独立的，每个进程运行在专有且受保护的内存空间</li>
+<li>是系统分配资源的基本单位</li>
+<li>线程</li>
+<li>一个进程要想执行任务，必须要有一个线程，线程执行任务是串行的，一个线程只能在执行一个任务</li>
+<li>是系统程序调度的基本单位</li>
+<li>多线程</li>
+<li>一个进程可以开启多个线程，多条线程可以并行执行，同时执行</li>
+<li>单核CPU的这种并行也是只有一条线程工作，只是CPU调度快，线程间不断切换</li>
+<li>优点</li>
+</ul>
+<ol>
+<li>能适当提高程序的执行效率</li>
+<li>能适当提高资源（CPU、内存）利用率</li>
+</ol>
+<ul>
+<li>缺点</li>
+</ul>
+<ol>
+<li>开启线程会占用一定内存，开启过多线程会大量占用空间</li>
+<li>线程越多，CPU调度线程的开销就越大</li>
+<li>程序设计会过于复杂（进程间通信、资源共享）</li>
+</ol>
+<ul>
+<li>是一种以空间换取时间的技术</li>
+</ul>
+<hr>
+<h4 id="pthread"><a href="#pthread" class="headerlink" title="pthread"></a>pthread</h4><ul>
+<li>简介</li>
+<li>一套跨平台的多线程API（Unix、Linux、Windows等）</li>
+<li>采用C语言，使用难度较大，很少使用</li>
+<li>使用<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建线程对象</span></span><br><span class="line">pthread_t thread1;</span><br><span class="line"><span class="comment">// 创建线程</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">pthread_create(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)</span></span><br><span class="line"><span class="comment">第一个参数：线程对象、传递地址</span></span><br><span class="line"><span class="comment">第二个参数：线程属性、NULL</span></span><br><span class="line"><span class="comment">第三个参数：指向函数的指针</span></span><br><span class="line"><span class="comment">第四个参数：函数需要接收的参数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">pthread_create(&amp;thread1, <span class="literal">NULL</span>, test, <span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="pthread-1"><a href="#pthread-1" class="headerlink" title="pthread"></a>pthread</h4><ul>
+<li>简介</li>
+<li><p>三种创建方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过init方法创建线程，需要手动开启</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">initWithTarget:(nonnull id) selector:(nonnull SEL) object:(nullable id)</span></span><br><span class="line"><span class="comment">第一个参数：目标对象、self</span></span><br><span class="line"><span class="comment">第二个参数：方法选择器、调用的方法</span></span><br><span class="line"><span class="comment">第三个参数：前面方法需要的参数、nil</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">NSThread</span> *thread1 = [[<span class="built_in">NSThread</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(test1) object:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 开启线程</span></span><br><span class="line">[thread1 start];</span><br><span class="line"><span class="comment">// 通过类方法创建，分离出的子线程</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">detachNewThreadSelector:(nonnull SEL) toTarget:(nonnull id) withObject:(nullable id)</span></span><br><span class="line"><span class="comment">第一个参数：方法选择器、调用的方法</span></span><br><span class="line"><span class="comment">第二个参数：目标对象、self</span></span><br><span class="line"><span class="comment">第三个参数：前面方法需要的参数、nil</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">NSThread</span> *thread2 = [<span class="built_in">NSThread</span> detachNewThreadSelector:<span class="keyword">@selector</span>(test2) toTarget:<span class="keyword">self</span> withObject:<span class="literal">nil</span>];</span><br><span class="line"><span class="comment">// 开启后台线程</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">performSelectorInBackground:(nonnull SEL) withObject:(nullable id)</span></span><br><span class="line"><span class="comment">第一个参数：方法选择器、调用的方法</span></span><br><span class="line"><span class="comment">第二个参数：前面方法需要的参数、nil</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">[<span class="keyword">self</span> performSelectorInBackground:<span class="keyword">@selector</span>(test3) withObject:<span class="literal">nil</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>属性</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置名字</span></span><br><span class="line">thread1.name = <span class="string">@"线程1"</span>;</span><br><span class="line"><span class="comment">// 线程优先级</span></span><br><span class="line">thread1.threadPriority = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>线程状态</p>
+</li>
+<li>新建状态</li>
+<li>就绪状态</li>
+<li>运行状态</li>
+<li><p>阻塞状态</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种：阻塞两秒</span></span><br><span class="line">[<span class="built_in">NSThread</span> sleepForTimeInterval:<span class="number">2.0</span>];</span><br><span class="line"><span class="comment">// 第二种：阻塞三秒</span></span><br><span class="line">[<span class="built_in">NSThread</span> sleepUntilDate:[<span class="built_in">NSDate</span> dateWithTimeInterval:<span class="number">3.0</span>]];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>死亡状态</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 退出线程，退出后不能再重启线程</span></span><br><span class="line">[<span class="built_in">NSThread</span> exit];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>线程安全</p>
+</li>
+<li>一块资源被多个线程访问，会引发数据混乱</li>
+<li><p>加锁</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 锁是全局唯一的</span></span><br><span class="line"><span class="keyword">@synchronized</span>(<span class="keyword">self</span>) &#123;</span><br><span class="line"><span class="built_in">NSInteger</span> count = <span class="keyword">self</span>.totalCount;</span><br><span class="line"><span class="keyword">if</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">self</span>.totalCount -= <span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"没有了"</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意：</p>
+</li>
+</ul>
+<ol>
+<li>加锁的位置</li>
+<li>加锁的前提条件（多线程共享同一资源）</li>
+<li>加锁是有代价的，需要耗费性能的</li>
+<li>加锁的结果是：线程同步</li>
+</ol>
+<ul>
+<li>原子和非原子</li>
+<li>nonatomic和atomic</li>
+</ul>
+<ol>
+<li>atomic：线程安全，需要耗费大量资源，加锁</li>
+<li>nonatomic：非线程安全，适合小内存移动设备</li>
+</ol>
+<ul>
+<li>iOS注意</li>
+</ul>
+<ol>
+<li>所有属性都声明为nonatomic</li>
+<li>尽量避免多线程抢夺同一资源</li>
+<li>将加锁、资源抢夺交给服务器，减小客户端压力</li>
+</ol>
+<ul>
+<li>线程间通信</li>
+<li>具体体现</li>
+</ul>
+<ol>
+<li>一个线程传递数据给另一个线程</li>
+<li>在一个特定线程执行完成过后，转到另一个线程继续执行任务</li>
+</ol>
+<ul>
+<li><p>常用方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：回到线程的什么方法</span></span><br><span class="line"><span class="comment">第二个参数：回到那个线程</span></span><br><span class="line"><span class="comment">第三个参数：传递的参数</span></span><br><span class="line"><span class="comment">第四个参数：是否需要等待</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)performSelector:(SEL)aSelector onThread:(<span class="built_in">NSThread</span> *)thr withObject:(<span class="keyword">id</span>)arg waitUntilDone:(<span class="built_in">BOOL</span>)wait;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：回到主线程的什么方法</span></span><br><span class="line"><span class="comment">第二个参数：传递的参数</span></span><br><span class="line"><span class="comment">第三个参数：是否需要等待</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)performSelectorOnMainThread:(SEL)aSelector withObject:(<span class="keyword">id</span>)arg waitUntilDone:(<span class="built_in">BOOL</span>)wait;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片下载</p>
+</li>
+<li>添加UIImageView</li>
+<li>开启线程，下载图片</li>
+<li>回到主线程刷新UI</li>
+<li><p>代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span>&lt;<span class="built_in">UITouch</span> *&gt; *)touches withEvent:(<span class="built_in">UIEvent</span> *)event &#123;</span><br><span class="line">[<span class="built_in">NSThread</span> detachNewThreadSelector:<span class="keyword">@selector</span>(downLoadImage) toTarget:<span class="keyword">self</span> withObject:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)downLoadImage &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line"><span class="built_in">CFTimeInterval</span> startD = <span class="built_in">CFAbsoluteTimeGetCurrent</span>();</span><br><span class="line"><span class="comment">// 确定url</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://www.onegreen.net/maps/Upload_maps/201412/2014120107143496.jpg"</span>];</span><br><span class="line"><span class="comment">// 根据url下载图片到本地（二进制数据）</span></span><br><span class="line"><span class="built_in">NSData</span> *imageData = [<span class="built_in">NSData</span> dataWithContentsOfURL:url];</span><br><span class="line"><span class="comment">// 转换数据</span></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:imageData];</span><br><span class="line"><span class="comment">// 回到主线程显示到imageView</span></span><br><span class="line">[<span class="keyword">self</span> performSelectorOnMainThread:<span class="keyword">@selector</span>(showImage:) withObject:image waitUntilDone:<span class="literal">YES</span>];</span><br><span class="line"><span class="built_in">CFTimeInterval</span> endD = <span class="built_in">CFAbsoluteTimeGetCurrent</span>();</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%f"</span>, endD - startD);</span><br><span class="line">&#125;</span><br><span class="line">- (<span class="keyword">void</span>)showImage:(<span class="built_in">UIImage</span> *)image &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line"><span class="keyword">self</span>.imageView.image = image;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以通过imageView调用回到主线程的方法</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span>.imageView performSelectorOnMainThread:<span class="keyword">@selector</span>(setImage:) withObject:image waitUntilDone:<span class="literal">YES</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h4><ul>
+<li>简介</li>
+<li>Grand Centra Dispatch，纯C语言，拥有非常强大的函数</li>
+<li>充分利用CPU多核，发挥设备性能</li>
+<li>会自动管理线程的生命周期（创建、调度、销毁）</li>
+<li>只需告诉GCD要执行的代码，不编写线程管理代码</li>
+<li>两个核心概念</li>
+<li>任务：需要执行的操作</li>
+<li>队列：用来存放任务</li>
+<li>两个步骤</li>
+<li>定制任务，确定要执行的操作</li>
+<li>添加到队列</li>
+</ul>
+<ol>
+<li>GCD会自动取出队列中的任务，放到相应的线程执行</li>
+<li>任务的取出遵守FIFO（先进先出）原则</li>
+</ol>
+<ul>
+<li>两个函数</li>
+<li><p>同步函数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">queue：队列</span></span><br><span class="line"><span class="comment">block：任务</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">dispatch_sync</span>(<span class="built_in">dispatch_queue_t</span> queue, ^(<span class="keyword">void</span>)block)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>异步函数</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">queue：队列</span></span><br><span class="line"><span class="comment">block：任务</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">dispatch_async</span>(<span class="built_in">dispatch_queue_t</span> queue, ^(<span class="keyword">void</span>)block)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>区别</p>
+</li>
+<li>同步：只能在当前线程中执行任务，不具备开启新线程的能力</li>
+<li>异步：可以在新线程中执行任务，具备开启新线程的能力，但不一定开启新线程</li>
+<li>两种队列</li>
+<li>并发队列</li>
+<li>可以让多个任务并发（同时）执行，自动开启多个线程同时执行任务</li>
+<li>只有在异步函数dispatch_async中在有效（开线程）</li>
+<li>串行队列</li>
+<li>让任务一个接着一个的执行（一个任务执行完再执行下一个任务）</li>
+<li>四种组合</li>
+<li><p>异步函数+并发队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 异步函数+并发队列</span></span><br><span class="line"><span class="comment">* 会开启多条线程，任务异步执行（没有顺序，一起执行）</span></span><br><span class="line"><span class="comment">* 并不是有多少个任务就会开多少个线程</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)asyncConcurrent &#123;</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* label：C语言字符串，标签</span></span><br><span class="line"><span class="comment">* queue：队列类型</span></span><br><span class="line"><span class="comment">* DISPATCH_QUEUE_CONCURRENT：并发</span></span><br><span class="line"><span class="comment">* DISPATCH_QUEUE_SERIAL：串行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="string">"xyz.Sleen"</span>, DISPATCH_QUEUE_CONCURRENT);</span><br><span class="line"><span class="comment">// 封装任务，添加到队列</span></span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/* 打印结果</span></span><br><span class="line"><span class="comment">downLoad - image1--&lt;NSThread: 0x7ff4a370ce40&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">downLoad - image3--&lt;NSThread: 0x7ff4a3614ff0&gt;&#123;number = 4, name = (null)&#125;</span></span><br><span class="line"><span class="comment">downLoad - image2--&lt;NSThread: 0x7ff4a347d260&gt;&#123;number = 3, name = (null)&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>异步函数+串行队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 异步函数+串行队列</span></span><br><span class="line"><span class="comment">* 会开启一条新线程，任务串行执行（一个接着一执行）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)asyncSerial &#123;</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="string">"xyz.Sleen"</span>, DISPATCH_QUEUE_SERIAL);</span><br><span class="line"><span class="comment">// 封装任务，添加到队列</span></span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/* 打印结果</span></span><br><span class="line"><span class="comment">downLoad - image1--&lt;NSThread: 0x7fe481e0ba00&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">downLoad - image2--&lt;NSThread: 0x7fe481e0ba00&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">downLoad - image3--&lt;NSThread: 0x7fe481e0ba00&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同步函数+并发队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 同步函数+并发队列</span></span><br><span class="line"><span class="comment">* 不会开线程，任务串行执行（一个接着一执行）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)syncConcurrent &#123;</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="string">"xyz.Sleen"</span>, DISPATCH_QUEUE_CONCURRENT);</span><br><span class="line"><span class="comment">// 封装任务，添加到队列</span></span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/* 打印结果：</span></span><br><span class="line"><span class="comment">downLoad - image1--&lt;NSThread: 0x7fd3b2f00f50&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">downLoad - image2--&lt;NSThread: 0x7fd3b2f00f50&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">downLoad - image3--&lt;NSThread: 0x7fd3b2f00f50&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同步函数+串行队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 同步函数+串行队列</span></span><br><span class="line"><span class="comment">* 不会开线程，任务串行执行（一个接着一执行）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)syncSerial &#123;</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="string">"xyz.Sleen"</span>, DISPATCH_QUEUE_SERIAL);</span><br><span class="line"><span class="comment">// 封装任务，添加到队列</span></span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/* 打印结果：</span></span><br><span class="line"><span class="comment">downLoad - image1--&lt;NSThread: 0x7fe333f04dd0&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">downLoad - image2--&lt;NSThread: 0x7fe333f04dd0&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">downLoad - image3--&lt;NSThread: 0x7fe333f04dd0&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>涉及到同步函数的都不会创建新线程，任务都是串行执行</p>
+</li>
+<li><p>GCD提供一个全局并发队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 获得全局并发队列</span></span><br><span class="line"><span class="comment">* 第一个参数：优先级</span></span><br><span class="line"><span class="comment">* 第二个参数：“未来使用”--0</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GCD提供一个主队列（串行队列）</p>
+</li>
+<li><p>异步函数+主队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 异步函数+主队列</span></span><br><span class="line"><span class="comment">* 不会开线程，都在主线程中执行</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)asycnMain &#123;</span><br><span class="line"><span class="comment">// 获取主线程</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_main_queue();</span><br><span class="line"><span class="comment">// 封装任务，添加到队列</span></span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/* 打印结果</span></span><br><span class="line"><span class="comment">start---</span></span><br><span class="line"><span class="comment">end---</span></span><br><span class="line"><span class="comment">downLoad - image1--&lt;NSThread: 0x7fb533f01aa0&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">downLoad - image2--&lt;NSThread: 0x7fb533f01aa0&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">downLoad - image3--&lt;NSThread: 0x7fb533f01aa0&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同步函数+主队列</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 同步函数+主队列</span></span><br><span class="line"><span class="comment">* 死锁</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)sycnMain &#123;</span><br><span class="line"><span class="comment">// 获取主线程</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_main_queue();</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"start---"</span>);</span><br><span class="line"><span class="comment">// 封装任务，添加到队列</span></span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad - image3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"end---"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>死锁分析</p>
+</li>
+<li>主队列特点：如果主队列发现当前主线程正在执行任务，那么主队列会暂停调用队列中的任务，知道主线程空闲为止</li>
+<li>同步函数+主队列，主线程正在执行<code>sycnMain</code>，因为接下来是同步函数，主线程不执行完<code>sycnMain</code>就不会继续执行，主队列就不会调用队列的任务，死锁</li>
+<li>异步函数+主队列，主线程正在执行<code>asycnMain</code>，因为接下来是异步函数，可以等下回来在执行，主线程先执行完<code>sycnMain</code>，然后主队列再调用队列的任务，不会死锁</li>
+<li><p>GCD线程间通信</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dispatch_async</span>(dispatch_get_global_queue(<span class="number">0</span>, <span class="number">0</span>), ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line"><span class="comment">// 确定url</span></span><br><span class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWitString:<span class="string">@"http://www.onegreen.net/maps/Upload_maps/2014122014120107143496.jpg"</span>];</span><br><span class="line"><span class="comment">// 根据url下载图片到本地（二进制数据）</span></span><br><span class="line"><span class="built_in">NSData</span> *imageData = [<span class="built_in">NSData</span> dataWihContentsOfURL:url];</span><br><span class="line"><span class="comment">// 转换数据</span></span><br><span class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWthData:imageData];</span><br><span class="line"><span class="comment">// 回到主线程显示到imageView</span></span><br><span class="line"><span class="built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line"><span class="keyword">self</span>.imageView.image = image;</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/* 打印结果</span></span><br><span class="line"><span class="comment">&lt;NSThread: 0x7ffa8861e9e0&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">&lt;NSThread: 0x7ffa88404630&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>GCD其他方法</p>
+</li>
+<li><p>延迟执行</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种：两秒执行self的test方法</span></span><br><span class="line">[<span class="keyword">self</span> performSelector:<span class="keyword">@selector</span>(test) withObject:<span class="keyword">self</span> afterDelay:<span class="number">2</span>];</span><br><span class="line"><span class="comment">// 第二种：三秒后执行self的test方法，不重复</span></span><br><span class="line">[<span class="built_in">NSTimer</span> timerWithTimeInterval:<span class="number">3</span> target:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(test) userInfo:<span class="literal">nil</span> repeats:<span class="literal">NO</span>];</span><br><span class="line"><span class="comment">// 第三种：delayInSeconds秒后再主队列执行操作</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">第一个参数：DISPATCH_TIME_NOW，从现在开始计算</span></span><br><span class="line"><span class="comment">第二个参数：延迟的时间，GCD时间单位纳秒</span></span><br><span class="line"><span class="comment">第三个参数：队列（主队列、串行队列、并发队列）</span></span><br><span class="line"><span class="comment">block：操作</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * <span class="built_in">NSEC_PER_SEC</span>)), dispatch_get_main_queue(), ^&#123;</span><br><span class="line"><span class="comment">// code to be executed after a specified delay</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一次性代码</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 整个程序的运行过程中只会调用一次</span></span><br><span class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line"><span class="comment">// code to be executed once</span></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"--once--"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>应用场景 —- 单例模式</p>
+</li>
+<li>栅栏函数</li>
+<li><p>控制多线程异步执行顺序</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="string">"sxy.Sleen"</span>, DISPATCH_QUEUE_CONCURRENT);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 栅栏函数</span></span><br><span class="line"><span class="comment">// 不能使用全局并发队列</span></span><br><span class="line">dispatch_barrier_async(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"-------栅栏函数"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">downLoad--1--&lt;NSThread: 0x7fad93c08760&gt;&#123;number = 3, name = (null)&#125;</span></span><br><span class="line"><span class="comment">downLoad--2--&lt;NSThread: 0x7fad93e2b890&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">-------栅栏函数</span></span><br><span class="line"><span class="comment">downLoad--3--&lt;NSThread: 0x7fad93e2b890&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>快速迭代</p>
+</li>
+<li><p>通过子线程和主线程并发执行</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 第一个参数：遍历的次数</span></span><br><span class="line"><span class="comment">* 第二个参数：队列（只能是并发队列）</span></span><br><span class="line"><span class="comment">* 第三个参数：索引</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">dispatch_apply(<span class="number">5</span>, dispatch_get_global_queue(<span class="number">0</span>, <span class="number">0</span>), ^(size_t index) &#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%zu---%@"</span>, index, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">0---&lt;NSThread: 0x7fe83b629bb0&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">1---&lt;NSThread: 0x7fe83b706490&gt;&#123;number = 1, name = main&#125;</span></span><br><span class="line"><span class="comment">2---&lt;NSThread: 0x7fe83b517710&gt;&#123;number = 3, name = (null)&#125;</span></span><br><span class="line"><span class="comment">3---&lt;NSThread: 0x7fe83b4115b0&gt;&#123;number = 4, name = (null)&#125;</span></span><br><span class="line"><span class="comment">4---&lt;NSThread: 0x7fe83b629bb0&gt;&#123;number = 2, name = (null)&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>队列组</p>
+</li>
+<li>用来管理队列，<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)group &#123;</span><br><span class="line"><span class="comment">// 创建队列</span></span><br><span class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="comment">// 创建队列组</span></span><br><span class="line">dispatch_group_t group = dispatch_group_create();</span><br><span class="line">dispatch_group_async(group, queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--1--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line">dispatch_group_async(group, queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--2--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line">dispatch_group_async(group, queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"downLoad--3--%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 拦截通知，队列组中的任务执行完毕后调用</span></span><br><span class="line">dispatch_group_notify(group, queue, ^&#123;</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"ALL--downLoad--"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 等待，直到队列组所有任务完成后才向下执行</span></span><br><span class="line">dispatch_group_wait(group, DISPATCH_TIME_FOREVER);</span><br><span class="line"><span class="comment">// 区别</span></span><br><span class="line"><span class="comment">/* 异步函数</span></span><br><span class="line"><span class="comment">* 1. 封装任务</span></span><br><span class="line"><span class="comment">* 2. 添加任务到队列</span></span><br><span class="line"><span class="comment">dispatch_async(queue, ^&#123;</span></span><br><span class="line"><span class="comment">NSLog(@"downLoad--1--%@", [NSThread currentThread]);</span></span><br><span class="line"><span class="comment">&#125;);</span></span><br><span class="line"><span class="comment">* 队列组</span></span><br><span class="line"><span class="comment">* 1. 封装任务</span></span><br><span class="line"><span class="comment">* 2. 添加任务到队列</span></span><br><span class="line"><span class="comment">* 3. 监听任务的执行情况，通知group</span></span><br><span class="line"><span class="comment">dispatch_group_async(group, queue, ^&#123;</span></span><br><span class="line"><span class="comment">NSLog(@"downLoad--2--%@", [NSThread currentThread]);</span></span><br><span class="line"><span class="comment">&#125;);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i> ios</a>
+          
+            <a href="/tags/gitbook/" rel="tag"><i class="fa fa-tag"></i> gitbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day16/" rel="next" title="my-ios-day16">
+                <i class="fa fa-chevron-left"></i> my-ios-day16
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/01/my-ios-day18/" rel="prev" title="my-ios-day18">
+                my-ios-day18 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTIzOS81ODA2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="xiusl">
+          <p class="site-author-name" itemprop="name">xiusl</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiusl" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/mizou" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2905248414" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#day-17"><span class="nav-number">1.</span> <span class="nav-text">day 17</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程"><span class="nav-number">1.1.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进程与线程"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">进程与线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pthread"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">pthread</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pthread-1"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">pthread</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GCD"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">GCD</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiusl</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+<span>
+</span></span></div>
+
+<div class="powered-by">
+  由 <a target="_blank" class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a target="_blank" class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("E7NpxD3dtsxehId7h2X2gH5O-gzGzoHsz", "jbjQIXtvCVcwmrvBdVl2rVla");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

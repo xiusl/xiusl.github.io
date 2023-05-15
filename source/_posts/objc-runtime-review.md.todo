@@ -1,0 +1,60 @@
+---
+title: objc-runtime-review
+date: 2019-03-29 09:57:44
+tags: [objc, runtime]
+---
+
+对 iOS 中 runtime 特性的复习和梳理
+<!-- more -->
+
+#### 简述
+
+Runtime 运行时，是一套底层 C 语言 API，是 Objective-C 区别于其他静态语言的重要特性。
+
+Objective-C 的一些变量类型、消息发送（函数调用）都是交给 Runtime 处理的。
+
+Apple 在其[网站](https://opensource.apple.com/source/objc4/objc4-750/runtime/)开源了 Runtime 的源代码，
+
+#### 认识
+
+- Runtime 的核心方法
+
+```
+OBJC_EXPORT id
+objc_msgSend(id _Nullable self, SEL _Nonnull op, ...)
+    OBJC_AVAILABLE(10.0, 2.0, 9.0, 1.0, 2.0);
+```
+
+`id` 就是一个指向实例对象的指针
+`SEL` 方法选择器，也就是指向方法的 `ID`
+
+- OC 中的消息发送（函数调用）
+
+三个阶段
+  - 消息的传递
+  - 消息的解析
+  - 消息的转发
+
+一些概念
+  - id 实例对象的数据结构
+    ```
+    struct objc_object {
+        isa_t isa;
+    }
+    ```
+  - class 类对象的数据结构
+    ```
+    struct objc_class : objc_object {
+        // Class ISA;
+        Class superclass; //父类指针
+        cache_t cache;             // formerly cache pointer and vtable 方法缓存
+        class_data_bits_t bits;    // class_rw_t * plus custom rr/alloc flags 用于获取地址
+    
+        class_rw_t *data() { 
+            return bits.data(); // &FAST_DATA_MASK 获取地址值
+        }
+        // ...
+    }
+    ```
+
+- 

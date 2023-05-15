@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>曾经的ios02 - Instance</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="instance"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="instance"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="使用注释 &amp;#x2F;&amp;#x2F; 要空一格在写  要有一定的编程思想，在对象方法和类方法都计算两点距离时，可以在对象方法（类方法）中调用类方法（对象方法）"><meta property="og:type" content="blog"><meta property="og:title" content="install"><meta property="og:url" content="https://xiusl.me/2015/10/02/%E6%9B%BE%E7%BB%8F%E7%9A%84ios02/"><meta property="og:site_name" content="Instance"><meta property="og:description" content="使用注释 &amp;#x2F;&amp;#x2F; 要空一格在写  要有一定的编程思想，在对象方法和类方法都计算两点距离时，可以在对象方法（类方法）中调用类方法（对象方法）"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://xiusl.me/img/og_image.png"><meta property="article:published_time" content="2015-10-02T08:20:00.000Z"><meta property="article:modified_time" content="2023-05-15T08:41:05.700Z"><meta property="article:author" content="xiusl"><meta property="article:tag" content="ios"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://xiusl.me/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xiusl.me/2015/10/02/%E6%9B%BE%E7%BB%8F%E7%9A%84ios02/"},"headline":"曾经的ios02","image":["https://xiusl.me/img/og_image.png"],"datePublished":"2015-10-02T08:20:00.000Z","dateModified":"2023-05-15T08:41:05.700Z","author":{"@type":"Person","name":"xlao2"},"publisher":{"@type":"Organization","name":"Instance","logo":{"@type":"ImageObject","url":"https://xiusl.me/img/logo.svg"}},"description":"使用注释 &#x2F;&#x2F; 要空一格在写  要有一定的编程思想，在对象方法和类方法都计算两点距离时，可以在对象方法（类方法）中调用类方法（对象方法）"}</script><link rel="canonical" href="https://xiusl.me/2015/10/02/%E6%9B%BE%E7%BB%8F%E7%9A%84ios02/"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Instance" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/xiusl/hexo-blog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2015-10-02T08:20:00.000Z" title="10/2/2015, 8:20:00 AM">2015-10-02</time>发表</span><span class="level-item"><time dateTime="2023-05-15T08:41:05.700Z" title="5/15/2023, 8:41:05 AM">2023-05-15</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><span> / </span><a class="link-muted" href="/categories/%E6%8A%80%E6%9C%AF/Objective-C/">Objective-C</a></span><span class="level-item">13 分钟读完 (大约1896个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">曾经的ios02</h1><div class="content"><ol>
+<li><p>使用注释 &#x2F;&#x2F; 要空一格在写</p>
+</li>
+<li><p>要有一定的编程思想，在对象方法和类方法都计算两点距离时，可以在对象方法（类方法）中调用类方法（对象方法）</p>
+<span id="more"></span></li>
+<li><p>返回值时BOOL类型时，方法或函数用is开头</p>
+</li>
+<li><p>＃pragm mark – 一段注释</p>
+</li>
+</ol>
+<p>  ＃pragm mark 一段注释，可以在快速查看方法的地方看到注释</p>
+<ol start="5">
+<li><p>点语法：是指实质就是方法的调用，要注意在类中使用点语法不要引发死循环</p>
+</li>
+<li><p>成员变量作用域：@public在任何地方都能直接访问对象的成员变量；@private 只能在当前类中直接访问（@implementation中如果声明比变量，默认就是@private）；@protected 在当前类和子类中可以直接访问（@interface 中就是默认的@protected）</p>
+</li>
+<li><p>@property 可以自动生成某个成员变量的setter和getter方法的声明</p>
+</li>
+<li><p>@synthesize 可以自动生成某个成员变量setter和getter方法的实现@synthesize age &#x3D; _age;会访问_age变量，如果不写&#x3D;_age就会访问age变量；如果类中没有当前要访问的变量，就会自动生成一个（类型为 @private）</p>
+</li>
+<li><p>在新的版本中，@property的功能更强大：在@interface中直接写 “@property int age；”就会自动有一个­­_age的成员变量，并且生成他的setter和getter方法的声明和实现</p>
+</li>
+<li><p>id万能指针，能指向、操作任何OC对象</p>
+</li>
+<li><p>构造方法：用来初始化对象的方法，是一个对象方法，-开头，可以在对象初始的时候成员变量就有一定的值；重写的时候要调用父类的构造方法，在进行子类对象的初始化</p>
+</li>
+<li><p>自定义构造方法：对象方法，以 – 开头，返回值一般为 id 类型，方法名以 initWith开头</p>
+</li>
+<li><p>分类：在不改变原来类内容的基础上，为类增加一些新的方法；分类只能增加方法，不能增加成员变量／分类的实现可以访问类中声明的成员变量／分类可以重新实现原类的方法，但会覆盖掉原类的方法／方法的调用顺序：分类，原类，父类</p>
+</li>
+<li><p>分类：可以为系统的类添加分类。网上有很多写好的分类，拓展了系统类的功能。</p>
+</li>
+<li><p>类的本质：类也是一个对象，是class类型的对象——类­­­­对象，类＝＝类对象，每个类只有一个类对象；获取内存中的类对象：Class c &#x3D; [Person class];</p>
+</li>
+<li><p>＋load方法：在程序启动时，就会加载项目中所有的类和分类，而加载后就会调用＋load方法，只调用一次</p>
+</li>
+<li><p>＋initialize方法：在第一次使用某个类时，就会调用当前类的＋initialize方法</p>
+</li>
+<li><p>注意：先加载父类，后加载子类－－先调用父类的＋load方法，在调用子类的＋load方法；先初始化父类，后初始化子类——先调用父类的＋initialize方法，在调用子类的＋initialize方法</p>
+</li>
+<li><p>－description方法：NSLog(@”%d”,p); 就会调用该方法；默认情况下，利用NSLog 和 ％@输出对象时，结果显示&lt;</span>类名:内存地址&gt;；在类中对－description进行重写，让其返回类的所有属性值，</p>
+</li>
+<li><p>＋description方法：Class c &#x3D; [Person class]; NSLog(@”%d”,c); 就会调用该方法，</p>
+</li>
+<li><p>SEL 类型：每个类方法列表都存储在类对象中，每个方法都有一个与之对应的SEL类型的对象，根据SEL对象就可以找到方法的地址从而调用方法；</p>
+</li>
+<li><p>_cmd ：代表当前方法</p>
+</li>
+</ol>
+<p>昨天太晚了，宿舍没网就没能贴上今天补上</p>
+<ul>
+<li>OC内存管理</li>
+</ul>
+<ol>
+<li><p>每一个Oc对象都有一个引用计数器（占4 个字节），用来保存有多少人在使用该对象，当使用alloc、new、copy创建一个新对象时，对象的引用计数器默认为1，当计数器的值＝0时，对象就会被回收</p>
+</li>
+<li><p>操作计数器的一些对象方法：</p>
+</li>
+</ol>
+<p>  retain方法： 计数器加1，会返回对象本身；</p>
+<p>  release方法： 计数器减1，没有返回值；</p>
+<p>  dealloc方法： 返回当前计数器值（ld类型）</p>
+<ol start="3">
+<li><p>dealloe方法：当一个对象被回收的时候就会调用，一定要调用会父类的dealloc（[super dealloc];）放在最后面</p>
+</li>
+<li><p>几个概念：</p>
+</li>
+</ol>
+<p>  僵尸对象：所占用的内存已经被回收的对象，不能在进行使用，</p>
+<p>  野指针：指向僵尸对象（不可用内存）的指针，给野指针发送消息（调用方法）就会报错（EXC_BAD_ACCESS）</p>
+<p>  空指针：没有指向任何东西的指针（nil、NULL、0），空指针调用方法不会报错</p>
+<ul>
+<li>多对象的内存管理</li>
+</ul>
+<ol start="5">
+<li><p>要使用某个对象的时候，就要让对象的计数器加1（让对象做一次retain操做）；不想在使用莫个对象时，就要让对象的计数器减1（让对象做一次release操作）</p>
+</li>
+<li><p>谁retain 谁release；谁alloc 谁release</p>
+</li>
+</ol>
+<ul>
+<li>类的set方法和dealloc方法</li>
+</ul>
+<ol start="7">
+<li><p>基本数据类型：直接赋值</p>
+</li>
+<li><p>Oc对象类型：先判断是不是新对象，如果是，对旧对象做一次release，在对新对象做一次retain并赋值</p>
+</li>
+<li><p>dealloc方法：要先对当前对象拥有的所有Oc对象进行一次release操作，最后调用[super dealloc];</p>
+</li>
+</ol>
+<ul>
+<li>@property的参数</li>
+</ul>
+<ol start="10">
+<li><p>retain：生成的set方法里面，release旧值，retain新值（用于Oc对象）</p>
+<p>assign：生成的set方法里面，直接赋值（用于非Oc对象，默认的）</p>
+<p>copy：release旧值，copy新值</p>
+</li>
+<li><p>readonly：只生成get方法（只读）</p>
+<p>readwrite：同时生成set和get方法（默认的）</p>
+</li>
+<li><p>多线程管理</p>
+<p>nonatomic：性能高（一定要写这个）</p>
+<p>atomic：性能低（默认的）</p>
+</li>
+<li><p>set和get方法名</p>
+<p>setter重新定义set的方法名；getter重新定义get的方法名；（一般set不会改，当get方法返回BOOL时会改为is开头）</p>
+</li>
+</ol>
+<ul>
+<li>循环引用（你中有我，我中有你）</li>
+</ul>
+<ol start="14">
+<li><p>@class xxx：告诉编译器xxx这是一个类，不会包含xxx类的任何内容</p>
+</li>
+<li><p>开发中：在 .h 文件中使用@class来声明类，在 .m 文件中使用#import来包含类的所有东西</p>
+</li>
+<li><p>两端循环的解决办法：在@property中，一端用retain，一端用assign</p>
+</li>
+</ol>
+<ul>
+<li>autorelease方法</li>
+</ul>
+<ol start="17">
+<li><p>将对象放到一个自动释放池中，当自动释放池被销毁时，会对池子中的所有对象进行一次release操作</p>
+</li>
+<li><p>会返回对象本身，调用后，对象的计数器数并不变</p>
+</li>
+<li><p>开发中，经常会将</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[[Car alloc] init] autorelease]封装到一个类方法（car）中；要是想要带初始值的（carWithSpeed：//方法中创建对象使用self）</span><br></pre></td></tr></table></figure></li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>曾经的ios02</p><p><a href="https://xiusl.me/2015/10/02/曾经的ios02/">https://xiusl.me/2015/10/02/曾经的ios02/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>xlao2</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2015-10-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-05-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/ios/">ios</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://xiusl.com" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2015/10/03/%E6%9B%BE%E7%BB%8F%E7%9A%84ios03/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">曾经的ios03</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2015/10/01/%E6%9B%BE%E7%BB%8F%E7%9A%84ios01/"><span class="level-item">曾经的ios01</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content twikoo" id="twikoo"></div><script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.6/dist/twikoo.all.min.js"></script><script>twikoo.init({
+            envId: 'hello-cloudbase-1gl9jq1k04131808',
+            
+            lang: "zh-CN",
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/avatar.jpg" alt="xlao2"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">xlao2</p><p class="is-size-6 is-block">CURD Developer</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Hangzhou · China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">43</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">23</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/xiusl" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/xiusl"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://likehub.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Like</span></span><span class="level-right"><span class="level-item tag">likehub.top</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/host/"><span class="level-start"><span class="level-item">host</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/leetcode/"><span class="level-start"><span class="level-item">leetcode</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">技术</span></span><span class="level-end"><span class="level-item tag">37</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/Golang/"><span class="level-start"><span class="level-item">Golang</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/Golang/RPC/"><span class="level-start"><span class="level-item">RPC</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/Objective-C/"><span class="level-start"><span class="level-item">Objective-C</span></span><span class="level-end"><span class="level-item tag">26</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/iOS/"><span class="level-start"><span class="level-item">iOS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E6%9C%AF/wAyS/"><span class="level-start"><span class="level-item">wAyS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-23T06:03:09.000Z">2021-06-23</time></p><p class="title"><a href="/2021/06/23/go-rpc-01/">gRPC 笔记 - 一元RPC</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a href="/categories/%E6%8A%80%E6%9C%AF/Golang/">Golang</a> / <a href="/categories/%E6%8A%80%E6%9C%AF/Golang/RPC/">RPC</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-30T08:13:34.000Z">2020-09-30</time></p><p class="title"><a href="/2020/09/30/iOS-AdHoc-distribute/">iOS 分发 Ad Hoc 应用</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-27T03:38:31.000Z">2020-09-27</time></p><p class="title"><a href="/2020/09/27/fix-xcode12/">Xcode12 模拟器编译报错</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-10-18T07:11:41.000Z">2019-10-18</time></p><p class="title"><a href="/2019/10/18/ios-uitest/">iOS 中的 UITest</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-09-26T02:57:36.000Z">2019-09-26</time></p><p class="title"><a href="/2019/09/26/nginx-gzip-md/">nginx 配置 gzip</a></p><p class="categories"><a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/"><span class="level-start"><span class="level-item">2019</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/"><span class="level-start"><span class="level-item">2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/"><span class="level-start"><span class="level-item">2017</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/"><span class="level-start"><span class="level-item">2016</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile" href="/archives/2015/"><span class="level-start"><span class="level-item">2015</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Ad-Hoc/"><span class="tag">Ad Hoc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RPC/"><span class="tag">RPC</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos/"><span class="tag">centos</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cookbook/"><span class="tag">cookbook</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/datastruct/"><span class="tag">datastruct</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flask/"><span class="tag">flask</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gitbook/"><span class="tag">gitbook</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/go/"><span class="tag">go</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gzip/"><span class="tag">gzip</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hacker/"><span class="tag">hacker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios/"><span class="tag">ios</span><span class="tag">27</span></a></div><div class="control"><a class="tags has-addons" href="/tags/life/"><span class="tag">life</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mongodb/"><span class="tag">mongodb</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nginx/"><span class="tag">nginx</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/objc/"><span class="tag">objc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/openshift/"><span class="tag">openshift</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ssh/"><span class="tag">ssh</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/test/"><span class="tag">test</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/think/"><span class="tag">think</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unary/"><span class="tag">unary</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/"><span class="tag">模拟器</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Instance" height="28"></a><p class="is-size-7"><span>&copy; 2023 xlao2</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

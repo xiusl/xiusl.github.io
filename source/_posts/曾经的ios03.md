@@ -2,7 +2,7 @@
 title: 曾经的ios03
 date: 2015-10-03 16:20:00
 categories: 
-- 技术
+- technology
 - Objective-C 
 tags: ios
 ---

@@ -2,7 +2,7 @@
 title: 宏和常量（Objective-C）
 date: 2018-08-15 14:41:11
 categories:
-- 技术
+- technology
 tags:
  
 ---

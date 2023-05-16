@@ -2,7 +2,7 @@
 title: my-ios-day1
 date: 2016-09-01 16:00:27
 categories: 
-- 技术
+- technology
 - Objective-C 
 tags: 
 - ios

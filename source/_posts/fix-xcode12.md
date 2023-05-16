@@ -1,7 +1,7 @@
 title: Xcode12 模拟器编译报错
 date: 2020-09-27 11:38:31
 tags: iOS
-categories: 技术
+categories: technology
 ---
 
 项目代码在 Xcode 12 版本模拟器编译报错记录

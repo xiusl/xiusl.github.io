@@ -2,9 +2,8 @@
 title: gRPC 笔记 - 一元RPC
 date: 2021-06-23 14:03:09
 categories:
-- 技术
+- technology
 - Golang
-- RPC
 tags:
 - RPC
 - go

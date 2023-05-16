@@ -5,7 +5,7 @@ tags:
 - iOS
 - Ad Hoc
 caegories:
-- 技术
+- technology
 ---
 
 公司内部测试 iOS App，之前一直用蒲公英分发，但现在各种平台都要重新认证，自己写一个网页简单分发下

@@ -2,7 +2,7 @@
 title: block & delegate & notification 特点和区别
 date: 2019-04-02 14:22:15
 tags: [iOS]
-categories: [技术, iOS]
+categories: [technology, iOS]
 ---
 
 iOS 中三种回调的特点、区别和使用场景的总结。

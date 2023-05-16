@@ -2,7 +2,7 @@
 title: nginx 配置 gzip
 date: 2019-09-26 10:57:36
 categories:
-- 技术
+- technology
 tags:
 - nginx
 - gzip

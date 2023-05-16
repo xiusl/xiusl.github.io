@@ -2,7 +2,7 @@
 title: 曾经的ios04
 date: 2015-10-04 16:20:00
 categories: 
-- 技术
+- technology
 - Objective-C 
 tags: ios
 ---

@@ -2,7 +2,7 @@
 title: 图片上传的问题
 date: 2019-05-15 19:48:51
 tags: [iOS]
-categories: [技术]
+categories: [technology]
 ---
 
 项目中上传图片的一个特例

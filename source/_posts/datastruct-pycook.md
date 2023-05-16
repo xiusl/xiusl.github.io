@@ -2,7 +2,7 @@
 title: datastruct-pycook
 date: 2019-01-12 16:34:30
 categories:
-- 技术
+- technology
 - Python
 tags:
 - cookbook

@@ -2,7 +2,7 @@
 title: be-hacker
 date: 2017-06-28 14:03:09
 categories: 
-- 技术 
+- technology 
 - wAyS
 tags: 
 - hacker

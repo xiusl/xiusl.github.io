@@ -2,7 +2,7 @@
 title: 曾经的ios05
 date: 2015-10-05 16:20:00
 categories: 
-- 技术
+- technology
 - Objective-C 
 tags: ios
 ---

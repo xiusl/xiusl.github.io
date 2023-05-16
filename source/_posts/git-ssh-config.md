@@ -2,7 +2,7 @@
 title: git ssh 的配置
 date: 2019-04-29 11:52:43
 tags: [git, ssh]
-categories: [技术]
+categories: [technology]
 ---
 
 git ssh 的配置，多个 git 仓库

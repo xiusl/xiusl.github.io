@@ -6,7 +6,7 @@ tags:
 - flask
 - mongodb
 categories: 
-- 技术
+- technology
 - Python
 ---
 

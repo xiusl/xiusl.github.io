@@ -2,6 +2,7 @@
 title: UITableView 中使用 IQKeyboardManager
 date: 2019-03-01 19:05:00
 tags: [ios]
+categories: [technology]
 ---
 
 项目中的表单需要在第一次进入的时候自动弹出键盘，使用 `IQKeyboardManager` 来调整输入框的时候，键盘收起后 tableView 底部多出一部分。

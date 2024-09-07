@@ -39,7 +39,7 @@ head:
     open_graph:
         # Page title (og:title) (optional)
         # You should leave this blank for most of the time
-        title: install
+        title: instance
         # Page type (og:type) (optional)
         # You should leave this blank for most of the time
         type: blog
@@ -114,7 +114,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/xiusl/hexo-blog
+            url: https://github.com/xiusl/xiusl.github.io
 # Page footer configurations
 footer:
     # Copyright text

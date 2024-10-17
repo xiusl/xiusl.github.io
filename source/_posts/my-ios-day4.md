@@ -1,9 +1,7 @@
 ---
 title: my-ios-day4
 date: 2016-09-01 16:00:36
-categories: 
-- technology
-- Objective-C 
+categories: iOS
 tags: 
 - ios
 - gitbook

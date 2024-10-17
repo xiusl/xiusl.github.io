@@ -3,11 +3,12 @@ title: datastruct-pycook
 date: 2019-01-12 16:34:30
 categories:
 - technology
-- Python
 tags:
 - cookbook
 - datastruct
+- python
 ---
+
 python cookbook datastruct
 <!--more-->
 

@@ -30,7 +30,7 @@ idcards : [
 ```
 
 - 通过postman 来测试接口，发现传的数据原来是这样，瞬间明白
-![img](https://image.sleen.top/hexo/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-05-15%20%E4%B8%8B%E5%8D%888.02.48.png)
+![img](//img-uss.likehub.top/hexo/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-05-15%20%E4%B8%8B%E5%8D%888.02.48.png)
 
 - 最终构造的请求长这样，应该就是把图片放在字典里上传(╰\_╯)
 

@@ -4,6 +4,7 @@ date: 2019-01-21 12:07:19
 tags: [centos, flask]
 categories: [host]
 ---
+
 在 centos7 上使用 nginx + uwsgi 部署 flask 应用
 <!-- more -->
 安装 `zsh` 和 `ohmyzsh`

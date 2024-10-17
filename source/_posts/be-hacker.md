@@ -1,13 +1,12 @@
 ---
 title: be-hacker
 date: 2017-06-28 14:03:09
-categories: 
-- technology 
+categories:
 - wAyS
 tags: 
 - hacker
 - life
-password: sleen
+password: hhhsososo
 ---
 
 读了一片如何成为一名黑客的文章，觉得对技术学习用帮助，把一些内容摘录在这里。原文译文在下面的链接。

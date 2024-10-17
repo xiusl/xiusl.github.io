@@ -1,10 +1,10 @@
 ---
 title: 曾经的ios06
 date: 2015-10-06 16:20:00
-categories: 
-- technology
+categories: iOS
+tags: 
+- iOS
 - Objective-C 
-tags: ios
 ---
 
 好久没写了，现在一起看完然后写的总结，代码没有在新浪发，感觉新浪对代码的支持不是很好，所以我把代码都放到了csdn，在这写个链接吧

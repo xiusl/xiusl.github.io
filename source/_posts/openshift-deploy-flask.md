@@ -7,7 +7,6 @@ tags:
 - mongodb
 categories: 
 - technology
-- Python
 ---
 
 > 新版 Openshift 部署 Flask+mongodb 应用

@@ -1,10 +1,10 @@
 ---
 title: 曾经的ios04
 date: 2015-10-04 16:20:00
-categories: 
-- technology
+categories: iOS
+tags: 
+- iOS
 - Objective-C 
-tags: ios
 ---
 
 # iOS学习06

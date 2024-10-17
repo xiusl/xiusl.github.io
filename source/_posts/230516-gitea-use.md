@@ -1,10 +1,10 @@
 ---
 title: gitea 的使用
 date: 2023-05-15 16:20:00
-categories: 
-- technology
-- instrument 
-tags: git
+categories: git
+tags: 
+- gitea
+- selfhost
 ---
 
 搭建自己的 `git` 仓库，使用 [gitea](https://gitea.io)

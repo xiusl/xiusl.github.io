@@ -1,9 +1,10 @@
 ---
 title: 宏和常量（Objective-C）
 date: 2018-08-15 14:41:11
-categories:
-- technology
-tags:
+categories: iOS
+tags: 
+- iOS
+- Objective-C 
  
 ---
 

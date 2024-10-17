@@ -1,10 +1,9 @@
 ---
 title: 部署自己的 sentry 服务
 date: 2023-07-01 09:29:32
+categories: technology
 tags:
   - sentry
-categories:
-  - technology
 ---
 
 

@@ -1,10 +1,10 @@
 ---
 title: 曾经的ios07
 date: 2015-10-07 16:20:00
-categories: 
-- technology
+categories: iOS
+tags: 
+- iOS
 - Objective-C 
-tags: ios
 ---
 
 这些天一直在忙期末复习的事，耽误了好些天，接下的考试周，课少了就可以有更多时间看视频和写代码了，下面是今天写的一点点。

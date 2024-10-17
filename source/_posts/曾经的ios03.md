@@ -1,10 +1,10 @@
 ---
 title: 曾经的ios03
 date: 2015-10-03 16:20:00
-categories: 
-- technology
+categories: iOS
+tags: 
+- iOS
 - Objective-C 
-tags: ios
 ---
 
 今天的很多，有ARC 还有Oc的一些结构体和类，

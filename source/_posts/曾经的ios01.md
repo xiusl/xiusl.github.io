@@ -1,10 +1,10 @@
 ---
 title: 曾经的ios01
 date: 2015-10-01 16:20:00
-categories: 
-- technology
+categories: iOS
+tags: 
+- iOS
 - Objective-C 
-tags: ios
 ---
 
 - Objective-C面向对象

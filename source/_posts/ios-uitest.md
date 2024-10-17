@@ -2,6 +2,7 @@
 title: iOS 中的 UITest
 date: 2019-10-18 15:11:41
 tags: [objc, test]
+caegories: technology
 ---
 
 在 iOS 开发中使用 UITest 对各种点击进行测试，避免上线后出现低级 bug。

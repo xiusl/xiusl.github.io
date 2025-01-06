@@ -30,7 +30,7 @@ caegories:
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>https://image.sleen.top/ipa/like.ipa</string>
+                    <string>https://files.example.com/ipa/like.ipa</string>
                 </dict>
             </array>
             <key>metadata</key>

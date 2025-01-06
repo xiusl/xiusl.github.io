@@ -21,38 +21,38 @@ categories:
 ### Project
 
 - 登录账号后就就可以创建 Project
-![img](http://image.sleen.top/hexo/create-2.png)
+![img](//images.xiusl.com/blog/hexo/create-2.png)
 
 - 点击 Create 后，会要求我们选择想要语言、技术等，因为要使用 MongoDB，所有先选择 Data Stores
-![img](http://image.sleen.top/hexo/data.png)
+![img](//images.xiusl.com/blog/hexo/data.png)
 
 ### MongoDB
 - 接下来在选择 MongoDB(Persisent)
-![img](http://image.sleen.top/hexo/mongo.png)
+![img](//images.xiusl.com/blog/hexo/mongo.png)
 
 - 之后的页面需要我们对 MongoDB 设置一些参数
-![img](http://image.sleen.top/hexo/mongo-config.png)
+![img](//images.xiusl.com/blog/hexo/mongo-config.png)
 
 - 等待一段时间就会创建成功，创建成功后我们可以通过 面板的 Applications-Service 
-![img](http://image.sleen.top/hexo/mongo-service.png)
+![img](//images.xiusl.com/blog/hexo/mongo-service.png)
 
 - 来查看 MongoDB 的主机地址
-![img](http://image.sleen.top/hexo/mongo-host.png)
+![img](//images.xiusl.com/blog/hexo/mongo-host.png)
 
 ### Flask
 - 接下来添加 Flask 应用，点击顶部的 Add to Project - Browse Catalog，接下来的页面选择 Python，还需要选择 Python 版本 (我选择的是 2.7)。
 - 设置 Flask 应用的一些信息，设置 git 仓库 (可以参考我的代码https://github.com/SleenXiu/openshift-flask.git)
-![img](http://image.sleen.top/hexo/careate-flask.png)
+![img](//images.xiusl.com/blog/hexo/careate-flask.png)
 
 - 点击 advanced options 填写一些额外的配置 
-![img](http://image.sleen.top/hexo/deploy-config.png)
+![img](//images.xiusl.com/blog/hexo/deploy-config.png)
 
 - 设置内存限制
-![img](http://image.sleen.top/hexo/deploy-limit.png)
+![img](//images.xiusl.com/blog/hexo/deploy-limit.png)
 
 - 设置git push 自动部署
-![img](http://image.sleen.top/hexo/git-buid.png)
-![img](http://image.sleen.top/hexo/git-hook.png)
+![img](//images.xiusl.com/blog/hexo/git-buid.png)
+![img](//images.xiusl.com/blog/hexo/git-hook.png)
 
 - 数据库配置
    ```

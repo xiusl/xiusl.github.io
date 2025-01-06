@@ -21,7 +21,7 @@ Xcode 12 去掉了 Valid Architectures，模拟器的指令集为 x86_64
 `
 在 Build Setting -> User-Defined -> VALID_ARCHS 增加 x86_64
 `
-[](!https://image.sleen.top/hexo/%E6%88%AA%E5%B1%8F2020-09-29%20%E4%B8%8B%E5%8D%882.45.29.png)
+[](!//images.xiusl.com/blog/hexo/%E6%88%AA%E5%B1%8F2020-09-29%20%E4%B8%8B%E5%8D%882.45.29.png)
 
 关于指令集
 ```

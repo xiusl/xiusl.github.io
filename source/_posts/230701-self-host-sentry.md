@@ -74,7 +74,7 @@ b0d87c431e33   memcached:1.5-alpine     "docker-entrypoint.s…"   15 hours ago 
 
 通过网页打开 `http://your-host-ip:9000` 登录创建好的账号就可以使用了
 
-![WX20230701-095613@2x](//img-uss.likehub.top/uPic/2023-07-01/TANnbo-WX20230701-095613@2x.png)
+![WX20230701-095613@2x](//images.xiusl.com/blog/2023-07-01/TANnbo-WX20230701-095613@2x.png)
 
 
 

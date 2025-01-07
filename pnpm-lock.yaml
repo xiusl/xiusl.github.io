@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       bulma:
-        specifier: ^0.9.4
-        version: 0.9.4
+        specifier: ^1.0.3
+        version: 1.0.3
       bulma-stylus:
         specifier: 0.8.0
         version: 0.8.0
       hexo:
         specifier: ^6.3.0
-        version: 6.3.0
+        version: 6.3.0(chokidar@3.6.0)
       hexo-component-inferno:
         specifier: ^2.0.3
-        version: 2.0.4
+        version: 2.0.4(chokidar@3.6.0)
       hexo-generator-archive:
         specifier: ^2.0.0
         version: 2.0.0
@@ -712,8 +712,8 @@ packages:
   bulma-stylus@0.8.0:
     resolution: {integrity: sha512-9Q9BMPeHFyJ5EWh/tJPCcLDYEovKzUBOyMHsKEIyxSYEKG8wqt9RVuTumaJ2AfDjyHC9OifWKOfJSweKYD5IMQ==}
 
-  bulma@0.9.4:
-    resolution: {integrity: sha512-86FlT5+1GrsgKbPLRRY7cGDg8fsJiP/jzTqXXVqiUZZ2aZT8uemEOHlU1CDU+TxklPEZ11HZNNWclRBBecP4CQ==}
+  bulma@1.0.3:
+    resolution: {integrity: sha512-9eVXBrXwlU337XUXBjIIq7i88A+tRbJYAjXQjT/21lwam+5tpvKF0R7dCesre9N+HV9c6pzCNEPKrtgvBBes2g==}
 
   bytes@3.0.0:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
@@ -2602,7 +2602,7 @@ snapshots:
 
   bulma-stylus@0.8.0: {}
 
-  bulma@0.9.4: {}
+  bulma@1.0.3: {}
 
   bytes@3.0.0: {}
 
@@ -2918,10 +2918,10 @@ snapshots:
       resolve: 1.22.8
       tildify: 2.0.0
 
-  hexo-component-inferno@2.0.4:
+  hexo-component-inferno@2.0.4(chokidar@3.6.0):
     dependencies:
       ajv: 8.17.1
-      hexo: 6.3.0
+      hexo: 6.3.0(chokidar@3.6.0)
       hexo-pagination: 2.0.0
       hexo-util: 2.7.0
       inferno: 7.4.11
@@ -3053,7 +3053,7 @@ snapshots:
       prismjs: 1.29.0
       strip-indent: 3.0.0
 
-  hexo@6.3.0:
+  hexo@6.3.0(chokidar@3.6.0):
     dependencies:
       abbrev: 1.1.1
       archy: 1.0.0
@@ -3070,7 +3070,7 @@ snapshots:
       moize: 6.1.6
       moment: 2.30.1
       moment-timezone: 0.5.46
-      nunjucks: 3.2.4
+      nunjucks: 3.2.4(chokidar@3.6.0)
       picocolors: 1.1.1
       pretty-hrtime: 1.0.3
       resolve: 1.22.8
@@ -3342,11 +3342,13 @@ snapshots:
 
   normalize-path@3.0.0: {}
 
-  nunjucks@3.2.4:
+  nunjucks@3.2.4(chokidar@3.6.0):
     dependencies:
       a-sync-waterfall: 1.0.1
       asap: 2.0.6
       commander: 5.1.0
+    optionalDependencies:
+      chokidar: 3.6.0
 
   nwsapi@2.2.13: {}
 
